@@ -1,0 +1,6 @@
+{
+  "name": "VoltEdge Beauty - متجر التجميل والعناية الفاخر",
+  "description": "متجر إلكتروني فاخر لعلامة VoltEdge Beauty المتخصصة في مستحضرات التجميل، العناية بالبشرة، العطور ومجموعات الجمال الهادئ بتصميم عصري راقٍ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoltEdge Beauty | متجر التجميل والعناية الفاخر</title>
+  <meta name="description" content="VoltEdge Beauty - متجر إلكتروني فاخر لمستحضرات التجميل، العناية بالبشرة، العطور ومجموعات الجمال الهادئ." />
+  <meta property="og:title" content="VoltEdge Beauty | متجر التجميل والعناية الفاخر" />
+  <meta property="og:description" content="عناية بالبشرة تليق بكِ مع تركيبات طبيعية فاخرة وإشراقة هادئة تأسر الحواس." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Amiri & Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandBg: '#F5F0EB',
+            brandCard: '#FFFFFF',
+            brandCardSoft: '#FAF6F1',
+            brandGold: '#D4AF37',
+            brandGoldText: '#B8962E',
+            brandBtn: '#D4A373',
+            brandBtnText: '#1C1917',
+            brandSecondary: '#E6CCB2',
+            brandPink: '#E8B4B8',
+            brandOlive: '#6B7F5E',
+            brandDark: '#3D2F2A'
+          },
+          fontFamily: {
+            serif: ['Amiri', 'serif'],
+            sans: ['Cairo', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <script>
+    // Simple fallback: hide broken image and show beige background
+    window.addEventListener("error", function(e) {
+      if (e.target && e.target.tagName === "IMG") {
+        e.target.style.display = "none";
+      }
+    }, true);
+  </script>
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #F5F0EB;
+      color: #3D2F2A;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+    h1, h2, h3, .font-heading {
+      font-family: 'Amiri', serif;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.4s ease-out forwards;
+    }
+    *:focus-visible {
+      outline: 2px solid #D4AF37;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="bg-[#F5F0EB] text-[#3D2F2A] flex flex-col min-h-screen antialiased selection:bg-[#E8B4B8] selection:text-[#3D2F2A]">
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-40 bg-[#F5F0EB]/90 backdrop-blur-md border-b border-[#D4AF37]/30 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Right Side in RTL: Nav Links (Desktop) & Hamburger (Mobile) -->
+      <div class="flex items-center gap-6">
+        <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-[#3D2F2A] hover:text-[#B8962E] transition-colors" aria-label="فتح القائمة">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+          <a href="#/home" data-nav-link class="transition-colors hover:text-[#B8962E] py-1 border-b-2 border-transparent">الرئيسية</a>
+          <a href="#/skincare" data-nav-link class="transition-colors hover:text-[#B8962E] py-1 border-b-2 border-transparent">العناية بالبشرة</a>
+          <a href="#/makeup" data-nav-link class="transition-colors hover:text-[#B8962E] py-1 border-b-2 border-transparent">المكياج</a>
+          <a href="#/perfumes" data-nav-link class="transition-colors hover:text-[#B8962E] py-1 border-b-2 border-transparent">العطور</a>
+          <a href="#/calm" data-nav-link class="transition-colors hover:text-[#B8962E] py-1 border-b-2 border-transparent">المجموعة الهادئة</a>
+        </nav>
+      </div>
+
+      <!-- Left Side in RTL: Logo & Cart Icon -->
+      <div class="flex items-center gap-5">
+        <!-- Cart Icon Button -->
+        <a href="#/cart" class="relative p-2.5 rounded-full hover:bg-stone-200/50 transition-colors group" aria-label="سلة التسوق">
+          <svg class="w-6 h-6 text-[#3D2F2A] group-hover:text-[#B8962E] transition-colors" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <div class="cart-badge-container absolute -top-1 -right-1 transition-transform duration-300">
+            <span class="cart-count-badge hidden min-w-[20px] h-5 px-1.5 rounded-full bg-[#E8B4B8] text-[#3D2F2A] text-[11px] font-bold flex items-center justify-center shadow-sm">0</span>
+          </div>
+        </a>
+
+        <!-- Brand Logo -->
+        <a href="#/home" class="flex flex-col items-start leading-none group">
+          <span class="font-serif italic tracking-wider text-2xl lg:text-3xl font-bold text-[#3D2F2A] group-hover:text-[#B8962E] transition-colors">VoltEdge</span>
+          <span class="text-[9px] font-sans tracking-[0.3em] text-[#B8962E] font-bold block -mt-0.5">BEAUTY</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer-backdrop" onclick="closeMobileMenu()" class="fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <aside id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-72 bg-[#F5F0EB] z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-6 border-l border-[#D4AF37]/30">
+    <div class="flex items-center justify-between pb-6 border-b border-[#D4AF37]/20">
+      <div class="flex flex-col items-start leading-none">
+        <span class="font-serif italic tracking-wider text-2xl font-bold text-[#3D2F2A]">VoltEdge</span>
+        <span class="text-[9px] font-sans tracking-[0.25em] text-[#B8962E] font-bold">BEAUTY</span>
+      </div>
+      <button onclick="closeMobileMenu()" class="p-2 text-stone-500 hover:text-stone-800" aria-label="إغلاق القائمة">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-4 mt-8 text-base font-semibold">
+      <a href="#/home" onclick="closeMobileMenu()" class="py-2.5 px-3 rounded-xl hover:bg-stone-200/60 transition-colors">الرئيسية</a>
+      <a href="#/skincare" onclick="closeMobileMenu()" class="py-2.5 px-3 rounded-xl hover:bg-stone-200/60 transition-colors">العناية بالبشرة</a>
+      <a href="#/makeup" onclick="closeMobileMenu()" class="py-2.5 px-3 rounded-xl hover:bg-stone-200/60 transition-colors">المكياج</a>
+      <a href="#/perfumes" onclick="closeMobileMenu()" class="py-2.5 px-3 rounded-xl hover:bg-stone-200/60 transition-colors">العطور</a>
+      <a href="#/calm" onclick="closeMobileMenu()" class="py-2.5 px-3 rounded-xl hover:bg-stone-200/60 transition-colors">المجموعة الهادئة</a>
+      <a href="#/cart" onclick="closeMobileMenu()" class="py-2.5 px-3 rounded-xl bg-[#D4A373]/20 text-[#1C1917] font-bold flex items-center justify-between mt-4">
+        <span>سلة المشتريات</span>
+        <span class="cart-count-badge hidden px-2 py-0.5 rounded-full bg-[#E8B4B8] text-xs font-bold">0</span>
+      </a>
+    </nav>
+  </aside>
+
+  <!-- MAIN VIEW CONTAINER -->
+  <main id="main-content" class="flex-grow">
+
+    <!-- ══════════════ [1] الصفحة الرئيسية #/home ══════════════ -->
+    <div id="page-home" class="space-y-16">
+      
+      <!-- HERO SECTION: FULLSCREEN IMAGE BACKGROUND WITH TEXT INSIDE OVER WALL -->
+      <section class="w-full min-h-[85vh] lg:min-h-[88vh] relative overflow-hidden flex items-center">
+        <!-- Background Hero Image -->
+        <img src="images/hero-beauty.jpg" alt="سيدة مشرقة مع سيروم VoltEdge Beauty" class="absolute inset-0 w-full h-full object-cover object-[70%_center] z-0">
+        
+        <!-- Gradient Overlay: Creamy gradient on the left side over empty beige wall, leaving woman and serum completely visible -->
+        <div class="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#F5F0EB]/90 via-[#F5F0EB]/50 to-transparent z-10 w-2/3 pointer-events-none"></div>
+        <div class="absolute inset-0 lg:hidden bg-gradient-to-t from-[#F5F0EB]/95 via-[#F5F0EB]/70 to-transparent z-10 pointer-events-none"></div>
+
+        <!-- Hero Content Placed on the Left Over the Wall -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-20 relative py-12">
+          <div class="max-w-xl lg:mr-auto lg:ml-12 text-right">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8B4B8]/35 border border-[#E8B4B8] text-xs font-bold text-[#3D2F2A] mb-4">
+              <span class="w-2 h-2 rounded-full bg-[#B8962E] animate-ping"></span>
+              VoltEdge Beauty · جمال هادئ
+            </span>
+            <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3D2F2A] leading-tight mb-4">
+              إشراقة ناعمة: اكتشفي <span class="text-[#B8962E]">الجمال</span> الهادئ
+            </h1>
+            <p class="font-sans text-sm sm:text-base text-stone-700 mb-8 leading-relaxed">
+              دلّلي نفسكِ مع VoltEdge، خلاصات طبيعية نقية ومستحضرات استثنائية صُممت لتبرز نضارتكِ الطبيعية بلمسات راقية تفيض أنوثة وجاذبية.
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+              <button onclick="navigateTo('#/skincare')" class="px-7 py-3.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-sm sm:text-base shadow-md transition-all transform hover:-translate-y-0.5 active:scale-95">
+                تسوقي المجموعة
+              </button>
+              <button onclick="navigateTo('#/skincare')" class="px-7 py-3.5 rounded-xl border border-[#D4AF37] hover:bg-[#D4AF37]/15 text-[#3D2F2A] font-semibold text-sm sm:text-base transition-all">
+                اكتشفي العناية بالبشرة
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OVERLAPPING PRODUCT CARDS (5 ITEMS) -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-20 sm:-mt-24 z-20 relative">
+        <div class="flex lg:grid lg:grid-cols-5 gap-5 overflow-x-auto pb-6 no-scrollbar pt-2">
+          
+          <!-- Card 1: prod-serum -->
+          <div class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300">
+            <div class="relative aspect-square rounded-xl overflow-hidden mb-3 bg-[#FAF6F1]">
+              <img src="images/prod-serum.jpg" alt="سيروم الورد المخملي" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108">
+              <span class="absolute top-2 right-2 px-2 py-0.5 rounded-md bg-[#E8B4B8] text-[10px] font-bold text-[#3D2F2A]">الأكثر مبيعاً</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-1 text-[#D4AF37] text-xs mb-1">
+                <span>★ 5.0</span>
+                <span class="text-stone-400 text-[10px]">(142 تقييم)</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">سيروم الورد المخملي</h3>
+              <div class="font-bold text-[#3D2F2A] text-base mb-3">349 <span class="text-xs text-[#B8962E]">ر.س</span></div>
+            </div>
+            <button onclick="addToCart({id: 'skin-1', name: 'سيروم الورد المخملي المركز', price: 349, image: 'images/prod-serum.jpg', category: 'سيروم'})"
+              class="w-full py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
+              أضيفي للسلة
+            </button>
+          </div>
+
+          <!-- Card 2: prod-cream -->
+          <div class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300">
+            <div class="relative aspect-square rounded-xl overflow-hidden mb-3 bg-[#FAF6F1]">
+              <img src="images/prod-cream.jpg" alt="كريم العناية بالفيتامينات" loading="lazy"  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108">
+            </div>
+            <div>
+              <div class="flex items-center gap-1 text-[#D4AF37] text-xs mb-1">
+                <span>★ 4.9</span>
+                <span class="text-stone-400 text-[10px]">(98 تقييم)</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">كريم العناية بالفيتامينات</h3>
+              <div class="font-bold text-[#3D2F2A] text-base mb-3">219 <span class="text-xs text-[#B8962E]">ر.س</span></div>
+            </div>
+            <button onclick="addToCart({id: 'skin-2', name: 'كريم العناية بالفيتامينات', price: 219, image: 'images/prod-cream.jpg', category: 'كريمات'})"
+              class="w-full py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
+              أضيفي للسلة
+            </button>
+          </div>
+
+          <!-- Card 3: prod-lipstick -->
+          <div class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300">
+            <div class="relative aspect-square rounded-xl overflow-hidden mb-3 bg-[#FAF6F1]">
+              <img src="images/prod-lipstick.jpg" alt="أحمر شفاه مخملي راقي" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108">
+            </div>
+            <div>
+              <div class="flex items-center gap-1 text-[#D4AF37] text-xs mb-1">
+                <span>★ 5.0</span>
+                <span class="text-stone-400 text-[10px]">(85 تقييم)</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">أحمر شفاه مخملي راقي</h3>
+              <div class="font-bold text-[#3D2F2A] text-base mb-3">119 <span class="text-xs text-[#B8962E]">ر.س</span></div>
+            </div>
+            <button onclick="addToCart({id: 'mu-1', name: 'أحمر شفاه مخملي راقي', price: 119, image: 'images/prod-lipstick.jpg', category: 'شفاه'})"
+              class="w-full py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
+              أضيفي للسلة
+            </button>
+          </div>
+
+          <!-- Card 4: prod-brushes (cropped zoom) -->
+          <div class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300">
+            <div class="relative aspect-square rounded-xl overflow-hidden mb-3 bg-[#FAF6F1]">
+              <img src="images/prod-brushes.jpg" alt="فرشاة مكياج احترافية" loading="lazy" class="w-full h-full object-cover scale-150 object-top transition-transform duration-500 group-hover:scale-160">
+            </div>
+            <div>
+              <div class="flex items-center gap-1 text-[#D4AF37] text-xs mb-1">
+                <span>★ 4.7</span>
+                <span class="text-stone-400 text-[10px]">(64 تقييم)</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">فرشاة مكياج احترافية</h3>
+              <div class="font-bold text-[#3D2F2A] text-base mb-3">179 <span class="text-xs text-[#B8962E]">ر.س</span></div>
+            </div>
+            <button onclick="addToCart({id: 'mu-2', name: 'فرشاة دمج وتوزيع احترافية', price: 179, image: 'images/prod-brushes.jpg', category: 'فرش'})"
+              class="w-full py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
+              أضيفي للسلة
+            </button>
+          </div>
+
+          <!-- Card 5: prod-brushes (full set) -->
+          <div class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300">
+            <div class="relative aspect-square rounded-xl overflow-hidden mb-3 bg-[#FAF6F1]">
+              <img src="images/prod-brushes.jpg" alt="طقم فرش التجميل المتكامل" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108">
+              <span class="absolute top-2 right-2 px-2 py-0.5 rounded-md bg-[#6B7F5E] text-[10px] font-bold text-white">طقم فاخر</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-1 text-[#D4AF37] text-xs mb-1">
+                <span>★ 4.8</span>
+                <span class="text-stone-400 text-[10px]">(110 تقييم)</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">طقم فرش التجميل المتكامل</h3>
+              <div class="font-bold text-[#3D2F2A] text-base mb-3">329 <span class="text-xs text-[#B8962E]">ر.س</span></div>
+            </div>
+            <button onclick="addToCart({id: 'mu-4', name: 'طقم فرش التجميل المتكامل', price: 329, image: 'images/prod-brushes.jpg', category: 'فرش'})"
+              class="w-full py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
+              أضيفي للسلة
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 4 CATEGORY TILES (IMAGE AS FULL BACKGROUND, TEXT INSIDE) -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#3D2F2A] mb-3">
+            عوالم <span class="text-[#B8962E]">الجمال</span> والأنوثة
+          </h2>
+          <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+            اختاري وجهتكِ المفضلة واستكشفي مجموعاتنا الحصرية المصممة لتألقكِ اليومي.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Tile 1: Skincare -->
+          <div onclick="navigateTo('#/skincare')" class="group relative overflow-hidden rounded-3xl min-h-[300px] cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#FAF6F1]">
+            <img src="images/prod-serum.jpg" alt="قسم العناية بالبشرة" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/90 via-[#3D2F2A]/40 to-transparent z-10"></div>
+            <div class="absolute inset-x-0 bottom-0 p-8 z-20 text-right">
+              <span class="text-xs font-semibold text-[#D4AF37] mb-1 block">تغذية عميقة</span>
+              <h3 class="font-serif text-3xl font-bold text-[#F5F0EB] mb-2">
+                العناية <span class="text-[#B8962E]">بالبشرة</span>
+              </h3>
+              <p class="text-xs text-[#FAF6F1]/80 max-w-md mb-4 font-sans">سيرومات الورد المركز وكريمات الكولاجين لنضارة حريرية تفوق التوقعات.</p>
+              <span class="inline-flex items-center gap-2 text-xs font-bold text-[#D4A373] group-hover:underline">
+                استكشفي المجموعة ←
+              </span>
+            </div>
+          </div>
+
+          <!-- Tile 2: Makeup -->
+          <div onclick="navigateTo('#/makeup')" class="group relative overflow-hidden rounded-3xl min-h-[300px] cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#FAF6F1]">
+            <img src="images/prod-lipstick.jpg" alt="قسم المكياج" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/90 via-[#3D2F2A]/40 to-transparent z-10"></div>
+            <div class="absolute inset-x-0 bottom-0 p-8 z-20 text-right">
+              <span class="text-xs font-semibold text-[#D4AF37] mb-1 block">لمسات ملكية</span>
+              <h3 class="font-serif text-3xl font-bold text-[#F5F0EB] mb-2">
+                مكياج <span class="text-[#B8962E]">فاخر</span>
+              </h3>
+              <p class="text-xs text-[#FAF6F1]/80 max-w-md mb-4 font-sans">أحمر شفاه عنابي مخملي وأدوات تطبيق استثنائية لمظهر أنيق يدوم طويلاً.</p>
+              <span class="inline-flex items-center gap-2 text-xs font-bold text-[#D4A373] group-hover:underline">
+                استكشفي المجموعة ←
+              </span>
+            </div>
+          </div>
+
+          <!-- Tile 3: Perfumes -->
+          <div onclick="navigateTo('#/perfumes')" class="group relative overflow-hidden rounded-3xl min-h-[300px] cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#FAF6F1]">
+            <img src="images/prod-serum.jpg" alt="قسم العطور" loading="lazy" class="absolute inset-0 w-full h-full object-cover contrast-110 sepia-[0.2] transition-transform duration-700 group-hover:scale-108 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/90 via-[#3D2F2A]/40 to-transparent z-10"></div>
+            <div class="absolute inset-x-0 bottom-0 p-8 z-20 text-right">
+              <span class="text-xs font-semibold text-[#D4AF37] mb-1 block">أريج ساحر</span>
+              <h3 class="font-serif text-3xl font-bold text-[#F5F0EB] mb-2">
+                عطور <span class="text-[#B8962E]">تأسر</span> الحواس
+              </h3>
+              <p class="text-xs text-[#FAF6F1]/80 max-w-md mb-4 font-sans">إكسيرات زيتية فاخرة وبخاخات للجسم تفيض بعبير الورد الفرنسي والمسك الأبيض.</p>
+              <span class="inline-flex items-center gap-2 text-xs font-bold text-[#D4A373] group-hover:underline">
+                استكشفي المجموعة ←
+              </span>
+            </div>
+          </div>
+
+          <!-- Tile 4: Calm Edition -->
+          <div onclick="navigateTo('#/calm')" class="group relative overflow-hidden rounded-3xl min-h-[300px] cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#FAF6F1]">
+            <img src="images/hero-beauty.jpg" alt="المجموعة الهادئة" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-[80%_center] transition-transform duration-700 group-hover:scale-108 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/90 via-[#3D2F2A]/40 to-transparent z-10"></div>
+            <div class="absolute inset-x-0 bottom-0 p-8 z-20 text-right">
+              <span class="text-xs font-semibold text-[#D4AF37] mb-1 block">إصدار محدود</span>
+              <h3 class="font-serif text-3xl font-bold text-[#F5F0EB] mb-2">
+                المجموعة <span class="text-[#B8962E]">الهادئة</span>
+              </h3>
+              <p class="text-xs text-[#FAF6F1]/80 max-w-md mb-4 font-sans">باقات عناية متكاملة لتهدئة البشرة وتجديد حيويتها ونضارتها في صندوق راقٍ.</p>
+              <span class="inline-flex items-center gap-2 text-xs font-bold text-[#D4A373] group-hover:underline">
+                استكشفي المجموعة ←
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION: سر الإشراقة (HERO CROP ZOOMED AS BACKGROUND, TEXT INSIDE) -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="relative overflow-hidden rounded-3xl min-h-[460px] flex items-center p-8 sm:p-12 border border-[#D4AF37]/30 shadow-2xl">
+          <img src="images/hero-beauty.jpg" alt="سر الإشراقة الطبيعية" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-[right_center] scale-125 z-0">
+          
+          <!-- Soft Creamy Gradient Layer for high text contrast -->
+          <div class="absolute inset-0 bg-gradient-to-r from-[#F5F0EB]/95 via-[#F5F0EB]/85 to-[#F5F0EB]/50 backdrop-blur-[1px] z-10"></div>
+
+          <!-- Content Inside Image -->
+          <div class="relative z-20 max-w-xl text-right">
+            <span class="text-xs font-bold tracking-widest text-[#B8962E] block mb-2">فلسفة الجمال المتوازن</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3D2F2A] mb-4 leading-tight">
+              سرّ <span class="text-[#B8962E]">الإشراقة</span> الحقيقية
+            </h2>
+            <p class="font-sans text-stone-700 text-sm sm:text-base leading-relaxed mb-8">
+              في VoltEdge Beauty، نؤمن بأن الجمال الحقيقي يبدأ من الهدوء الداخلي والعناية النقية. تم تطوير تركيباتنا بمستخلصات نباتية نادرة خالية من الكيماويات القاسية لتمنحكِ مظهراً طبيعياً مشرقاً يدوم طوال اليوم.
+            </p>
+
+            <!-- 3 Stat Numbers -->
+            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-stone-300">
+              <div>
+                <span class="font-serif text-2xl sm:text-3xl font-bold text-[#B8962E] block">100%</span>
+                <span class="text-xs text-stone-600 font-semibold">مكونات طبيعية نقية</span>
+              </div>
+              <div>
+                <span class="font-serif text-2xl sm:text-3xl font-bold text-[#B8962E] block">+30 ألف</span>
+                <span class="text-xs text-stone-600 font-semibold">عميلة سعيدة ومميزة</span>
+              </div>
+              <div>
+                <span class="font-serif text-2xl sm:text-3xl font-bold text-[#B8962E] block">100%</span>
+                <span class="text-xs text-stone-600 font-semibold">خالٍ تماماً من القسوة</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WIDE BANNER: PROD-CREAM AS BACKGROUND, TEXT INSIDE -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="relative overflow-hidden rounded-3xl min-h-[380px] sm:min-h-[420px] flex items-center justify-center text-center p-8 border border-[#D4AF37]/30 shadow-2xl">
+          <img src="images/prod-cream.jpg" alt="كريم العناية بالبشرة الفاخر" loading="lazy" class="absolute inset-0 w-full h-full object-cover z-0">
+          
+          <!-- Dark Elegant Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/90 via-[#3D2F2A]/60 to-[#3D2F2A]/40 backdrop-blur-[1px] z-10"></div>
+
+          <!-- Content Inside Image -->
+          <div class="relative z-20 max-w-2xl mx-auto text-center px-4">
+            <span class="text-xs sm:text-sm font-semibold text-[#D4AF37] tracking-widest block mb-2">ترطيب ملكي مكثف</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-[#F5F0EB] mb-4 leading-tight">
+              بشرتكِ تستحق <span class="text-[#B8962E]">الأفضل</span> دائماً
+            </h2>
+            <p class="font-sans text-sm sm:text-base text-[#FAF6F1]/85 mb-8 leading-relaxed max-w-lg mx-auto">
+              اكتشفي تركيبة الكولاجين والذهب الخالص التي تمنح أنسجة البشرة نعومة مخملية ومرونة شبابية لا تقاوم.
+            </p>
+            <button onclick="navigateTo('#/skincare')" class="px-8 py-3.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-sm sm:text-base shadow-lg transition-all transform hover:scale-105 active:scale-95">
+              دلّلي نفسكِ الآن
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES BAR OVER BLURRED PROD-SERUM BACKGROUND -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="relative overflow-hidden rounded-3xl p-8 sm:p-10 border border-[#D4AF37]/30 shadow-lg">
+          <img src="images/prod-serum.jpg" alt="خلفية ميزات VoltEdge" loading="lazy" class="absolute inset-0 w-full h-full object-cover filter blur-md opacity-25 z-0">
+          <div class="absolute inset-0 bg-[#F5F0EB]/85 backdrop-blur-md z-10"></div>
+
+          <div class="relative z-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center sm:text-right">
+            
+            <div class="flex items-center gap-4 bg-white/70 p-4 rounded-2xl border border-white/60">
+              <div class="w-12 h-12 rounded-xl bg-[#FAF6F1] border border-[#D4AF37]/40 flex items-center justify-center flex-shrink-0 text-[#B8962E]">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-base text-[#3D2F2A]">شحن سريع ومجاني</h4>
+                <p class="text-xs text-stone-600 font-sans">توصيل آمن لباب منزلكِ في جميع أنحاء المملكة</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 bg-white/70 p-4 rounded-2xl border border-white/60">
+              <div class="w-12 h-12 rounded-xl bg-[#FAF6F1] border border-[#D4AF37]/40 flex items-center justify-center flex-shrink-0 text-[#B8962E]">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-base text-[#3D2F2A]">منتجات أصلية 100%</h4>
+                <p class="text-xs text-stone-600 font-sans">تركيبات مختبرة سريرياً ومعتمدة بضمان الجودة</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 bg-white/70 p-4 rounded-2xl border border-white/60">
+              <div class="w-12 h-12 rounded-xl bg-[#FAF6F1] border border-[#D4AF37]/40 flex items-center justify-center flex-shrink-0 text-[#B8962E]">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-base text-[#3D2F2A]">استبدال واسترجاع سهل</h4>
+                <p class="text-xs text-stone-600 font-sans">سياسة إرجاع مرنة ومريحة خلال 14 يوماً</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ══════════════ [2] صفحة العناية بالبشرة #/skincare ══════════════ -->
+    <div id="page-skincare" class="hidden space-y-12 pb-16">
+      
+      <!-- Skincare Top Banner: 60vh with image background and text inside -->
+      <section class="w-full min-h-[55vh] sm:min-h-[60vh] relative overflow-hidden flex items-center justify-center text-center">
+        <img src="images/prod-serum.jpg" alt="قسم العناية بالبشرة" class="absolute inset-0 w-full h-full object-cover z-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/90 via-[#3D2F2A]/50 to-[#3D2F2A]/30 z-10"></div>
+        
+        <div class="relative z-20 max-w-2xl px-4 text-center">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-[#E8B4B8]/30 border border-[#E8B4B8]/50 text-xs font-bold text-[#FAF6F1] mb-3">
+            مستخلصات الورد الدمشقي
+          </span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold text-[#F5F0EB] mb-4">
+            عناية بالبشرة <span class="text-[#B8962E]">تليق بكِ</span>
+          </h1>
+          <p class="font-sans text-sm sm:text-base text-[#FAF6F1]/85 leading-relaxed">
+            سيرومات مكثفة وكريمات عناية فائقة تعيد بناء النضارة وتمنح بشرتكِ إشراقة مخملية تدوم.
+          </p>
+        </div>
+      </section>
+
+      <!-- Filter & Sort Bar -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl p-4 border border-[#D4AF37]/30 shadow-sm flex flex-wrap items-center justify-between gap-4">
+          
+          <!-- Category Tabs -->
+          <div data-filter-group="skincare" class="flex flex-wrap items-center gap-2">
+            <button data-filter="all" onclick="setFilter('skincare', 'all')" class="px-4 py-2 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold text-sm shadow-sm transition-all">الكل</button>
+            <button data-filter="سيروم" onclick="setFilter('skincare', 'سيروم')" class="px-4 py-2 rounded-xl bg-white/70 hover:bg-white text-[#3D2F2A] border border-[#D4AF37]/30 text-sm transition-all">سيروم</button>
+            <button data-filter="كريمات" onclick="setFilter('skincare', 'كريمات')" class="px-4 py-2 rounded-xl bg-white/70 hover:bg-white text-[#3D2F2A] border border-[#D4AF37]/30 text-sm transition-all">كريمات</button>
+            <button data-filter="تنظيف" onclick="setFilter('skincare', 'تنظيف')" class="px-4 py-2 rounded-xl bg-white/70 hover:bg-white text-[#3D2F2A] border border-[#D4AF37]/30 text-sm transition-all">تنظيف</button>
+          </div>
+
+          <!-- Sorting Select -->
+          <div class="flex items-center gap-2 text-xs sm:text-sm">
+            <span class="text-stone-600 font-semibold">ترتيب حسب:</span>
+            <select onchange="setSort('skincare', this.value)" class="bg-[#FAF6F1] border border-[#D4AF37]/30 rounded-xl px-3 py-1.5 text-[#3D2F2A] focus:outline-none focus:ring-1 focus:ring-[#D4AF37]">
+              <option value="featured">المميز</option>
+              <option value="price-desc">الأعلى سعراً</option>
+              <option value="price-asc">الأقل سعراً</option>
+              <option value="rating-desc">الأعلى تقييماً</option>
+            </select>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 6 Skincare Products Grid (3:4 ratio cards with text inside image) -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="skincare-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Routine in 3 Steps with Image Background -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <div class="relative overflow-hidden rounded-3xl p-8 sm:p-12 border border-[#D4AF37]/30 shadow-xl">
+          <img src="images/hero-beauty.jpg" alt="روتين العناية بالبشرة" loading="lazy" class="absolute inset-0 w-full h-full object-cover filter blur-[2px] opacity-25 z-0">
+          <div class="absolute inset-0 bg-[#F5F0EB]/90 backdrop-blur-md z-10"></div>
+
+          <div class="relative z-20 text-center max-w-3xl mx-auto">
+            <h2 class="font-serif text-3xl font-bold text-[#3D2F2A] mb-3">
+              روتينكِ اليومي في <span class="text-[#B8962E]">3 خطوات</span>
+            </h2>
+            <p class="text-stone-600 text-sm mb-10">خطوات بسيطة ومدروسة تضمن لكِ امتصاصاً فعالاً ومظهراً متألقاً كل صباح ومساء.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-right">
+              <div class="bg-white/80 p-6 rounded-2xl border border-[#FAF6F1] shadow-sm">
+                <div class="w-10 h-10 rounded-full bg-[#E8B4B8]/40 text-[#B8962E] font-serif font-bold text-lg flex items-center justify-center mb-4">١</div>
+                <h4 class="font-serif font-bold text-lg text-[#3D2F2A] mb-2">التنظيف النقي</h4>
+                <p class="text-xs text-stone-600 font-sans leading-relaxed">استخدمي غسول الورد لإزالة كافة الشوائب وتحضير المسام للتغذية.</p>
+              </div>
+
+              <div class="bg-white/80 p-6 rounded-2xl border border-[#FAF6F1] shadow-sm">
+                <div class="w-10 h-10 rounded-full bg-[#E8B4B8]/40 text-[#B8962E] font-serif font-bold text-lg flex items-center justify-center mb-4">٢</div>
+                <h4 class="font-serif font-bold text-lg text-[#3D2F2A] mb-2">السيروم المركز</h4>
+                <p class="text-xs text-stone-600 font-sans leading-relaxed">ضعي قطرات من سيروم الورد المركز مع التربيت اللطيف لترطيب عميق.</p>
+              </div>
+
+              <div class="bg-white/80 p-6 rounded-2xl border border-[#FAF6F1] shadow-sm">
+                <div class="w-10 h-10 rounded-full bg-[#E8B4B8]/40 text-[#B8962E] font-serif font-bold text-lg flex items-center justify-center mb-4">٣</div>
+                <h4 class="font-serif font-bold text-lg text-[#3D2F2A] mb-2">حبس الرطوبة</h4>
+                <p class="text-xs text-stone-600 font-sans leading-relaxed">طبّقي كريم الكولاجين والذهب لحماية الحاجز الجلدي وتثبيت النضارة.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ══════════════ [3] صفحة المكياج #/makeup ══════════════ -->
+    <div id="page-makeup" class="hidden space-y-12 pb-16">
+      
+      <!-- Makeup Banner: prod-lipstick as background, text inside -->
+      <section class="w-full min-h-[55vh] sm:min-h-[60vh] relative overflow-hidden flex items-center justify-center text-center">
+        <img src="images/prod-lipstick.jpg" alt="مكياج فاخر" class="absolute inset-0 w-full h-full object-cover z-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/90 via-[#3D2F2A]/50 to-[#3D2F2A]/30 z-10"></div>
+        
+        <div class="relative z-20 max-w-2xl px-4 text-center">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-[#E8B4B8]/30 border border-[#E8B4B8]/50 text-xs font-bold text-[#FAF6F1] mb-3">
+            ألوان مخملية آسرة
+          </span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold text-[#F5F0EB] mb-4">
+            مكياج بلمسة <span class="text-[#B8962E]">فاخرة</span>
+          </h1>
+          <p class="font-sans text-sm sm:text-base text-[#FAF6F1]/85 leading-relaxed">
+            ألوان غنية مفعمة بالثقة وأدوات مكياج متقنة تمنحكِ مظهراً ملكياً يسلب الأنظار.
+          </p>
+        </div>
+      </section>
+
+      <!-- Filter & Sort Bar -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl p-4 border border-[#D4AF37]/30 shadow-sm flex flex-wrap items-center justify-between gap-4">
+          <div data-filter-group="makeup" class="flex flex-wrap items-center gap-2">
+            <button data-filter="all" onclick="setFilter('makeup', 'all')" class="px-4 py-2 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold text-sm shadow-sm transition-all">الكل</button>
+            <button data-filter="شفاه" onclick="setFilter('makeup', 'شفاه')" class="px-4 py-2 rounded-xl bg-white/70 hover:bg-white text-[#3D2F2A] border border-[#D4AF37]/30 text-sm transition-all">شفاه</button>
+            <button data-filter="فرش" onclick="setFilter('makeup', 'فرش')" class="px-4 py-2 rounded-xl bg-white/70 hover:bg-white text-[#3D2F2A] border border-[#D4AF37]/30 text-sm transition-all">فرش</button>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs sm:text-sm">
+            <span class="text-stone-600 font-semibold">ترتيب حسب:</span>
+            <select onchange="setSort('makeup', this.value)" class="bg-[#FAF6F1] border border-[#D4AF37]/30 rounded-xl px-3 py-1.5 text-[#3D2F2A] focus:outline-none focus:ring-1 focus:ring-[#D4AF37]">
+              <option value="featured">المميز</option>
+              <option value="price-desc">الأعلى سعراً</option>
+              <option value="price-asc">الأقل سعراً</option>
+              <option value="rating-desc">الأعلى تقييماً</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 Makeup Products Grid -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="makeup-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Section: أدواتك تصنع الفرق (prod-brushes background with text inside) -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <div class="relative overflow-hidden rounded-3xl min-h-[380px] flex items-center p-8 sm:p-12 border border-[#D4AF37]/30 shadow-2xl">
+          <img src="images/prod-brushes.jpg" alt="فرش مكياج فاخرة" loading="lazy" class="absolute inset-0 w-full h-full object-cover scale-125 object-center z-0">
+          <div class="absolute inset-0 bg-gradient-to-r from-[#3D2F2A]/90 via-[#3D2F2A]/75 to-transparent z-10"></div>
+
+          <div class="relative z-20 max-w-lg text-right">
+            <span class="text-xs font-semibold text-[#D4AF37] block mb-2">ألياف حريرية نباتية</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#F5F0EB] mb-4">
+              أدواتكِ <span class="text-[#B8962E]">تصنع الفرق</span>
+            </h2>
+            <p class="font-sans text-sm text-[#FAF6F1]/85 mb-8 leading-relaxed">
+              مصنوعة بأعلى معايير الحرفية مع مقابض خضراء زيتية وحلقات ذهبية توفر تحكماً فائقاً ودقة استثنائية في توزيع كل مستحضر.
+            </p>
+            <button onclick="addToCart({id: 'mu-4', name: 'طقم فرش التجميل المتكامل', price: 329, image: 'images/prod-brushes.jpg', category: 'فرش'})"
+              class="px-8 py-3.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-sm shadow-md transition-all active:scale-95">
+              تسوقي طقم الفرش الآن
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ══════════════ [4] صفحة العطور #/perfumes ══════════════ -->
+    <div id="page-perfumes" class="hidden space-y-12 pb-16">
+      
+      <!-- Perfume Banner: prod-serum with distinct warm filter as background -->
+      <section class="w-full min-h-[55vh] sm:min-h-[60vh] relative overflow-hidden flex items-center justify-center text-center">
+        <img src="images/prod-serum.jpg" alt="عطور فاخرة" class="absolute inset-0 w-full h-full object-cover contrast-115 sepia-[0.25] z-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/90 via-[#3D2F2A]/50 to-[#3D2F2A]/30 z-10"></div>
+        
+        <div class="relative z-20 max-w-2xl px-4 text-center">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-[#E8B4B8]/30 border border-[#E8B4B8]/50 text-xs font-bold text-[#FAF6F1] mb-3">
+            قطرات عطرية ملكية
+          </span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold text-[#F5F0EB] mb-4">
+            عطور تحكي <span class="text-[#B8962E]">أنوثتكِ</span>
+          </h1>
+          <p class="font-sans text-sm sm:text-base text-[#FAF6F1]/85 leading-relaxed">
+            زيوت عطرية نقية وبخاخات للجسم تترك بصمة ساحرة من الورد الطبيعي والمسك والعنبر.
+          </p>
+        </div>
+      </section>
+
+      <!-- Filter & Sort Bar -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white/80 backdrop-blur-md rounded-2xl p-4 border border-[#D4AF37]/30 shadow-sm flex flex-wrap items-center justify-between gap-4">
+          <div data-filter-group="perfumes" class="flex flex-wrap items-center gap-2">
+            <button data-filter="all" onclick="setFilter('perfumes', 'all')" class="px-4 py-2 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold text-sm shadow-sm transition-all">الكل</button>
+            <button data-filter="زهري" onclick="setFilter('perfumes', 'زهري')" class="px-4 py-2 rounded-xl bg-white/70 hover:bg-white text-[#3D2F2A] border border-[#D4AF37]/30 text-sm transition-all">زهري</button>
+            <button data-filter="مسكي" onclick="setFilter('perfumes', 'مسكي')" class="px-4 py-2 rounded-xl bg-white/70 hover:bg-white text-[#3D2F2A] border border-[#D4AF37]/30 text-sm transition-all">مسكي</button>
+            <button data-filter="شرقي" onclick="setFilter('perfumes', 'شرقي')" class="px-4 py-2 rounded-xl bg-white/70 hover:bg-white text-[#3D2F2A] border border-[#D4AF37]/30 text-sm transition-all">شرقي</button>
+            <button data-filter="فاكهي" onclick="setFilter('perfumes', 'فاكهي')" class="px-4 py-2 rounded-xl bg-white/70 hover:bg-white text-[#3D2F2A] border border-[#D4AF37]/30 text-sm transition-all">فاكهي</button>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs sm:text-sm">
+            <span class="text-stone-600 font-semibold">ترتيب حسب:</span>
+            <select onchange="setSort('perfumes', this.value)" class="bg-[#FAF6F1] border border-[#D4AF37]/30 rounded-xl px-3 py-1.5 text-[#3D2F2A] focus:outline-none focus:ring-1 focus:ring-[#D4AF37]">
+              <option value="featured">المميز</option>
+              <option value="price-desc">الأعلى سعراً</option>
+              <option value="price-asc">الأقل سعراً</option>
+              <option value="rating-desc">الأعلى تقييماً</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 Perfumes Products Grid -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="perfumes-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Notes Story Section -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <div class="relative overflow-hidden rounded-3xl p-8 sm:p-12 border border-[#D4AF37]/30 shadow-xl">
+          <img src="images/prod-cream.jpg" alt="المكونات العطرية" loading="lazy" class="absolute inset-0 w-full h-full object-cover filter blur-[2px] opacity-20 z-0">
+          <div class="absolute inset-0 bg-[#F5F0EB]/90 backdrop-blur-md z-10"></div>
+
+          <div class="relative z-20 text-center max-w-3xl mx-auto">
+            <h2 class="font-serif text-3xl font-bold text-[#3D2F2A] mb-3">
+              هرم <span class="text-[#B8962E]">النفحات</span> العطرية
+            </h2>
+            <p class="text-stone-600 text-sm mb-8">رحلة حسية تتدرج بنعومة من الانتعاش الزهري إلى العمق المسكي الدافئ.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div class="bg-white/80 p-5 rounded-2xl border border-stone-100">
+                <span class="text-xs font-bold text-[#B8962E] block mb-1">المقدمة (القمة)</span>
+                <h4 class="font-serif font-bold text-lg text-[#3D2F2A] mb-2">أزهار الورد والكرز</h4>
+                <p class="text-xs text-stone-600 font-sans">انطلاقة مشعة تمنحكِ شعوراً فورياً بالانتعاش والبهجة.</p>
+              </div>
+
+              <div class="bg-white/80 p-5 rounded-2xl border border-stone-100">
+                <span class="text-xs font-bold text-[#B8962E] block mb-1">القلب</span>
+                <h4 class="font-serif font-bold text-lg text-[#3D2F2A] mb-2">الياسمين والفانيلا</h4>
+                <p class="text-xs text-stone-600 font-sans">نبض دافئ يفيض بالجاذبية والأنوثة الهادئة المتوازنة.</p>
+              </div>
+
+              <div class="bg-white/80 p-5 rounded-2xl border border-stone-100">
+                <span class="text-xs font-bold text-[#B8962E] block mb-1">القاعدة (الثبات)</span>
+                <h4 class="font-serif font-bold text-lg text-[#3D2F2A] mb-2">المسك الأبيض وخشب الصندل</h4>
+                <p class="text-xs text-stone-600 font-sans">ثبات ملكي يدوم لساعات طويلة ويترك أثراً لا يُنسى.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ══════════════ [5] المجموعة الهادئة #/calm ══════════════ -->
+    <div id="page-calm" class="hidden space-y-12 pb-16">
+      
+      <!-- Calm Banner: hero-beauty.jpg as background, text inside -->
+      <section class="w-full min-h-[55vh] sm:min-h-[60vh] relative overflow-hidden flex items-center justify-center text-center">
+        <img src="images/hero-beauty.jpg" alt="المجموعة الهادئة" class="absolute inset-0 w-full h-full object-cover object-[center_top] z-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/90 via-[#3D2F2A]/55 to-[#3D2F2A]/30 z-10"></div>
+        
+        <div class="relative z-20 max-w-2xl px-4 text-center">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-[#E8B4B8]/30 border border-[#E8B4B8]/50 text-xs font-bold text-[#FAF6F1] mb-3">
+            إصدار محدود ومميز
+          </span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold text-[#F5F0EB] mb-4">
+            المجموعة الهادئة — <span class="text-[#B8962E]">إصدار محدود</span>
+          </h1>
+          <p class="font-sans text-sm sm:text-base text-[#FAF6F1]/85 leading-relaxed">
+            باقات حصرية تجمع أفضل ما ابتكرناه من عناية ومكياج لتهدئة حواسكِ وتجديد إشراقتكِ.
+          </p>
+
+          <!-- Countdown Timer -->
+          <div class="mt-8 inline-flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl bg-black/40 backdrop-blur-md border border-[#D4AF37]/40 text-[#F5F0EB]">
+            <div class="text-center">
+              <span id="timer-days" class="font-serif text-xl sm:text-2xl font-bold block text-[#B8962E]">03</span>
+              <span class="text-[10px] text-stone-300">يوم</span>
+            </div>
+            <span class="text-[#B8962E] font-bold text-lg">:</span>
+            <div class="text-center">
+              <span id="timer-hours" class="font-serif text-xl sm:text-2xl font-bold block text-[#B8962E]">14</span>
+              <span class="text-[10px] text-stone-300">ساعة</span>
+            </div>
+            <span class="text-[#B8962E] font-bold text-lg">:</span>
+            <div class="text-center">
+              <span id="timer-mins" class="font-serif text-xl sm:text-2xl font-bold block text-[#B8962E]">42</span>
+              <span class="text-[10px] text-stone-300">دقيقة</span>
+            </div>
+            <span class="text-[#B8962E] font-bold text-lg">:</span>
+            <div class="text-center">
+              <span id="timer-secs" class="font-serif text-xl sm:text-2xl font-bold block text-[#B8962E]">18</span>
+              <span class="text-[10px] text-stone-300">ثانية</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 Large Bundle Cards: full image background, text and price inside -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <h2 class="font-serif text-3xl font-bold text-[#3D2F2A] mb-2">
+            باقات <span class="text-[#B8962E]">الجمال</span> الشاملة
+          </h2>
+          <p class="text-stone-600 text-sm">مجموعات هدايا فاخرة بأسعار مميزة وتغليف ملكي خاص.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Bundle 1 -->
+          <div class="group relative overflow-hidden rounded-3xl min-h-[460px] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-[#FAF6F1] flex flex-col justify-end">
+            <img src="images/hero-beauty.jpg" alt="باقة الإشراقة الفائقة" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-[75%_center] transition-transform duration-700 group-hover:scale-108 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/95 via-[#3D2F2A]/60 to-transparent z-10"></div>
+            
+            <div class="relative z-20 p-6 sm:p-8 text-right">
+              <span class="px-3 py-1 rounded-full bg-[#E8B4B8] text-[11px] font-bold text-[#3D2F2A] inline-block mb-3">توفير 15%</span>
+              <h3 class="font-serif text-2xl font-bold text-[#F5F0EB] mb-2">باقة الإشراقة الفائقة</h3>
+              <p class="text-xs text-[#FAF6F1]/80 mb-4 leading-relaxed font-sans">
+                تحتوي على: سيروم الورد المخملي + كريم الفيتامينات + أحمر الشفاه العنابي في صندوق مخملي فاخر.
+              </p>
+              
+              <div class="flex items-center justify-between gap-4 pt-4 border-t border-white/20">
+                <div>
+                  <span class="text-[11px] text-stone-300 line-through block">687 ر.س</span>
+                  <span class="font-bold text-xl text-[#F5F0EB]">649 <span class="text-xs text-[#D4AF37]">ر.س</span></span>
+                </div>
+                <button onclick="addToCart({id: 'bundle-1', name: 'باقة الإشراقة الفائقة', price: 649, image: 'images/hero-beauty.jpg', category: 'باقات'})"
+                  class="px-5 py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-md transition-all active:scale-95">
+                  أضيفي الباقة للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bundle 2 -->
+          <div class="group relative overflow-hidden rounded-3xl min-h-[460px] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-[#FAF6F1] flex flex-col justify-end">
+            <img src="images/prod-serum.jpg" alt="باقة العروس الملكية" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/95 via-[#3D2F2A]/60 to-transparent z-10"></div>
+            
+            <div class="relative z-20 p-6 sm:p-8 text-right">
+              <span class="px-3 py-1 rounded-full bg-[#B8962E] text-[11px] font-bold text-white inline-block mb-3">الباقة الملكية</span>
+              <h3 class="font-serif text-2xl font-bold text-[#F5F0EB] mb-2">باقة العروس الملكية</h3>
+              <p class="text-xs text-[#FAF6F1]/80 mb-4 leading-relaxed font-sans">
+                تحتوي على: طقم فرش التجميل المتكامل + سيروم الورد + كريم الليل + محدد الشفاه الحريري.
+              </p>
+              
+              <div class="flex items-center justify-between gap-4 pt-4 border-t border-white/20">
+                <div>
+                  <span class="text-[11px] text-stone-300 line-through block">976 ر.س</span>
+                  <span class="font-bold text-xl text-[#F5F0EB]">899 <span class="text-xs text-[#D4AF37]">ر.س</span></span>
+                </div>
+                <button onclick="addToCart({id: 'bundle-2', name: 'باقة العروس الملكية', price: 899, image: 'images/prod-serum.jpg', category: 'باقات'})"
+                  class="px-5 py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-md transition-all active:scale-95">
+                  أضيفي الباقة للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bundle 3 -->
+          <div class="group relative overflow-hidden rounded-3xl min-h-[460px] shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-[#FAF6F1] flex flex-col justify-end">
+            <img src="images/prod-cream.jpg" alt="باقة الاسترخاء الهادئ" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/95 via-[#3D2F2A]/60 to-transparent z-10"></div>
+            
+            <div class="relative z-20 p-6 sm:p-8 text-right">
+              <span class="px-3 py-1 rounded-full bg-[#6B7F5E] text-[11px] font-bold text-white inline-block mb-3">هدوء ونقاء</span>
+              <h3 class="font-serif text-2xl font-bold text-[#F5F0EB] mb-2">باقة الاسترخاء الهادئ</h3>
+              <p class="text-xs text-[#FAF6F1]/80 mb-4 leading-relaxed font-sans">
+                تحتوي على: كريم الترطيب المغذي + زيت العطر الملكي + فرشاة تدليك وتوزيع ناعمة.
+              </p>
+              
+              <div class="flex items-center justify-between gap-4 pt-4 border-t border-white/20">
+                <div>
+                  <span class="text-[11px] text-stone-300 line-through block">547 ر.س</span>
+                  <span class="font-bold text-xl text-[#F5F0EB]">499 <span class="text-xs text-[#D4AF37]">ر.س</span></span>
+                </div>
+                <button onclick="addToCart({id: 'bundle-3', name: 'باقة الاسترخاء الهادئ', price: 499, image: 'images/prod-cream.jpg', category: 'باقات'})"
+                  class="px-5 py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-md transition-all active:scale-95">
+                  أضيفي الباقة للسلة
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- VIP Club Newsletter (prod-lipstick background with text inside) -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <div class="relative overflow-hidden rounded-3xl min-h-[340px] flex items-center justify-center p-8 sm:p-12 border border-[#D4AF37]/30 shadow-2xl text-center">
+          <img src="images/prod-lipstick.jpg" alt="نادي VoltEdge الحصري" loading="lazy" class="absolute inset-0 w-full h-full object-cover filter brightness-50 z-0">
+          <div class="absolute inset-0 bg-[#3D2F2A]/70 backdrop-blur-[2px] z-10"></div>
+
+          <div class="relative z-20 max-w-xl mx-auto text-center">
+            <span class="text-xs font-semibold text-[#D4AF37] block mb-2">عضوية حصرية مجانية</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#F5F0EB] mb-3">
+              انضمي إلى نادي <span class="text-[#B8962E]">VoltEdge</span>
+            </h2>
+            <p class="font-sans text-xs sm:text-sm text-[#FAF6F1]/85 mb-6 leading-relaxed">
+              سجّلي بريدكِ لتكوني أول من يتعرف على الإصدارات الحصرية واستمتعي بخصم 15% على أول طلب لكِ.
+            </p>
+
+            <form onsubmit="handleNewsletter(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input type="email" id="newsletter-email" required placeholder="أدخلي بريدكِ الإلكتروني"
+                class="flex-grow px-4 py-3 rounded-xl bg-white/90 text-[#3D2F2A] placeholder-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
+              <button type="submit" class="px-6 py-3 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-sm shadow-md transition-all">
+                اشتراك فوري
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ══════════════ [6] صفحة السلة والدفع #/cart ══════════════ -->
+    <div id="page-cart" class="hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+      <div class="flex items-center justify-between pb-4 border-b border-[#D4AF37]/20">
+        <div>
+          <h1 class="font-serif text-3xl sm:text-4xl font-bold text-[#3D2F2A]">سلة <span class="text-[#B8962E]">التسوق</span></h1>
+          <p class="text-xs text-stone-600 mt-1 font-sans">راجعي منتجاتكِ المختارة وأكملي طلبكِ بكل سهولة وأمان.</p>
+        </div>
+        <a href="#/home" class="text-xs sm:text-sm font-semibold text-[#B8962E] hover:underline flex items-center gap-1">
+          <span>متابعة التسوق</span>
+          <span>←</span>
+        </a>
+      </div>
+
+      <!-- Container where cart items or empty state are rendered by JS -->
+      <div id="cart-container">
+        <!-- Injected via renderCartPage() -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- COMMON FOOTER: OVER PROD-SERUM BACKGROUND (TEXT INSIDE) -->
+  <footer class="relative overflow-hidden bg-[#3D2F2A] text-[#F5F0EB] pt-16 pb-12 mt-16 border-t border-[#D4AF37]/30">
+    <!-- Subtle Image Background -->
+    <img src="images/prod-serum.jpg" alt="خلفية فوتر VoltEdge" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-10 filter blur-[3px] z-0">
+    <div class="absolute inset-0 bg-[#3D2F2A]/90 z-10"></div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-stone-700/60">
+        
+        <!-- Brand Col -->
+        <div class="md:col-span-1 space-y-4">
+          <div class="flex flex-col items-start leading-none">
+            <span class="font-serif italic tracking-wider text-2xl lg:text-3xl font-bold text-[#F5F0EB]">VoltEdge</span>
+            <span class="text-[9px] font-sans tracking-[0.3em] text-[#B8962E] font-bold mt-0.5">BEAUTY</span>
+          </div>
+          <p class="text-xs text-[#FAF6F1]/75 leading-relaxed font-sans">
+            علامة رائدة في الجمال والأنوثة الهادئة، تقدم تركيبات استثنائية مستخلصة من أجود بتلات الورد والزيوت الملكية الطبيعية.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <!-- Instagram -->
+            <a href="javascript:void(0)" class="w-8 h-8 rounded-full bg-stone-800/80 hover:bg-[#D4A373] text-[#F5F0EB] hover:text-[#1C1917] flex items-center justify-center transition-all" aria-label="انستغرام">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <!-- TikTok -->
+            <a href="javascript:void(0)" class="w-8 h-8 rounded-full bg-stone-800/80 hover:bg-[#D4A373] text-[#F5F0EB] hover:text-[#1C1917] flex items-center justify-center transition-all" aria-label="تيك توك">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-1.01v9.65c0 3.2-1.6 6.35-4.43 7.82-3.1 1.61-7.06 1.12-9.67-1.19-2.58-2.28-3.32-6.18-1.76-9.28 1.54-3.06 4.9-4.88 8.3-4.4v4.11c-1.76-.2-3.56.57-4.42 2.12-.87 1.55-.47 3.59.95 4.67 1.43 1.09 3.52 1.04 4.91-.11 1.05-.88 1.56-2.3 1.54-3.66V.02z"/></svg>
+            </a>
+            <!-- Snapchat -->
+            <a href="javascript:void(0)" class="w-8 h-8 rounded-full bg-stone-800/80 hover:bg-[#D4A373] text-[#F5F0EB] hover:text-[#1C1917] flex items-center justify-center transition-all" aria-label="سناب شات">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c4.418 0 8 3.582 8 8 0 2.21-.896 4.21-2.344 5.656l-.656.657v1.687l1.5.5v1.5h-13v-1.5l1.5-.5v-1.687l-.656-.657c-1.448-1.446-2.344-3.446-2.344-5.656 0-4.418 3.582-8 8-8z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-serif font-bold text-base text-[#D4AF37] mb-4">أقسام المتجر</h4>
+          <ul class="space-y-2.5 text-xs text-[#FAF6F1]/80">
+            <li><a href="#/skincare" class="hover:text-[#D4AF37] transition-colors">العناية بالبشرة والسيرومات</a></li>
+            <li><a href="#/makeup" class="hover:text-[#D4AF37] transition-colors">المكياج وأحمر الشفاه</a></li>
+            <li><a href="#/perfumes" class="hover:text-[#D4AF37] transition-colors">العطور وزيوت المسك</a></li>
+            <li><a href="#/calm" class="hover:text-[#D4AF37] transition-colors">المجموعة الهادئة المحدودة</a></li>
+            <li><a href="#/cart" class="hover:text-[#D4AF37] transition-colors">سلة المشتريات والدفع</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Care -->
+        <div>
+          <h4 class="font-serif font-bold text-base text-[#D4AF37] mb-4">خدمة العملاء</h4>
+          <ul class="space-y-2.5 text-xs text-[#FAF6F1]/80">
+            <li><span class="block">ساعات العمل: السبت - الخميس (9 ص - 10 م)</span></li>
+            <li><span class="block">واتساب الدعم: +966 50 123 4567</span></li>
+            <li><span class="block">البريد: care@voltedge-beauty.com</span></li>
+            <li><a href="javascript:void(0)" class="hover:text-[#D4AF37] transition-colors">سياسة الاستبدال والاسترجاع</a></li>
+            <li><a href="javascript:void(0)" class="hover:text-[#D4AF37] transition-colors">الأسئلة الشائعة والشحن</a></li>
+          </ul>
+        </div>
+
+        <!-- Payment & Trust -->
+        <div>
+          <h4 class="font-serif font-bold text-base text-[#D4AF37] mb-4">طرق الدفع المعتمدة</h4>
+          <p class="text-xs text-[#FAF6F1]/75 mb-4 leading-relaxed font-sans">
+            نوفر وسائل دفع آمنة ومشفرة متوافقة مع الأنظمة المصرفية السعودية.
+          </p>
+          <div class="flex items-center gap-2.5 flex-wrap">
+            <!-- Mada SVG -->
+            <div class="h-8 px-2.5 bg-white rounded flex items-center justify-center" title="مدى">
+              <span class="text-[11px] font-extrabold text-[#007A3D]">mada مدى</span>
+            </div>
+            <!-- Visa SVG -->
+            <div class="h-8 px-2.5 bg-white rounded flex items-center justify-center" title="Visa">
+              <span class="text-[12px] font-extrabold text-[#1A1F71] italic">VISA</span>
+            </div>
+            <!-- Mastercard SVG -->
+            <div class="h-8 px-2.5 bg-white rounded flex items-center justify-center gap-0.5" title="Mastercard">
+              <span class="w-3.5 h-3.5 rounded-full bg-[#EB001B] inline-block -mr-1.5 opacity-90"></span>
+              <span class="w-3.5 h-3.5 rounded-full bg-[#F79E1B] inline-block opacity-90"></span>
+            </div>
+            <!-- Apple Pay -->
+            <div class="h-8 px-2.5 bg-black text-white rounded flex items-center justify-center font-bold text-[11px]" title="Apple Pay">
+              Pay
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#FAF6F1]/60">
+        <p>© 2026 VoltEdge Beauty. جميع الحقوق محفوظة لعلامة VoltEdge.</p>
+        <p class="flex items-center gap-1 font-serif text-[#D4AF37]">
+          صُنع بحب لأجلكِ ولإشراقتكِ الملكية ✨
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-[#3D2F2A] text-[#F5F0EB] px-5 py-3 rounded-2xl shadow-2xl border border-[#D4AF37] flex items-center gap-3 backdrop-blur-md">
+      <div class="w-6 h-6 rounded-full bg-[#D4AF37] text-[#1C1917] flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</div>
+      <span id="toast-message" class="text-xs sm:text-sm font-semibold">تمت الإضافة إلى السلة بنجاح ✨</span>
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS MODAL -->
+  <div id="order-modal" class="fixed inset-0 bg-stone-950/60 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+    <div class="bg-[#FAF6F1] max-w-md w-full rounded-3xl p-6 sm:p-8 text-center border border-[#D4AF37]/40 shadow-2xl relative">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#FAF6F1] border-2 border-[#D4AF37] flex items-center justify-center text-[#B8962E] shadow-md">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+      </div>
+
+      <span class="text-xs font-bold text-[#B8962E] tracking-widest block mb-1">تم تأكيد الطلب بنجاح</span>
+      <h3 class="font-serif text-2xl sm:text-3xl font-bold text-[#3D2F2A] mb-2">شكراً لاختياركِ VoltEdge!</h3>
+      <p class="text-xs text-stone-600 mb-6 leading-relaxed">
+        سعداء بثقتكِ يا جميلة. تم تسجيل طلبكِ وسيتم تجهيز شحنتكِ بعناية فائقة لتصلكِ خلال ٢ إلى ٣ أيام عمل.
+      </p>
+
+      <div class="bg-white rounded-2xl p-4 text-right space-y-2.5 text-xs text-stone-700 border border-stone-200/60 mb-6">
+        <div class="flex justify-between">
+          <span class="text-stone-500">رقم الطلب:</span>
+          <span id="modal-order-id" class="font-bold text-[#3D2F2A] font-mono">VE-84920</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-stone-500">الاسم المستلم:</span>
+          <span id="modal-cust-name" class="font-semibold text-[#3D2F2A]">-</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-stone-500">عنوان التوصيل:</span>
+          <span id="modal-cust-city" class="font-semibold text-[#3D2F2A]">-</span>
+        </div>
+        <div class="flex justify-between pt-2 border-t border-stone-200">
+          <span class="font-bold text-stone-800">المبلغ الإجمالي المدفوع:</span>
+          <span id="modal-total" class="font-bold text-[#B8962E] font-serif text-sm">0 ر.س</span>
+        </div>
+      </div>
+
+      <button onclick="closeOrderModal()" class="w-full py-3.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-sm shadow-md transition-all">
+        العودة للصفحة الرئيسية
+      </button>
+    </div>
+  </div>
+
+  <!-- APPLICATION LOGIC -->
+  <script>
+// VoltEdge Beauty - Application State & Logic
+const PRODUCTS_DATA = {
+  skincare: [
+    {
+      id: 'skin-1',
+      name: 'سيروم الورد المخملي المركز',
+      category: 'سيروم',
+      price: 349,
+      rating: 5.0,
+      image: 'images/prod-serum.jpg',
+      imgClass: 'object-cover',
+      desc: 'تركيبة مكثفة من بتلات الورد الدمشقي مع الهيالورونيك لنضارة فائقة وترطيب عميق.'
+    },
+    {
+      id: 'skin-2',
+      name: 'كريم الكولاجين والذهب 24 قيراط',
+      category: 'كريمات',
+      price: 419,
+      rating: 4.9,
+      image: 'images/prod-cream.jpg',
+      imgClass: 'object-cover brightness-105',
+      desc: 'إكسير استعادة الشباب وحبس الرطوبة، مع جزيئات الذهب الخالص لمرونة تدوم.'
+    },
+    {
+      id: 'skin-3',
+      name: 'غسول التقشير اللطيف ببتلات الورد',
+      category: 'تنظيف',
+      price: 189,
+      rating: 4.8,
+      image: 'images/prod-serum.jpg',
+      imgClass: 'object-cover brightness-95 saturate-110',
+      desc: 'تنقية حريرية للبشرة تزيل الشوائب بلطف وتعيد التوازن الطبيعي دون جفاف.'
+    },
+    {
+      id: 'skin-4',
+      name: 'كريم الليل المغذي بالببتيدات',
+      category: 'كريمات',
+      price: 389,
+      rating: 4.9,
+      image: 'images/prod-cream.jpg',
+      imgClass: 'object-cover contrast-105',
+      desc: 'تجديد خلوي عميق أثناء النوم يمنحكِ بشرة ناعمة ومشدودة عند الصباح.'
+    },
+    {
+      id: 'skin-5',
+      name: 'سيروم النضارة الفورية بالفيتامينات',
+      category: 'سيروم',
+      price: 279,
+      rating: 4.7,
+      image: 'images/prod-serum.jpg',
+      imgClass: 'object-cover scale-110 object-top',
+      desc: 'مزيج فيتامين C و E لتفتيح وتوحيد لون البشرة وحمايتها من العوامل البيئية.'
+    },
+    {
+      id: 'skin-6',
+      name: 'قناع الترميم العميق بالزيوت الطبيعية',
+      category: 'كريمات',
+      price: 229,
+      rating: 4.8,
+      image: 'images/prod-cream.jpg',
+      imgClass: 'object-cover sepia-[0.15]',
+      desc: 'علاج أسبوعي مركز يعيد بناء الحاجز الواقي للبشرة ويمنحها نعومة الحرير.'
+    }
+  ],
+  makeup: [
+    {
+      id: 'mu-1',
+      name: 'أحمر شفاه مخملي راقي',
+      category: 'شفاه',
+      price: 119,
+      rating: 5.0,
+      image: 'images/prod-lipstick.jpg',
+      imgClass: 'object-cover',
+      desc: 'لون عنابي فاخر بتغطية كاملة من لمسة واحدة وثبات مريح يدوم 12 ساعة.'
+    },
+    {
+      id: 'mu-2',
+      name: 'فرشاة دمج وتوزيع احترافية',
+      category: 'فرش',
+      price: 179,
+      rating: 4.7,
+      image: 'images/prod-brushes.jpg',
+      imgClass: 'object-cover scale-150 object-top',
+      desc: 'ألياف نباتية فائقة النعومة بمقبض زيتي مطعم بالذهب لتوزيع متجانس كالمحترفات.'
+    },
+    {
+      id: 'mu-3',
+      name: 'أحمر شفاه كريمي بالذهب المنقوش',
+      category: 'شفاه',
+      price: 149,
+      rating: 4.9,
+      image: 'images/prod-lipstick.jpg',
+      imgClass: 'object-cover brightness-105 saturate-120',
+      desc: 'ترطيب عميق مع لمسة ساتانية جذابة في عبوة ذهبية منقوشة بالغة الرقي.'
+    },
+    {
+      id: 'mu-4',
+      name: 'طقم فرش التجميل المتكامل',
+      category: 'فرش',
+      price: 329,
+      rating: 4.8,
+      image: 'images/prod-brushes.jpg',
+      imgClass: 'object-cover',
+      desc: 'مجموعة متكاملة تغطي كافة مراحل المكياج، تمنحكِ دقة لا تضاهى وشعيرات تدوم طويلاً.'
+    },
+    {
+      id: 'mu-5',
+      name: 'محدد شفاه حريري يدوم طويلاً',
+      category: 'شفاه',
+      price: 89,
+      rating: 4.7,
+      image: 'images/prod-lipstick.jpg',
+      imgClass: 'object-cover scale-125 object-bottom',
+      desc: 'انسيابية فائقة في التحديد ورسم الشفاه دون تكتل أو جفاف طوال اليوم.'
+    },
+    {
+      id: 'mu-6',
+      name: 'فرشاة البودرة والكونتور الملكية',
+      category: 'فرش',
+      price: 159,
+      rating: 4.8,
+      image: 'images/prod-brushes.jpg',
+      imgClass: 'object-cover scale-130 object-center',
+      desc: 'رأس مروحي كثيف وناعم ينساب بسلاسة على تفاصيل الوجه لتثبيت متقن.'
+    }
+  ],
+  perfumes: [
+    {
+      id: 'perf-1',
+      name: 'إكسير عطر الورد الدمشقي المركز',
+      category: 'زهري',
+      price: 489,
+      rating: 5.0,
+      image: 'images/prod-serum.jpg',
+      imgClass: 'object-cover brightness-105 saturate-110',
+      desc: 'قطرات زيتية نقية من أندر ورود الربيع، تمنحكِ هالة زهرية آسرة تدوم لأيام.'
+    },
+    {
+      id: 'perf-2',
+      name: 'زيت العطر الملكي بالمسك والعنبر',
+      category: 'مسكي',
+      price: 549,
+      rating: 4.9,
+      image: 'images/prod-serum.jpg',
+      imgClass: 'object-cover contrast-110 sepia-[0.2]',
+      desc: 'مزيج فاخر ودافئ من المسك الأبيض وحبيبات العنبر الثمينة لإحساس ملكي مهيب.'
+    },
+    {
+      id: 'perf-3',
+      name: 'زبدة العطر المخملية برائحة الفانيلا',
+      category: 'شرقي',
+      price: 259,
+      rating: 4.8,
+      image: 'images/prod-cream.jpg',
+      imgClass: 'object-cover brightness-100',
+      desc: 'ترطيب عميق معطر بنفحات الفانيلا المدغشقرية الدافئة وعبير أخشاب الأرز.'
+    },
+    {
+      id: 'perf-4',
+      name: 'رذاذ الجسم الحريري بزهور الكرز',
+      category: 'فاكهي',
+      price: 199,
+      rating: 4.7,
+      image: 'images/prod-serum.jpg',
+      imgClass: 'object-cover hue-rotate-15',
+      desc: 'انتعاش مائي أنثوي خفيف يلف بشرتك بغيمة رقيقة من أزهار الساكورا المبهجة.'
+    },
+    {
+      id: 'perf-5',
+      name: 'زيت الشعر العطري بالياسمين الملكي',
+      category: 'زهري',
+      price: 319,
+      rating: 4.9,
+      image: 'images/prod-serum.jpg',
+      imgClass: 'object-cover scale-110',
+      desc: 'لمعان حريري فوري للشعر مع عبير الياسمين الخالص وفيتامين E الحامي للأطراف.'
+    },
+    {
+      id: 'perf-6',
+      name: 'كريم المسك الأبيض المعطر للجسم',
+      category: 'مسكي',
+      price: 239,
+      rating: 4.8,
+      image: 'images/prod-cream.jpg',
+      imgClass: 'object-cover brightness-105',
+      desc: 'قوام مخملي غني بالمسك الصافي يذوب على البشرة ليتركها فائقة النعومة والجاذبية.'
+    }
+  ]
+};
+
+// Initial cart state
+let cart = [];
+try {
+  const savedCart = localStorage.getItem('voltedge_beauty_cart');
+  if (savedCart) {
+    cart = JSON.parse(savedCart);
+  }
+} catch (e) {
+  console.warn('LocalStorage unavailable:', e);
+}
+
+let discountRate = 0;
+let appliedPromoCode = '';
+
+function saveCart() {
+  try {
+    localStorage.setItem('voltedge_beauty_cart', JSON.stringify(cart));
+  } catch (e) {
+    console.warn('Could not save cart to localStorage:', e);
+  }
+  updateCartBadge();
+}
+
+function addToCart(product) {
+  const existing = cart.find(item => item.id === product.id);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({ ...product, qty: 1 });
+  }
+  saveCart();
+  showToast(`تمت إضافة "${product.name}" إلى السلة بنجاح ✨`);
+  pulseCartBadge();
+}
+
+function removeFromCart(productId) {
+  cart = cart.filter(item => item.id !== productId);
+  saveCart();
+  renderCartPage();
+}
+
+function updateQty(productId, delta) {
+  const item = cart.find(item => item.id === productId);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) {
+    removeFromCart(productId);
+  } else {
+    saveCart();
+    renderCartPage();
+  }
+}
+
+function getCartCount() {
+  return cart.reduce((total, item) => total + item.qty, 0);
+}
+
+function getCartSubtotal() {
+  return cart.reduce((total, item) => total + item.price * item.qty, 0);
+}
+
+function updateCartBadge() {
+  const count = getCartCount();
+  const badges = document.querySelectorAll('.cart-count-badge');
+  badges.forEach(badge => {
+    badge.textContent = count;
+    if (count > 0) {
+      badge.classList.remove('hidden');
+    } else {
+      badge.classList.add('hidden');
+    }
+  });
+}
+
+function pulseCartBadge() {
+  const badges = document.querySelectorAll('.cart-badge-container');
+  badges.forEach(container => {
+    container.classList.add('scale-125');
+    setTimeout(() => {
+      container.classList.remove('scale-125');
+    }, 300);
+  });
+}
+
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  const toastMsg = document.getElementById('toast-message');
+  if (!toast || !toastMsg) return;
+  toastMsg.textContent = message;
+  toast.classList.remove('translate-y-24', 'opacity-0');
+  toast.classList.add('translate-y-0', 'opacity-100');
+  
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => {
+    toast.classList.add('translate-y-24', 'opacity-0');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+  }, 2800);
+}
+
+// Navigation & Hash Routing
+function navigateTo(hash) {
+  window.location.hash = hash;
+}
+
+function handleRoute() {
+  const hash = window.location.hash || '#/home';
+  const validPages = ['#/home', '#/skincare', '#/makeup', '#/perfumes', '#/calm', '#/cart'];
+  const activePage = validPages.includes(hash) ? hash.replace('#/', '') : 'home';
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Update Page visibility
+  ['home', 'skincare', 'makeup', 'perfumes', 'calm', 'cart'].forEach(page => {
+    const el = document.getElementById(`page-${page}`);
+    if (el) {
+      if (page === activePage) {
+        el.classList.remove('hidden');
+        el.classList.add('animate-fade-in');
+      } else {
+        el.classList.add('hidden');
+        el.classList.remove('animate-fade-in');
+      }
+    }
+  });
+
+  // Update Navigation Active Links
+  document.querySelectorAll('[data-nav-link]').forEach(link => {
+    const linkTarget = link.getAttribute('href');
+    if (linkTarget === hash || (hash === '' && linkTarget === '#/home')) {
+      link.classList.add('text-[#B8962E]', 'border-b-2', 'border-[#D4AF37]');
+      link.classList.remove('text-[#3D2F2A]');
+    } else {
+      link.classList.remove('text-[#B8962E]', 'border-b-2', 'border-[#D4AF37]');
+      link.classList.add('text-[#3D2F2A]');
+    }
+  });
+
+  // Page Specific Actions
+  if (activePage === 'cart') {
+    renderCartPage();
+  } else if (activePage === 'skincare') {
+    renderCategoryGrid('skincare');
+  } else if (activePage === 'makeup') {
+    renderCategoryGrid('makeup');
+  } else if (activePage === 'perfumes') {
+    renderCategoryGrid('perfumes');
+  }
+
+  // Close Mobile Menu if open
+  closeMobileMenu();
+}
+
+// Category Grid Rendering with filters and sorting
+const categoryFilters = {
+  skincare: 'all',
+  makeup: 'all',
+  perfumes: 'all'
+};
+const categorySorts = {
+  skincare: 'featured',
+  makeup: 'featured',
+  perfumes: 'featured'
+};
+
+function setFilter(cat, filterValue) {
+  categoryFilters[cat] = filterValue;
+  
+  // Update button active styling
+  const buttons = document.querySelectorAll(`[data-filter-group="${cat}"] button`);
+  buttons.forEach(btn => {
+    if (btn.getAttribute('data-filter') === filterValue) {
+      btn.className = "px-4 py-2 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold text-sm shadow-sm transition-all";
+    } else {
+      btn.className = "px-4 py-2 rounded-xl bg-white/70 hover:bg-white text-[#3D2F2A] border border-[#D4AF37]/30 text-sm transition-all";
+    }
+  });
+  
+  renderCategoryGrid(cat);
+}
+
+function setSort(cat, sortValue) {
+  categorySorts[cat] = sortValue;
+  renderCategoryGrid(cat);
+}
+
+function renderCategoryGrid(cat) {
+  const container = document.getElementById(`${cat}-products-grid`);
+  if (!container) return;
+
+  let items = [...PRODUCTS_DATA[cat]];
+  const activeFilter = categoryFilters[cat];
+  if (activeFilter && activeFilter !== 'all') {
+    items = items.filter(i => i.category === activeFilter);
+  }
+
+  const activeSort = categorySorts[cat];
+  if (activeSort === 'price-asc') {
+    items.sort((a, b) => a.price - b.price);
+  } else if (activeSort === 'price-desc') {
+    items.sort((a, b) => b.price - a.price);
+  } else if (activeSort === 'rating-desc') {
+    items.sort((a, b) => b.rating - a.rating);
+  }
+
+  container.innerHTML = items.map(prod => `
+    <div class="group relative overflow-hidden rounded-3xl aspect-[3/4] shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-[#FAF6F1]/50">
+      <img src="${prod.image}" alt="${prod.name}" loading="lazy" class="absolute inset-0 w-full h-full ${prod.imgClass} transition-transform duration-700 group-hover:scale-108 z-0">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/90 via-[#3D2F2A]/45 to-transparent z-10"></div>
+      
+      <!-- Top rating badge -->
+      <div class="absolute top-4 right-4 z-20 flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/85 backdrop-blur-md text-xs font-bold text-[#3D2F2A] shadow-sm">
+        <svg class="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <span>${prod.rating}</span>
+      </div>
+
+      <!-- Text inside image (Golden Rule) -->
+      <div class="absolute inset-x-0 bottom-0 p-5 sm:p-6 z-20 text-right flex flex-col justify-end">
+        <span class="text-xs font-semibold text-[#D4AF37] mb-1">${prod.category}</span>
+        <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#F5F0EB] mb-1.5 leading-snug">${prod.name}</h3>
+        <p class="text-xs text-[#FAF6F1]/80 line-clamp-2 mb-4 leading-relaxed font-sans">${prod.desc}</p>
+        
+        <div class="flex items-center justify-between gap-3 pt-3 border-t border-white/15">
+          <div class="text-right">
+            <span class="text-xs text-[#FAF6F1]/70 block font-light">السعر</span>
+            <span class="font-bold text-lg text-[#F5F0EB]">${prod.price} <span class="text-xs text-[#D4AF37]">ر.س</span></span>
+          </div>
+          <button onclick="addToCart({id: '${prod.id}', name: '${prod.name}', price: ${prod.price}, image: '${prod.image}', category: '${prod.category}'})"
+            class="px-5 py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#e0b182] active:scale-95 text-[#1C1917] font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            <span>أضيفي للسلة</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// Render Cart Page
+function renderCartPage() {
+  const container = document.getElementById('cart-container');
+  if (!container) return;
+
+  if (cart.length === 0) {
+    container.innerHTML = `
+      <div class="relative overflow-hidden rounded-3xl min-h-[480px] flex items-center justify-center text-center p-8 border border-[#D4AF37]/20 shadow-xl">
+        <img src="images/prod-cream.jpg" alt="سلة التسوق فارغة" class="absolute inset-0 w-full h-full object-cover brightness-90 filter blur-[2px] z-0">
+        <div class="absolute inset-0 bg-[#F5F0EB]/90 via-[#F5F0EB]/85 to-[#F5F0EB]/75 backdrop-blur-[4px] z-10"></div>
+        <div class="relative z-20 max-w-md mx-auto">
+          <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-white/90 border border-[#D4AF37]/30 flex items-center justify-center shadow-lg text-[#B8962E]">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          </div>
+          <h2 class="font-serif text-3xl font-bold text-[#3D2F2A] mb-3">سلتكِ لا تزال <span class="text-[#B8962E]">فارغة</span></h2>
+          <p class="text-stone-600 mb-8 leading-relaxed font-sans">دلّلي نفسكِ اليوم باختيار إحدى تشكيلاتنا الفاخرة للعناية بالبشرة والجمال الساحر.</p>
+          <a href="#/home" class="inline-block px-8 py-3.5 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold shadow-md hover:bg-[#c99564] transition-all">
+            اكتشفي تشكيلتنا الفاخرة
+          </a>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  const subtotal = getCartSubtotal();
+  const discountAmount = Math.round(subtotal * discountRate);
+  const total = subtotal - discountAmount;
+
+  const itemsHtml = cart.map(item => `
+    <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-stone-200/60 flex flex-col sm:flex-row items-center gap-4 transition-all">
+      <img src="${item.image}" alt="${item.name}" class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover border border-stone-100 flex-shrink-0">
+      <div class="flex-grow text-center sm:text-right">
+        <span class="text-xs font-semibold text-[#B8962E] block mb-1">${item.category || 'VoltEdge Beauty'}</span>
+        <h4 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">${item.name}</h4>
+        <span class="text-sm font-bold text-stone-700">${item.price} ر.س</span>
+      </div>
+      
+      <!-- Quantity Controls -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center border border-stone-300 rounded-xl bg-stone-50 overflow-hidden">
+          <button onclick="updateQty('${item.id}', -1)" class="w-8 h-8 flex items-center justify-center text-stone-600 hover:bg-stone-200 transition-colors font-bold text-base" title="إنقاص الكمية">-</button>
+          <span class="w-8 text-center text-sm font-bold text-[#3D2F2A]">${item.qty}</span>
+          <button onclick="updateQty('${item.id}', 1)" class="w-8 h-8 flex items-center justify-center text-stone-600 hover:bg-stone-200 transition-colors font-bold text-base" title="زيادة الكمية">+</button>
+        </div>
+        <div class="text-right min-w-[70px]">
+          <span class="font-bold text-base text-[#3D2F2A]">${item.price * item.qty} ر.س</span>
+        </div>
+        <button onclick="removeFromCart('${item.id}')" class="p-2 text-stone-400 hover:text-red-500 transition-colors" title="حذف">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+        </button>
+      </div>
+    </div>
+  `).join('');
+
+  container.innerHTML = `
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <!-- Items List -->
+      <div class="lg:col-span-7 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-stone-300">
+          <h2 class="font-serif text-2xl font-bold text-[#3D2F2A]">منتجاتكِ المختارة (${getCartCount()})</h2>
+          <button onclick="cart = []; saveCart(); renderCartPage();" class="text-xs text-stone-500 hover:text-red-600 transition-colors">تفريغ السلة</button>
+        </div>
+        ${itemsHtml}
+      </div>
+
+      <!-- Checkout & Summary -->
+      <div class="lg:col-span-5 space-y-6">
+        <!-- Order Summary Card -->
+        <div class="bg-[#FAF6F1] rounded-3xl p-6 border border-[#D4AF37]/30 shadow-md">
+          <h3 class="font-serif text-xl font-bold text-[#3D2F2A] mb-4 pb-2 border-b border-[#D4AF37]/20">ملخص الطلب</h3>
+          
+          <div class="space-y-3 text-sm text-[#3D2F2A] mb-6">
+            <div class="flex justify-between">
+              <span>المجموع الفرعي</span>
+              <span class="font-semibold">${subtotal} ر.س</span>
+            </div>
+            <div class="flex justify-between">
+              <span>تكلفة الشحن</span>
+              <span class="text-[#6B7F5E] font-bold">مجاني لجميع مناطق المملكة</span>
+            </div>
+            ${discountRate > 0 ? `
+              <div class="flex justify-between text-[#6B7F5E]">
+                <span>خصم الكوبون (${appliedPromoCode})</span>
+                <span class="font-bold">-${discountAmount} ر.س</span>
+              </div>
+            ` : ''}
+            <div class="pt-3 border-t border-stone-300/80 flex justify-between text-base sm:text-lg font-bold">
+              <span>الإجمالي النهائي (شامل الضريبة)</span>
+              <span class="text-[#B8962E] text-xl font-serif">${total} ر.س</span>
+            </div>
+          </div>
+
+          <!-- Promo Code -->
+          <div class="mb-6">
+            <label class="block text-xs text-stone-600 mb-1.5">هل لديكِ كود خصم؟ (جرّبي: BEAUTY10)</label>
+            <div class="flex gap-2">
+              <input type="text" id="promo-input" placeholder="أدخلي الكود هنا" value="${appliedPromoCode}"
+                class="flex-grow px-3 py-2 text-sm rounded-xl border border-stone-300 focus:outline-none focus:border-[#D4AF37] uppercase">
+              <button onclick="applyPromoCode()" class="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-900 text-white text-xs font-bold transition-all">تطبيق</button>
+            </div>
+            ${discountRate > 0 ? `<p class="text-xs text-[#6B7F5E] mt-1 font-semibold">تم تطبيق خصم 10% بنجاح!</p>` : ''}
+          </div>
+
+          <!-- Shipping Form -->
+          <form id="checkout-form" onsubmit="handleCheckout(event)" class="space-y-4 pt-4 border-t border-[#D4AF37]/20">
+            <h4 class="font-serif font-bold text-base text-[#3D2F2A]">بيانات الشحن والتوصيل</h4>
+            
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1">الاسم الكامل *</label>
+              <input type="text" id="cust-name" required placeholder="سارة أحمد" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 bg-white">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1">رقم الجوال *</label>
+              <input type="tel" id="cust-phone" required placeholder="05XXXXXXXX" dir="ltr" class="w-full text-right px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 bg-white">
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-semibold text-stone-700 mb-1">المدينة *</label>
+                <select id="cust-city" required class="w-full px-3 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 bg-white">
+                  <option value="الرياض">الرياض</option>
+                  <option value="جدة">جدة</option>
+                  <option value="الدمام">الدمام</option>
+                  <option value="مكة المكرمة">مكة المكرمة</option>
+                  <option value="المدينة المنورة">المدينة المنورة</option>
+                  <option value="الخبر">الخبر</option>
+                  <option value="أخرى">مدينة أخرى</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-stone-700 mb-1">الحي السكني *</label>
+                <input type="text" id="cust-district" required placeholder="حي النرجس" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 bg-white">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1">العنوان التفصيلي والشارع *</label>
+              <input type="text" id="cust-address" required placeholder="اسم الشارع ورقم المبنى" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 bg-white">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1.5">طريقة الدفع المعتمدة</label>
+              <div class="grid grid-cols-3 gap-2 text-xs">
+                <label class="flex flex-col items-center justify-center p-2 rounded-xl border border-[#D4AF37] bg-white cursor-pointer hover:bg-stone-50">
+                  <input type="radio" name="payment-method" value="mada" checked class="accent-[#D4AF37] mb-1">
+                  <span class="font-bold text-[#3D2F2A]">مدى / بطاقة</span>
+                </label>
+                <label class="flex flex-col items-center justify-center p-2 rounded-xl border border-stone-200 bg-white cursor-pointer hover:bg-stone-50">
+                  <input type="radio" name="payment-method" value="applepay" class="accent-[#D4AF37] mb-1">
+                  <span class="font-bold text-[#3D2F2A]">Apple Pay</span>
+                </label>
+                <label class="flex flex-col items-center justify-center p-2 rounded-xl border border-stone-200 bg-white cursor-pointer hover:bg-stone-50">
+                  <input type="radio" name="payment-method" value="cod" class="accent-[#D4AF37] mb-1">
+                  <span class="font-bold text-[#3D2F2A]">عند الاستلام</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-base shadow-lg transition-all transform active:scale-98 mt-4 flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span>إتمام الطلب وتأكيد الشحن</span>
+            </button>
+            <p class="text-center text-[11px] text-stone-500 mt-2">تسوق آمن ومشفر 100% · استبدال واسترجاع مجاني</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function applyPromoCode() {
+  const input = document.getElementById('promo-input');
+  if (!input) return;
+  const val = input.value.trim().toUpperCase();
+  if (val === 'BEAUTY10') {
+    discountRate = 0.10;
+    appliedPromoCode = 'BEAUTY10';
+    showToast('تم تطبيق كود الخصم بنجاح (-10%) 🎉');
+    renderCartPage();
+  } else if (val === '') {
+    discountRate = 0;
+    appliedPromoCode = '';
+    renderCartPage();
+  } else {
+    showToast('كود الخصم غير صحيح أو منتهي الصلاحية');
+  }
+}
+
+function handleCheckout(e) {
+  e.preventDefault();
+  const name = document.getElementById('cust-name')?.value || '';
+  const phone = document.getElementById('cust-phone')?.value || '';
+  const city = document.getElementById('cust-city')?.value || '';
+  const address = document.getElementById('cust-address')?.value || '';
+
+  const orderNum = 'VE-' + Math.floor(100000 + Math.random() * 900000);
+  const subtotal = getCartSubtotal();
+  const total = subtotal - Math.round(subtotal * discountRate);
+
+  // Show Success Modal
+  const modal = document.getElementById('order-modal');
+  if (modal) {
+    document.getElementById('modal-order-id').textContent = orderNum;
+    document.getElementById('modal-cust-name').textContent = name;
+    document.getElementById('modal-cust-city').textContent = city + ' - ' + address;
+    document.getElementById('modal-total').textContent = `${total} ر.س`;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  // Clear cart
+  cart = [];
+  discountRate = 0;
+  appliedPromoCode = '';
+  saveCart();
+}
+
+function closeOrderModal() {
+  const modal = document.getElementById('order-modal');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+  navigateTo('#/home');
+}
+
+// Mobile drawer controls
+function toggleMobileMenu() {
+  const drawer = document.getElementById('mobile-drawer');
+  const backdrop = document.getElementById('mobile-drawer-backdrop');
+  if (!drawer || !backdrop) return;
+  
+  if (drawer.classList.contains('translate-x-full')) {
+    drawer.classList.remove('translate-x-full');
+    backdrop.classList.remove('hidden');
+  } else {
+    drawer.classList.add('translate-x-full');
+    backdrop.classList.add('hidden');
+  }
+}
+
+function closeMobileMenu() {
+  const drawer = document.getElementById('mobile-drawer');
+  const backdrop = document.getElementById('mobile-drawer-backdrop');
+  if (drawer) drawer.classList.add('translate-x-full');
+  if (backdrop) backdrop.classList.add('hidden');
+}
+
+// Countdown timer for Calm edition
+function startCountdown() {
+  let totalSeconds = 3 * 24 * 3600 + 14 * 3600 + 42 * 60 + 18;
+  const daysEl = document.getElementById('timer-days');
+  const hoursEl = document.getElementById('timer-hours');
+  const minsEl = document.getElementById('timer-mins');
+  const secsEl = document.getElementById('timer-secs');
+
+  if (!daysEl) return;
+
+  setInterval(() => {
+    if (totalSeconds > 0) totalSeconds--;
+    const d = Math.floor(totalSeconds / (24 * 3600));
+    const h = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+    const m = Math.floor((totalSeconds % 3600) / 60);
+    const s = Math.floor(totalSeconds % 60);
+
+    if (daysEl) daysEl.textContent = String(d).padStart(2, '0');
+    if (hoursEl) hoursEl.textContent = String(h).padStart(2, '0');
+    if (minsEl) minsEl.textContent = String(m).padStart(2, '0');
+    if (secsEl) secsEl.textContent = String(s).padStart(2, '0');
+  }, 1000);
+}
+
+// Newsletter form handler
+function handleNewsletter(e) {
+  e.preventDefault();
+  const input = document.getElementById('newsletter-email');
+  if (input && input.value) {
+    showToast('أهلاً بكِ في نادي VoltEdge النخبوي! تم تسجيل بريدكِ بنجاح 🌸');
+    input.value = '';
+  }
+}
+
+// Initialization
+function initApp() {
+  updateCartBadge();
+  window.addEventListener('hashchange', handleRoute);
+  if (!window.location.hash || window.location.hash === '#/' || window.location.hash === '#') {
+    window.location.hash = '#/home';
+  } else {
+    handleRoute();
+  }
+  startCountdown();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
+
+</script>
+</body>
+</html>
