@@ -97,8 +97,12 @@
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
 
-        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold">
           <a href="#/home" data-nav-link class="transition-colors hover:text-[#B8962E] py-1 border-b-2 border-transparent">الرئيسية</a>
+          <a href="#/deals" data-nav-link class="transition-colors hover:text-[#E60000] py-1 border-b-2 border-transparent flex items-center gap-1.5 text-[#E60000] font-bold">
+            <span class="w-2 h-2 rounded-full bg-[#E60000] animate-ping"></span>
+            <span>العروض الحصرية 🔥</span>
+          </a>
           <a href="#/skincare" data-nav-link class="transition-colors hover:text-[#B8962E] py-1 border-b-2 border-transparent">العناية بالبشرة</a>
           <a href="#/makeup" data-nav-link class="transition-colors hover:text-[#B8962E] py-1 border-b-2 border-transparent">المكياج</a>
           <a href="#/perfumes" data-nav-link class="transition-colors hover:text-[#B8962E] py-1 border-b-2 border-transparent">العطور</a>
@@ -167,28 +171,24 @@
           <img src="images/hero-beauty.jpg" alt="سيدة مشرقة مع سيروم VoltEdge Beauty" class="absolute inset-0 w-full h-full object-cover object-[70%_center] z-0">
         </video>
         
-        <!-- Gradient Overlay: Creamy gradient on the left side over empty beige wall, leaving woman and serum completely visible -->
-        <div class="absolute inset-0 hidden lg:block bg-gradient-to-r from-[#F5F0EB]/90 via-[#F5F0EB]/50 to-transparent z-10 w-2/3 pointer-events-none"></div>
-        <div class="absolute inset-0 lg:hidden bg-gradient-to-t from-[#F5F0EB]/95 via-[#F5F0EB]/70 to-transparent z-10 pointer-events-none"></div>
-
-        <!-- Hero Content Placed on the Left Over the Wall -->
+        <!-- Hero Content Placed on the Left Over the Wall Directly with No Heavy Fog -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-20 relative py-12">
           <div class="max-w-xl lg:mr-auto lg:ml-12 text-right">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8B4B8]/35 border border-[#E8B4B8] text-xs font-bold text-[#3D2F2A] mb-4">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8B4B8]/60 backdrop-blur-sm border border-[#E8B4B8] text-xs font-bold text-[#3D2F2A] mb-4 shadow-sm">
               <span class="w-2 h-2 rounded-full bg-[#B8962E] animate-ping"></span>
               VoltEdge Beauty · جمال هادئ
             </span>
-            <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3D2F2A] leading-tight mb-4">
+            <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3D2F2A] leading-tight mb-4 drop-shadow-[0_2px_4px_rgba(255,255,255,0.7)]">
               إشراقة ناعمة: اكتشفي <span class="text-[#B8962E]">الجمال</span> الهادئ
             </h1>
-            <p class="font-sans text-sm sm:text-base text-stone-700 mb-8 leading-relaxed">
+            <p class="font-sans text-sm sm:text-base text-stone-800 mb-8 leading-relaxed font-medium drop-shadow-[0_1px_3px_rgba(255,255,255,0.7)]">
               دلّلي نفسكِ مع VoltEdge، خلاصات طبيعية نقية ومستحضرات استثنائية صُممت لتبرز نضارتكِ الطبيعية بلمسات راقية تفيض أنوثة وجاذبية.
             </p>
             <div class="flex flex-wrap items-center gap-4">
               <button onclick="navigateTo('#/skincare')" class="px-7 py-3.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-sm sm:text-base shadow-md transition-all transform hover:-translate-y-0.5 active:scale-95">
                 تسوقي المجموعة
               </button>
-              <button onclick="navigateTo('#/skincare')" class="px-7 py-3.5 rounded-xl border border-[#D4AF37] hover:bg-[#D4AF37]/15 text-[#3D2F2A] font-semibold text-sm sm:text-base transition-all">
+              <button onclick="navigateTo('#/skincare')" class="px-7 py-3.5 rounded-xl border border-[#D4AF37] bg-white/70 backdrop-blur-sm hover:bg-[#D4AF37]/20 text-[#3D2F2A] font-semibold text-sm sm:text-base transition-all shadow-sm">
                 اكتشفي العناية بالبشرة
               </button>
             </div>
@@ -201,7 +201,7 @@
         <div class="flex lg:grid lg:grid-cols-5 gap-5 overflow-x-auto pb-6 no-scrollbar pt-2">
           
           <!-- Card 1: prod-serum -->
-          <div class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300">
+          <div onclick="navigateTo('#/product/skin-1')" class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300 cursor-pointer">
             <div class="relative aspect-square rounded-xl overflow-hidden mb-3 bg-[#FAF6F1]">
               <img src="images/prod-serum.jpg" alt="سيروم الورد المخملي" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108">
               <span class="absolute top-2 right-2 px-2 py-0.5 rounded-md bg-[#E8B4B8] text-[10px] font-bold text-[#3D2F2A]">الأكثر مبيعاً</span>
@@ -212,16 +212,16 @@
                 <span class="text-stone-400 text-[10px]">(142 تقييم)</span>
               </div>
               <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">سيروم الورد المخملي</h3>
-              <div class="font-bold text-[#3D2F2A] text-base mb-3">349 <span class="text-xs text-[#B8962E]">ر.س</span></div>
+              <div class="font-bold text-[#3D2F2A] text-base mb-3">349 <span class="text-xs text-[#B8962E]">ج.م</span></div>
             </div>
-            <button onclick="addToCart({id: 'skin-1', name: 'سيروم الورد المخملي المركز', price: 349, image: 'images/prod-serum.jpg', category: 'سيروم'})"
+            <button onclick="event.stopPropagation(); addToCart({id: 'skin-1', name: 'سيروم الورد المخملي المركز', price: 349, image: 'images/prod-serum.jpg', category: 'سيروم'})"
               class="w-full py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
               أضيفي للسلة
             </button>
           </div>
 
           <!-- Card 2: prod-cream -->
-          <div class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300">
+          <div onclick="navigateTo('#/product/skin-2')" class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300 cursor-pointer">
             <div class="relative aspect-square rounded-xl overflow-hidden mb-3 bg-[#FAF6F1]">
               <img src="images/prod-cream.jpg" alt="كريم العناية بالفيتامينات" loading="lazy"  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108">
             </div>
@@ -231,16 +231,16 @@
                 <span class="text-stone-400 text-[10px]">(98 تقييم)</span>
               </div>
               <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">كريم العناية بالفيتامينات</h3>
-              <div class="font-bold text-[#3D2F2A] text-base mb-3">219 <span class="text-xs text-[#B8962E]">ر.س</span></div>
+              <div class="font-bold text-[#3D2F2A] text-base mb-3">219 <span class="text-xs text-[#B8962E]">ج.م</span></div>
             </div>
-            <button onclick="addToCart({id: 'skin-2', name: 'كريم العناية بالفيتامينات', price: 219, image: 'images/prod-cream.jpg', category: 'كريمات'})"
+            <button onclick="event.stopPropagation(); addToCart({id: 'skin-2', name: 'كريم العناية بالفيتامينات', price: 219, image: 'images/prod-cream.jpg', category: 'كريمات'})"
               class="w-full py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
               أضيفي للسلة
             </button>
           </div>
 
           <!-- Card 3: prod-lipstick -->
-          <div class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300">
+          <div onclick="navigateTo('#/product/mu-1')" class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300 cursor-pointer">
             <div class="relative aspect-square rounded-xl overflow-hidden mb-3 bg-[#FAF6F1]">
               <img src="images/prod-lipstick.jpg" alt="أحمر شفاه مخملي راقي" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108">
             </div>
@@ -250,16 +250,16 @@
                 <span class="text-stone-400 text-[10px]">(85 تقييم)</span>
               </div>
               <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">أحمر شفاه مخملي راقي</h3>
-              <div class="font-bold text-[#3D2F2A] text-base mb-3">119 <span class="text-xs text-[#B8962E]">ر.س</span></div>
+              <div class="font-bold text-[#3D2F2A] text-base mb-3">119 <span class="text-xs text-[#B8962E]">ج.م</span></div>
             </div>
-            <button onclick="addToCart({id: 'mu-1', name: 'أحمر شفاه مخملي راقي', price: 119, image: 'images/prod-lipstick.jpg', category: 'شفاه'})"
+            <button onclick="event.stopPropagation(); addToCart({id: 'mu-1', name: 'أحمر شفاه مخملي راقي', price: 119, image: 'images/prod-lipstick.jpg', category: 'شفاه'})"
               class="w-full py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
               أضيفي للسلة
             </button>
           </div>
 
           <!-- Card 4: prod-brushes (cropped zoom) -->
-          <div class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300">
+          <div class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300 cursor-pointer">
             <div class="relative aspect-square rounded-xl overflow-hidden mb-3 bg-[#FAF6F1]">
               <img src="images/prod-brushes.jpg" alt="فرشاة مكياج احترافية" loading="lazy" class="w-full h-full object-cover scale-150 object-top transition-transform duration-500 group-hover:scale-160">
             </div>
@@ -269,16 +269,16 @@
                 <span class="text-stone-400 text-[10px]">(64 تقييم)</span>
               </div>
               <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">فرشاة مكياج احترافية</h3>
-              <div class="font-bold text-[#3D2F2A] text-base mb-3">179 <span class="text-xs text-[#B8962E]">ر.س</span></div>
+              <div class="font-bold text-[#3D2F2A] text-base mb-3">179 <span class="text-xs text-[#B8962E]">ج.م</span></div>
             </div>
-            <button onclick="addToCart({id: 'mu-2', name: 'فرشاة دمج وتوزيع احترافية', price: 179, image: 'images/prod-brushes.jpg', category: 'فرش'})"
+            <button onclick="event.stopPropagation(); addToCart({id: 'mu-2', name: 'فرشاة دمج وتوزيع احترافية', price: 179, image: 'images/prod-brushes.jpg', category: 'فرش'})"
               class="w-full py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
               أضيفي للسلة
             </button>
           </div>
 
           <!-- Card 5: prod-brushes (full set) -->
-          <div class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300">
+          <div onclick="navigateTo('#/product/mu-4')" class="flex-shrink-0 w-64 lg:w-auto bg-white rounded-2xl p-4 shadow-xl border border-[#FAF6F1] text-right flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300 cursor-pointer">
             <div class="relative aspect-square rounded-xl overflow-hidden mb-3 bg-[#FAF6F1]">
               <img src="images/prod-brushes.jpg" alt="طقم فرش التجميل المتكامل" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108">
               <span class="absolute top-2 right-2 px-2 py-0.5 rounded-md bg-[#6B7F5E] text-[10px] font-bold text-white">طقم فاخر</span>
@@ -289,9 +289,9 @@
                 <span class="text-stone-400 text-[10px]">(110 تقييم)</span>
               </div>
               <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">طقم فرش التجميل المتكامل</h3>
-              <div class="font-bold text-[#3D2F2A] text-base mb-3">329 <span class="text-xs text-[#B8962E]">ر.س</span></div>
+              <div class="font-bold text-[#3D2F2A] text-base mb-3">329 <span class="text-xs text-[#B8962E]">ج.م</span></div>
             </div>
-            <button onclick="addToCart({id: 'mu-4', name: 'طقم فرش التجميل المتكامل', price: 329, image: 'images/prod-brushes.jpg', category: 'فرش'})"
+            <button onclick="event.stopPropagation(); addToCart({id: 'mu-4', name: 'طقم فرش التجميل المتكامل', price: 329, image: 'images/prod-brushes.jpg', category: 'فرش'})"
               class="w-full py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-sm transition-all active:scale-95">
               أضيفي للسلة
             </button>
@@ -299,6 +299,229 @@
 
         </div>
       </section>
+
+
+      <!-- ══════════════ FLASH DEALS & LIMITED-TIME OFFERS (COUNTDOWN TIMERS) ══════════════ -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="bg-gradient-to-br from-[#3D2F2A] via-[#2E221E] to-[#1C1917] rounded-3xl p-6 sm:p-10 text-[#F5F0EB] shadow-2xl border border-[#D4AF37]/40 relative overflow-hidden">
+          <!-- Background Glow Effect -->
+          <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#B8962E]/20 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-[#E8B4B8]/20 rounded-full blur-3xl pointer-events-none"></div>
+
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 relative z-10 border-b border-white/10 pb-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8B4B8]/25 border border-[#E8B4B8]/40 text-xs font-bold text-[#FAF6F1] mb-2.5">
+                <span class="w-2 h-2 rounded-full bg-[#E60000] animate-ping"></span>
+                <span>🔥 صفقات الفلاش الكبرى | تخفيضات تصل إلى 45%</span>
+              </div>
+              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#F5F0EB]">
+                عروض <span class="text-[#D4AF37]">محدودة الوقت</span> لا تفوّتيها
+              </h2>
+              <p class="text-xs sm:text-sm text-[#FAF6F1]/80 mt-1.5 max-w-xl font-sans">
+                استمتعي بأقوى الخصومات الحصرية مع هدايا قيمة وشحن مجاني لجميع المحافظات. تنتهي هذه العروض بانتهاء الوقت أو نفاد الكمية!
+              </p>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-[#D4AF37] font-semibold bg-white/10 px-4 py-2 rounded-xl backdrop-blur-sm self-start md:self-auto">
+              <span>⚡ يتجدد المخزون والعدادات لحظياً</span>
+            </div>
+          </div>
+
+          <!-- 3 Flash Deal Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+
+            <!-- Deal 1: Deal of the Day (Expires in ~6 hours) -->
+            <div onclick="navigateTo('#/product/flash-1')" class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-[#D4AF37]/50 flex flex-col justify-between group hover:border-[#D4AF37] hover:bg-white/[0.14] transition-all duration-300 cursor-pointer">
+              <div>
+                <!-- Top Badge & Timer -->
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="px-2.5 py-1 rounded-md bg-[#E60000] text-white text-[11px] font-bold shadow-sm">صفقة اليوم (خصم 38%)</span>
+                  <span class="text-[10px] text-stone-300 font-mono">ينتهي خلال:</span>
+                </div>
+
+                <!-- Live Countdown Timer 1 -->
+                <div class="grid grid-cols-3 gap-2 text-center mb-4">
+                  <div class="bg-black/40 rounded-xl py-2 px-1 border border-white/10">
+                    <span id="deal1-hours" class="block font-mono text-xl sm:text-2xl font-bold text-[#D4AF37]">05</span>
+                    <span class="text-[9px] text-stone-300">ساعة</span>
+                  </div>
+                  <div class="bg-black/40 rounded-xl py-2 px-1 border border-white/10">
+                    <span id="deal1-minutes" class="block font-mono text-xl sm:text-2xl font-bold text-[#D4AF37]">42</span>
+                    <span class="text-[9px] text-stone-300">دقيقة</span>
+                  </div>
+                  <div class="bg-black/40 rounded-xl py-2 px-1 border border-white/10">
+                    <span id="deal1-seconds" class="block font-mono text-xl sm:text-2xl font-bold text-[#E60000] animate-pulse">18</span>
+                    <span class="text-[9px] text-stone-300">ثانية</span>
+                  </div>
+                </div>
+
+                <!-- Image & Details -->
+                <div class="relative aspect-video rounded-xl overflow-hidden mb-3.5 bg-black/30">
+                  <img src="images/hero-beauty.jpg" alt="باقة الإشراقة الفائقة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/70 text-[10px] font-bold text-[#FAF6F1]">3 منتجات ملكية</span>
+                </div>
+
+                <h3 class="font-serif font-bold text-lg text-[#F5F0EB] mb-1">باقة الإشراقة الفائقة الثلاثية</h3>
+                <p class="text-[11px] text-[#FAF6F1]/75 mb-3 leading-relaxed">
+                  سيروم الورد المركز 50ml + كريم الكولاجين والذهب 24k + غسول التقشير اللطيف.
+                </p>
+
+                <!-- Stock Progress -->
+                <div class="mb-4">
+                  <div class="flex justify-between text-[11px] mb-1">
+                    <span class="text-[#FAF6F1]/80">المتبقي في العرض:</span>
+                    <span class="text-[#E60000] font-bold">5 قطع فقط!</span>
+                  </div>
+                  <div class="w-full bg-white/20 h-2 rounded-full overflow-hidden">
+                    <div class="bg-gradient-to-r from-[#D4AF37] to-[#E60000] h-full w-[85%] rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Price & CTA -->
+              <div class="pt-3 border-t border-white/15 flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[11px] text-stone-400 line-through block">957 ج.م</span>
+                  <div class="text-xl font-bold text-[#F5F0EB]">599 <span class="text-xs text-[#D4AF37]">ج.م</span></div>
+                </div>
+                <button onclick="event.stopPropagation(); addToCart({id: 'flash-1', name: 'باقة الإشراقة الفائقة الثلاثية (عرض فلاش)', price: 599, image: 'images/hero-beauty.jpg', category: 'عروض فلاش'})"
+                  class="px-4 py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs shadow-md transition-all active:scale-95 flex items-center gap-1.5">
+                  <span>احجزي العرض</span>
+                  <span>⚡</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Deal 2: Weekend Special (Expires in 1 day and hours) -->
+            <div onclick="navigateTo('#/product/flash-2')" class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 flex flex-col justify-between group hover:border-[#D4AF37] hover:bg-white/[0.14] transition-all duration-300 cursor-pointer">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="px-2.5 py-1 rounded-md bg-[#B8962E] text-[#1C1917] text-[11px] font-bold shadow-sm">عرض نهاية الأسبوع (خصم 35%)</span>
+                  <span class="text-[10px] text-stone-300 font-mono">ينتهي خلال:</span>
+                </div>
+
+                <!-- Live Countdown Timer 2 -->
+                <div class="grid grid-cols-4 gap-1.5 text-center mb-4">
+                  <div class="bg-black/40 rounded-xl py-2 px-1 border border-white/10">
+                    <span id="deal2-days" class="block font-mono text-lg font-bold text-[#D4AF37]">01</span>
+                    <span class="text-[9px] text-stone-300">يوم</span>
+                  </div>
+                  <div class="bg-black/40 rounded-xl py-2 px-1 border border-white/10">
+                    <span id="deal2-hours" class="block font-mono text-lg font-bold text-[#D4AF37]">14</span>
+                    <span class="text-[9px] text-stone-300">ساعة</span>
+                  </div>
+                  <div class="bg-black/40 rounded-xl py-2 px-1 border border-white/10">
+                    <span id="deal2-minutes" class="block font-mono text-lg font-bold text-[#D4AF37]">20</span>
+                    <span class="text-[9px] text-stone-300">دقيقة</span>
+                  </div>
+                  <div class="bg-black/40 rounded-xl py-2 px-1 border border-white/10">
+                    <span id="deal2-seconds" class="block font-mono text-lg font-bold text-[#D4AF37] animate-pulse">05</span>
+                    <span class="text-[9px] text-stone-300">ثانية</span>
+                  </div>
+                </div>
+
+                <!-- Image & Details -->
+                <div class="relative aspect-video rounded-xl overflow-hidden mb-3.5 bg-black/30">
+                  <img src="images/prod-lipstick.jpg" alt="طقم الجمال الملكي" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/70 text-[10px] font-bold text-[#FAF6F1]">شفاه ومكياج</span>
+                </div>
+
+                <h3 class="font-serif font-bold text-lg text-[#F5F0EB] mb-1">طقم الجمال المخملي والفرش</h3>
+                <p class="text-[11px] text-[#FAF6F1]/75 mb-3 leading-relaxed">
+                  أحمر شفاه عنابي مخملي ثابت 12 ساعة + طقم فرش التجميل المتكامل 12 قطعة ناعمة.
+                </p>
+
+                <!-- Stock Progress -->
+                <div class="mb-4">
+                  <div class="flex justify-between text-[11px] mb-1">
+                    <span class="text-[#FAF6F1]/80">تم بيع:</span>
+                    <span class="text-[#D4AF37] font-bold">78% من الكمية</span>
+                  </div>
+                  <div class="w-full bg-white/20 h-2 rounded-full overflow-hidden">
+                    <div class="bg-gradient-to-r from-[#D4AF37] to-[#B8962E] h-full w-[78%] rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Price & CTA -->
+              <div class="pt-3 border-t border-white/15 flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[11px] text-stone-400 line-through block">648 ج.م</span>
+                  <div class="text-xl font-bold text-[#F5F0EB]">419 <span class="text-xs text-[#D4AF37]">ج.م</span></div>
+                </div>
+                <button onclick="event.stopPropagation(); addToCart({id: 'flash-2', name: 'طقم الجمال المخملي والفرش (عرض أسبوعي)', price: 419, image: 'images/prod-lipstick.jpg', category: 'عروض فلاش'})"
+                  class="px-4 py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs shadow-md transition-all active:scale-95 flex items-center gap-1.5">
+                  <span>احجزي العرض</span>
+                  <span>⚡</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Deal 3: Happy Hour (Expires in ~2 hours) -->
+            <div onclick="navigateTo('#/product/flash-3')" class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/20 flex flex-col justify-between group hover:border-[#D4AF37] hover:bg-white/[0.14] transition-all duration-300 cursor-pointer">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="px-2.5 py-1 rounded-md bg-[#6B7F5E] text-white text-[11px] font-bold shadow-sm">الساعة السعيدة (وفّري 150 ج.م)</span>
+                  <span class="text-[10px] text-stone-300 font-mono">ينتهي خلال:</span>
+                </div>
+
+                <!-- Live Countdown Timer 3 -->
+                <div class="grid grid-cols-3 gap-2 text-center mb-4">
+                  <div class="bg-black/40 rounded-xl py-2 px-1 border border-white/10">
+                    <span id="deal3-hours" class="block font-mono text-xl sm:text-2xl font-bold text-[#D4AF37]">02</span>
+                    <span class="text-[9px] text-stone-300">ساعة</span>
+                  </div>
+                  <div class="bg-black/40 rounded-xl py-2 px-1 border border-white/10">
+                    <span id="deal3-minutes" class="block font-mono text-xl sm:text-2xl font-bold text-[#D4AF37]">15</span>
+                    <span class="text-[9px] text-stone-300">دقيقة</span>
+                  </div>
+                  <div class="bg-black/40 rounded-xl py-2 px-1 border border-white/10">
+                    <span id="deal3-seconds" class="block font-mono text-xl sm:text-2xl font-bold text-[#E60000] animate-pulse">44</span>
+                    <span class="text-[9px] text-stone-300">ثانية</span>
+                  </div>
+                </div>
+
+                <!-- Image & Details -->
+                <div class="relative aspect-video rounded-xl overflow-hidden mb-3.5 bg-black/30">
+                  <img src="images/prod-serum.jpg" alt="عطر مسك العروس الفاخر" class="w-full h-full object-cover contrast-110 sepia-[0.2] group-hover:scale-105 transition-transform duration-500">
+                  <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/70 text-[10px] font-bold text-[#FAF6F1]">عطور وزيوت</span>
+                </div>
+
+                <h3 class="font-serif font-bold text-lg text-[#F5F0EB] mb-1">دويتو المسك الأبيض والورد</h3>
+                <p class="text-[11px] text-[#FAF6F1]/75 mb-3 leading-relaxed">
+                  زيت مسك العروس النقي الخالي من الكحول + بخاخ الجسم المنعش برائحة الورد الفرنسي.
+                </p>
+
+                <!-- Stock Progress -->
+                <div class="mb-4">
+                  <div class="flex justify-between text-[11px] mb-1">
+                    <span class="text-[#FAF6F1]/80">المتبقي:</span>
+                    <span class="text-[#E60000] font-bold">3 قطع فقط!</span>
+                  </div>
+                  <div class="w-full bg-white/20 h-2 rounded-full overflow-hidden">
+                    <div class="bg-gradient-to-r from-[#D4AF37] to-[#E60000] h-full w-[92%] rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Price & CTA -->
+              <div class="pt-3 border-t border-white/15 flex items-center justify-between gap-3">
+                <div>
+                  <span class="text-[11px] text-stone-400 line-through block">449 ج.م</span>
+                  <div class="text-xl font-bold text-[#F5F0EB]">299 <span class="text-xs text-[#D4AF37]">ج.م</span></div>
+                </div>
+                <button onclick="event.stopPropagation(); addToCart({id: 'flash-3', name: 'دويتو المسك الأبيض والورد (الساعة السعيدة)', price: 299, image: 'images/prod-serum.jpg', category: 'عروض فلاش'})"
+                  class="px-4 py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs shadow-md transition-all active:scale-95 flex items-center gap-1.5">
+                  <span>احجزي العرض</span>
+                  <span>⚡</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
 
       <!-- 4 CATEGORY TILES (IMAGE AS FULL BACKGROUND, TEXT INSIDE) -->
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -480,6 +703,246 @@
             </div>
 
           </div>
+        </div>
+      </section>
+
+
+      <!-- ══════════════ REVIEWS SECTION (آراء عميلاتنا) ══════════════ -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <!-- Header & Trust Stats -->
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E8B4B8]/30 border border-[#E8B4B8] text-xs font-bold text-[#3D2F2A] mb-3">
+            <span class="text-[#B8962E]">★★★★★</span>
+            <span>تقييم 4.9 من 5 (أكثر من 4,200 عميلة سعيدة بمصر)</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3D2F2A] mb-4 leading-tight">
+            تجارب حقيقية تفيض <span class="text-[#B8962E]">بالثقة والجمال</span>
+          </h2>
+          <p class="font-sans text-stone-600 text-sm sm:text-base leading-relaxed">
+            نفتخر بثقة عميلاتنا في مختلف محافظات مصر. إليكِ بعض آراء وتجارب الجميلات اللاتي عشن تجربة VoltEdge Beauty الفاخرة:
+          </p>
+        </div>
+
+        <!-- Trust Metric Bar -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          <div class="bg-white rounded-2xl p-5 border border-[#D4AF37]/25 text-center shadow-sm">
+            <span class="font-serif text-3xl font-bold text-[#B8962E] block mb-1">4.9 / 5</span>
+            <div class="text-[#D4AF37] text-xs mb-1">★★★★★</div>
+            <span class="text-xs text-stone-600 font-semibold">متوسط التقييم العام</span>
+          </div>
+          <div class="bg-white rounded-2xl p-5 border border-[#D4AF37]/25 text-center shadow-sm">
+            <span class="font-serif text-3xl font-bold text-[#6B7F5E] block mb-1">99.2%</span>
+            <span class="text-xs text-stone-500 block mb-1">توصيات إيجابية</span>
+            <span class="text-xs text-stone-600 font-semibold">نسبة رضا العميلات</span>
+          </div>
+          <div class="bg-white rounded-2xl p-5 border border-[#D4AF37]/25 text-center shadow-sm">
+            <span class="font-serif text-3xl font-bold text-[#3D2F2A] block mb-1">48 ساعة</span>
+            <span class="text-xs text-stone-500 block mb-1">توصيل لباب البيت</span>
+            <span class="text-xs text-stone-600 font-semibold">متوسط سرعة الشحن</span>
+          </div>
+          <div class="bg-white rounded-2xl p-5 border border-[#D4AF37]/25 text-center shadow-sm">
+            <span class="font-serif text-3xl font-bold text-[#D4A373] block mb-1">100%</span>
+            <span class="text-xs text-stone-500 block mb-1">أصلي ومضمون</span>
+            <span class="text-xs text-stone-600 font-semibold">خلاصات طبيعية نقية</span>
+          </div>
+        </div>
+
+        <!-- 6 Customer Review Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Review 1 -->
+          <div class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-md flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-full bg-[#FAF6F1] border border-[#D4AF37] flex items-center justify-center font-bold text-sm text-[#B8962E]">
+                    نهى
+                  </div>
+                  <div>
+                    <h3 class="font-serif font-bold text-sm text-[#3D2F2A]">نهى الشربيني</h3>
+                    <span class="text-[11px] text-stone-500">القاهرة (المعادي)</span>
+                  </div>
+                </div>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#6B7F5E]/15 text-[#6B7F5E] text-[10px] font-bold">
+                  <span>✓</span> مشترية موثقة
+                </span>
+              </div>
+              <div class="flex items-center gap-1 text-[#D4AF37] text-sm mb-3">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span class="text-[11px] text-stone-400 font-sans mr-2">منذ 3 أيام</span>
+              </div>
+              <p class="text-xs sm:text-sm text-stone-700 leading-relaxed font-sans mb-4">
+                "سيروم الورد المركز وكريم الكولاجين فرقوا معايا جداً من أول أسبوعين! نضارة وترطيب عميق بدون أي ملمس دهني. التوصيل في المعادي جالي تاني يوم، والدفع كان فودافون كاش في ثواني. تجربة ممتازة بجد!"
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500">
+              <span>المنتج: سيروم الورد + كريم الكولاجين</span>
+              <span class="text-[#B8962E] font-semibold">توصي بالشراء 👍</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-md flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-full bg-[#FAF6F1] border border-[#D4AF37] flex items-center justify-center font-bold text-sm text-[#B8962E]">
+                    مريم
+                  </div>
+                  <div>
+                    <h3 class="font-serif font-bold text-sm text-[#3D2F2A]">د. مريم الخواجة</h3>
+                    <span class="text-[11px] text-stone-500">الإسكندرية (سموحة)</span>
+                  </div>
+                </div>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#6B7F5E]/15 text-[#6B7F5E] text-[10px] font-bold">
+                  <span>✓</span> مشترية موثقة
+                </span>
+              </div>
+              <div class="flex items-center gap-1 text-[#D4AF37] text-sm mb-3">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span class="text-[11px] text-stone-400 font-sans mr-2">منذ أسبوع</span>
+              </div>
+              <p class="text-xs sm:text-sm text-stone-700 leading-relaxed font-sans mb-4">
+                "أنا طبيبة جلدية وبدقق جداً في مكونات أي منتج. مستخلصات الزيوت خفيفة وممتزة، وأحمر الشفاه المخملي ثابت ومبيشققش الشفايف نهائياً. فخورة بوجود جودة بالرقي ده في مصر."
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500">
+              <span>المنتج: أحمر شفاه مخملي راقي</span>
+              <span class="text-[#B8962E] font-semibold">توصي بشدة ⭐</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-md flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-full bg-[#FAF6F1] border border-[#D4AF37] flex items-center justify-center font-bold text-sm text-[#B8962E]">
+                    سارة
+                  </div>
+                  <div>
+                    <h3 class="font-serif font-bold text-sm text-[#3D2F2A]">سارة عبد الرحمن</h3>
+                    <span class="text-[11px] text-stone-500">الجيزة (الشيخ زايد)</span>
+                  </div>
+                </div>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#6B7F5E]/15 text-[#6B7F5E] text-[10px] font-bold">
+                  <span>✓</span> مشترية موثقة
+                </span>
+              </div>
+              <div class="flex items-center gap-1 text-[#D4AF37] text-sm mb-3">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span class="text-[11px] text-stone-400 font-sans mr-2">منذ 5 أيام</span>
+              </div>
+              <p class="text-xs sm:text-sm text-stone-700 leading-relaxed font-sans mb-4">
+                "لحقت عرض الفلاش ديل على باقة الإشراقة، التوفير كان كبير جداً والعلبة تغليفها شيك ينفع هدية قيمة. زيت المسك والعطور ريحتها فواحة وثابتة يومين كاملين. خدمة عملاء راقية ومحترفة."
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500">
+              <span>المنتج: باقة الإشراقة + عطر المسك</span>
+              <span class="text-[#B8962E] font-semibold">عميلة دائمة ❤️</span>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-md flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-full bg-[#FAF6F1] border border-[#D4AF37] flex items-center justify-center font-bold text-sm text-[#B8962E]">
+                    إنجي
+                  </div>
+                  <div>
+                    <h3 class="font-serif font-bold text-sm text-[#3D2F2A]">إنجي المنشاوي</h3>
+                    <span class="text-[11px] text-stone-500">الدقهلية (المنصورة)</span>
+                  </div>
+                </div>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#6B7F5E]/15 text-[#6B7F5E] text-[10px] font-bold">
+                  <span>✓</span> مشترية موثقة
+                </span>
+              </div>
+              <div class="flex items-center gap-1 text-[#D4AF37] text-sm mb-3">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span class="text-[11px] text-stone-400 font-sans mr-2">منذ أسبوعين</span>
+              </div>
+              <p class="text-xs sm:text-sm text-stone-700 leading-relaxed font-sans mb-4">
+                "طقم الفرش ده سحر! شعيراتها فائقة النعومة وتوزيع الفاونديشن والبودرة بقى ناعم ومثالي بدون أي خطوط. الشحن للمنصورة وصلني في يومين فقط والدفع عند الاستلام بعد ما فتحت وشوفت."
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500">
+              <span>المنتج: طقم فرش التجميل المتكامل</span>
+              <span class="text-[#B8962E] font-semibold">ممتاز 10/10 ✨</span>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-md flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-full bg-[#FAF6F1] border border-[#D4AF37] flex items-center justify-center font-bold text-sm text-[#B8962E]">
+                    ياسمين
+                  </div>
+                  <div>
+                    <h3 class="font-serif font-bold text-sm text-[#3D2F2A]">ياسمين فؤاد</h3>
+                    <span class="text-[11px] text-stone-500">بورسعيد</span>
+                  </div>
+                </div>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#6B7F5E]/15 text-[#6B7F5E] text-[10px] font-bold">
+                  <span>✓</span> مشترية موثقة
+                </span>
+              </div>
+              <div class="flex items-center gap-1 text-[#D4AF37] text-sm mb-3">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span class="text-[11px] text-stone-400 font-sans mr-2">منذ 4 أيام</span>
+              </div>
+              <p class="text-xs sm:text-sm text-stone-700 leading-relaxed font-sans mb-4">
+                "حقيقي انبهرت بالاهتمام بأدق التفاصيل، من أول التغليف والريحة اللي تفتح النفس أول ما تفتحي البوكس، لحد سرعة التحويل بإنستاباي وتأكيد الأوردر. السيروم يستاهل كل قرش."
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500">
+              <span>المنتج: سيروم الورد المخملي المركز</span>
+              <span class="text-[#B8962E] font-semibold">رائع وفخم 🌟</span>
+            </div>
+          </div>
+
+          <!-- Review 6 -->
+          <div class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-md flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-full bg-[#FAF6F1] border border-[#D4AF37] flex items-center justify-center font-bold text-sm text-[#B8962E]">
+                    ريم
+                  </div>
+                  <div>
+                    <h3 class="font-serif font-bold text-sm text-[#3D2F2A]">ريم السعدني</h3>
+                    <span class="text-[11px] text-stone-500">الغربية (طنطا)</span>
+                  </div>
+                </div>
+                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#6B7F5E]/15 text-[#6B7F5E] text-[10px] font-bold">
+                  <span>✓</span> مشترية موثقة
+                </span>
+              </div>
+              <div class="flex items-center gap-1 text-[#D4AF37] text-sm mb-3">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span class="text-[11px] text-stone-400 font-sans mr-2">منذ يومين</span>
+              </div>
+              <p class="text-xs sm:text-sm text-stone-700 leading-relaxed font-sans mb-4">
+                "أفضل تجربة تسوق أونلاين في مصر بلا منازع! المنتجات جودتها تفوقت على توقعاتي، والتوصيل لطنطا كان سريع ومندوب الشحن محترم جداً. شكراً VoltEdge على المصداقية العالية."
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-500">
+              <span>المنتج: باقة الاسترخاء الهادئ</span>
+              <span class="text-[#B8962E] font-semibold">فوق الممتاز ✨</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Add Review Modal Button -->
+        <div class="mt-10 text-center">
+          <button onclick="openReviewModal()" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-white border border-[#D4AF37] text-[#3D2F2A] hover:bg-[#FAF6F1] font-bold text-sm shadow-md transition-all transform hover:-translate-y-0.5">
+            <span>✍️ شاركينا تجربتكِ ورأيكِ</span>
+          </button>
         </div>
       </section>
 
@@ -806,10 +1269,10 @@
               
               <div class="flex items-center justify-between gap-4 pt-4 border-t border-white/20">
                 <div>
-                  <span class="text-[11px] text-stone-300 line-through block">687 ر.س</span>
-                  <span class="font-bold text-xl text-[#F5F0EB]">649 <span class="text-xs text-[#D4AF37]">ر.س</span></span>
+                  <span class="text-[11px] text-stone-300 line-through block">687 ج.م</span>
+                  <span class="font-bold text-xl text-[#F5F0EB]">649 <span class="text-xs text-[#D4AF37]">ج.م</span></span>
                 </div>
-                <button onclick="addToCart({id: 'bundle-1', name: 'باقة الإشراقة الفائقة', price: 649, image: 'images/hero-beauty.jpg', category: 'باقات'})"
+                <button onclick="event.stopPropagation(); addToCart({id: 'bundle-1', name: 'باقة الإشراقة الفائقة', price: 649, image: 'images/hero-beauty.jpg', category: 'باقات'})"
                   class="px-5 py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-md transition-all active:scale-95">
                   أضيفي الباقة للسلة
                 </button>
@@ -831,10 +1294,10 @@
               
               <div class="flex items-center justify-between gap-4 pt-4 border-t border-white/20">
                 <div>
-                  <span class="text-[11px] text-stone-300 line-through block">976 ر.س</span>
-                  <span class="font-bold text-xl text-[#F5F0EB]">899 <span class="text-xs text-[#D4AF37]">ر.س</span></span>
+                  <span class="text-[11px] text-stone-300 line-through block">976 ج.م</span>
+                  <span class="font-bold text-xl text-[#F5F0EB]">899 <span class="text-xs text-[#D4AF37]">ج.م</span></span>
                 </div>
-                <button onclick="addToCart({id: 'bundle-2', name: 'باقة العروس الملكية', price: 899, image: 'images/prod-serum.jpg', category: 'باقات'})"
+                <button onclick="event.stopPropagation(); addToCart({id: 'bundle-2', name: 'باقة العروس الملكية', price: 899, image: 'images/prod-serum.jpg', category: 'باقات'})"
                   class="px-5 py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-md transition-all active:scale-95">
                   أضيفي الباقة للسلة
                 </button>
@@ -856,10 +1319,10 @@
               
               <div class="flex items-center justify-between gap-4 pt-4 border-t border-white/20">
                 <div>
-                  <span class="text-[11px] text-stone-300 line-through block">547 ر.س</span>
-                  <span class="font-bold text-xl text-[#F5F0EB]">499 <span class="text-xs text-[#D4AF37]">ر.س</span></span>
+                  <span class="text-[11px] text-stone-300 line-through block">547 ج.م</span>
+                  <span class="font-bold text-xl text-[#F5F0EB]">499 <span class="text-xs text-[#D4AF37]">ج.م</span></span>
                 </div>
-                <button onclick="addToCart({id: 'bundle-3', name: 'باقة الاسترخاء الهادئ', price: 499, image: 'images/prod-cream.jpg', category: 'باقات'})"
+                <button onclick="event.stopPropagation(); addToCart({id: 'bundle-3', name: 'باقة الاسترخاء الهادئ', price: 499, image: 'images/prod-cream.jpg', category: 'باقات'})"
                   class="px-5 py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-xs sm:text-sm shadow-md transition-all active:scale-95">
                   أضيفي الباقة للسلة
                 </button>
@@ -917,6 +1380,226 @@
       </div>
     </div>
 
+
+    <!-- ══════════════ [7] صفحة تفاصيل المنتج أو العرض المستقلة #/product/:id ══════════════ -->
+    
+    <!-- ══════════════ [8] صفحة العروض الكبرى والتخفيضات #/deals ══════════════ -->
+    <div id="page-deals" class="hidden space-y-12 pb-16">
+      <!-- Deals Hero Banner -->
+      <section class="w-full min-h-[50vh] relative overflow-hidden flex items-center justify-center text-center">
+        <img src="images/hero-beauty.jpg" alt="العروض الكبرى والتخفيضات" class="absolute inset-0 w-full h-full object-cover z-0">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#2E1F1A] via-[#2E1F1A]/75 to-[#2E1F1A]/50 z-10"></div>
+        
+        <div class="relative z-20 max-w-3xl px-4 text-center">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E60000]/30 border border-[#E60000]/50 text-xs font-bold text-white mb-3">
+            <span class="w-2 h-2 rounded-full bg-[#E60000] animate-ping"></span>
+            تخفيضات حصرية تصل إلى 45% · لفترة محدودة
+          </span>
+          <h1 class="font-serif text-3xl sm:text-5xl font-bold text-[#F5F0EB] mb-4">
+            صفقات <span class="text-[#D4AF37]">الجمال الذهبي</span> الكبرى
+          </h1>
+          <p class="font-sans text-sm sm:text-base text-[#FAF6F1]/90 leading-relaxed max-w-xl mx-auto">
+            اختاري باقتكِ المفضلة الآن واستمتعي بأعلى نسبة توفير، شحن مجاني لكافة محافظات مصر، وهدايا عينات فاخرة مع كل طلب!
+          </p>
+        </div>
+      </section>
+
+      <!-- Active Coupon Notice -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-[#D4AF37]/20 via-[#FAF6F1] to-[#E8B4B8]/20 border border-[#D4AF37]/40 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+          <div class="flex items-center gap-3 text-right">
+            <span class="text-2xl">🎁</span>
+            <div>
+              <h3 class="font-serif font-bold text-[#3D2F2A] text-sm sm:text-base">كوبون خصم إضافي: <span class="font-mono text-[#B8962E]">BEAUTY10</span></h3>
+              <p class="text-xs text-stone-600">خصم إضافي 10% فوق العروض المتاحة عند إدخال الكود في سلة المشتريات.</p>
+            </div>
+          </div>
+          <button onclick="navigator.clipboard?.writeText('BEAUTY10'); showToast('تم نسخ الكوبون: BEAUTY10 🎉')" class="px-5 py-2 rounded-xl bg-white border border-[#D4AF37] text-xs font-bold text-[#3D2F2A] hover:bg-[#FAF6F1] shadow-sm">
+            نسخ الكوبون
+          </button>
+        </div>
+      </section>
+
+      <!-- 3 Flash Deals Cards (Clickable to dedicated detail page) -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-6 pb-2 border-b border-[#D4AF37]/30">
+          <div>
+            <span class="text-xs font-bold text-[#E60000]">عروض تنتهي قريباً</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#3D2F2A]">صفقات الفلاش التنازلية</h2>
+          </div>
+          <span class="text-xs text-stone-500 font-mono">اضغطي على أي عرض لمشاهدة تفاصيله ومميزاته</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Deal 1 -->
+          <div onclick="navigateTo('#/product/flash-1')" class="bg-white rounded-3xl p-5 border-2 border-[#D4AF37] shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group flex flex-col justify-between hover:-translate-y-1">
+            <div>
+              <div class="relative aspect-video rounded-2xl overflow-hidden mb-4 bg-stone-100">
+                <img src="images/hero-beauty.jpg" alt="باقة الإشراقة الفائقة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2 right-2 px-2.5 py-1 rounded-md bg-[#E60000] text-white text-[11px] font-bold">خصم 38% · صفقة اليوم</span>
+                <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-black/70 text-white text-[10px]">3 منتجات ملكية</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#3D2F2A] mb-1">باقة الإشراقة الفائقة الثلاثية</h3>
+              <p class="text-xs text-stone-600 leading-relaxed mb-4">
+                سيروم الورد المركز 50ml + كريم الكولاجين والذهب عيار 24 + غسول التقشير بماء الورد.
+              </p>
+              <div class="p-3 bg-[#FAF6F1] rounded-xl text-xs text-stone-700 mb-4 flex items-center justify-between">
+                <span>المتبقي في العرض:</span>
+                <span class="font-bold text-[#E60000]">5 قطع فقط!</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-stone-400 line-through block">957 ج.م</span>
+                <div class="text-xl font-bold text-[#B8962E]">599 <span class="text-xs text-stone-600 font-normal">ج.م</span></div>
+              </div>
+              <span class="inline-flex items-center gap-1 px-4 py-2 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold text-xs group-hover:bg-[#c99564] transition-colors">
+                <span>مشاهدة تفاصيل العرض</span>
+                <span>←</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Deal 2 -->
+          <div onclick="navigateTo('#/product/flash-2')" class="bg-white rounded-3xl p-5 border border-stone-200 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group flex flex-col justify-between hover:-translate-y-1">
+            <div>
+              <div class="relative aspect-video rounded-2xl overflow-hidden mb-4 bg-stone-100">
+                <img src="images/prod-bundle-rose.jpg" alt="طقم الجمال المخملي والفرش" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2 right-2 px-2.5 py-1 rounded-md bg-[#B8962E] text-white text-[11px] font-bold">خصم 35% · عرض الأسبوع</span>
+                <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-black/70 text-white text-[10px]">مكياج وفرش</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#3D2F2A] mb-1">طقم الجمال المخملي والفرش</h3>
+              <p class="text-xs text-stone-600 leading-relaxed mb-4">
+                أحمر شفاه عنابي مخملي ثابت 12 ساعة + طقم فرش التجميل الاحترافية 12 قطعة داخل حقيبة جلدية.
+              </p>
+              <div class="p-3 bg-[#FAF6F1] rounded-xl text-xs text-stone-700 mb-4 flex items-center justify-between">
+                <span>المتبقي في العرض:</span>
+                <span class="font-bold text-[#B8962E]">8 قطع فقط</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-stone-400 line-through block">648 ج.م</span>
+                <div class="text-xl font-bold text-[#B8962E]">419 <span class="text-xs text-stone-600 font-normal">ج.م</span></div>
+              </div>
+              <span class="inline-flex items-center gap-1 px-4 py-2 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold text-xs group-hover:bg-[#c99564] transition-colors">
+                <span>مشاهدة تفاصيل العرض</span>
+                <span>←</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Deal 3 -->
+          <div onclick="navigateTo('#/product/flash-3')" class="bg-white rounded-3xl p-5 border border-stone-200 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group flex flex-col justify-between hover:-translate-y-1">
+            <div>
+              <div class="relative aspect-video rounded-2xl overflow-hidden mb-4 bg-stone-100">
+                <img src="images/prod-perfume.jpg" alt="دويتو المسك الأبيض والورد" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2 right-2 px-2.5 py-1 rounded-md bg-[#6B7F5E] text-white text-[11px] font-bold">خصم 34% · الساعة السعيدة</span>
+                <span class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-black/70 text-white text-[10px]">عطور فاخرة</span>
+              </div>
+              <h3 class="font-serif font-bold text-xl text-[#3D2F2A] mb-1">دويتو المسك الأبيض والورد</h3>
+              <p class="text-xs text-stone-600 leading-relaxed mb-4">
+                زيت مسك العروس النقي الخالي من الكحول ثبات 48 ساعة + بخاخ الجسم بعبير الورد الفرنسي 250ml.
+              </p>
+              <div class="p-3 bg-[#FAF6F1] rounded-xl text-xs text-stone-700 mb-4 flex items-center justify-between">
+                <span>المتبقي في العرض:</span>
+                <span class="font-bold text-[#E60000]">3 قطع فقط!</span>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-stone-400 line-through block">449 ج.م</span>
+                <div class="text-xl font-bold text-[#B8962E]">299 <span class="text-xs text-stone-600 font-normal">ج.م</span></div>
+              </div>
+              <span class="inline-flex items-center gap-1 px-4 py-2 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold text-xs group-hover:bg-[#c99564] transition-colors">
+                <span>مشاهدة تفاصيل العرض</span>
+                <span>←</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- All Packages / Bundles -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-6 pb-2 border-b border-[#D4AF37]/30">
+          <div>
+            <span class="text-xs font-bold text-[#B8962E]">باقات متكاملة</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#3D2F2A]">باقات التوفير والعرائس</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Bundle 1 -->
+          <div onclick="navigateTo('#/product/bundle-1')" class="bg-white rounded-3xl p-5 border border-stone-200 shadow-lg hover:shadow-xl transition-all cursor-pointer group flex flex-col justify-between hover:-translate-y-1">
+            <div>
+              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3 bg-stone-100">
+                <img src="images/hero-beauty.jpg" alt="باقة الإشراقة الفائقة الملكية" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2 right-2 px-2.5 py-1 rounded-md bg-[#E8B4B8] text-[#3D2F2A] text-[11px] font-bold">الأكثر طلباً</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">باقة الإشراقة الفائقة الملكية</h3>
+              <p class="text-xs text-stone-600 mb-3 leading-relaxed">
+                سيروم الورد المركز + كريم الكولاجين والذهب + محدد الشفاه مع حقيبة مكياج جلدية هدية.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-stone-400 line-through block">890 ج.م</span>
+                <span class="font-bold text-lg text-[#B8962E]">649 ج.م</span>
+              </div>
+              <span class="px-3 py-1.5 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold text-xs group-hover:bg-[#c99564]">عرض التفاصيل</span>
+            </div>
+          </div>
+
+          <!-- Bundle 2 -->
+          <div onclick="navigateTo('#/product/bundle-2')" class="bg-white rounded-3xl p-5 border border-stone-200 shadow-lg hover:shadow-xl transition-all cursor-pointer group flex flex-col justify-between hover:-translate-y-1">
+            <div>
+              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3 bg-stone-100">
+                <img src="images/prod-serum.jpg" alt="باقة العروس الملكية الشاملة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2 right-2 px-2.5 py-1 rounded-md bg-[#6B7F5E] text-white text-[11px] font-bold">الباقة الشاملة</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">باقة العروس الملكية الشاملة</h3>
+              <p class="text-xs text-stone-600 mb-3 leading-relaxed">
+                عطر الورد الفرنسي + زيت المسك + سيروم النضارة + كريم الكولاجين + طقم الفرش 12 قطعة.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-stone-400 line-through block">1250 ج.م</span>
+                <span class="font-bold text-lg text-[#B8962E]">899 ج.م</span>
+              </div>
+              <span class="px-3 py-1.5 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold text-xs group-hover:bg-[#c99564]">عرض التفاصيل</span>
+            </div>
+          </div>
+
+          <!-- Bundle 3 -->
+          <div onclick="navigateTo('#/product/bundle-3')" class="bg-white rounded-3xl p-5 border border-stone-200 shadow-lg hover:shadow-xl transition-all cursor-pointer group flex flex-col justify-between hover:-translate-y-1">
+            <div>
+              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden mb-3 bg-stone-100">
+                <img src="images/prod-cream.jpg" alt="باقة الاسترخاء الهادئ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2 right-2 px-2.5 py-1 rounded-md bg-[#B8962E] text-white text-[11px] font-bold">استرخاء ونوم</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">باقة الاسترخاء الهادئ</h3>
+              <p class="text-xs text-stone-600 mb-3 leading-relaxed">
+                معطر الوسائد بماء اللافندر + كريم الليل المغذي + ماسك الطين الوردي الأسترالي.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-stone-400 line-through block">680 ج.م</span>
+                <span class="font-bold text-lg text-[#B8962E]">499 ج.م</span>
+              </div>
+              <span class="px-3 py-1.5 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold text-xs group-hover:bg-[#c99564]">عرض التفاصيل</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="page-product" class="hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+      <!-- Injected via renderProductDetailPage() -->
+    </div>
+
   </main>
 
   <!-- COMMON FOOTER: OVER PROD-SERUM BACKGROUND (TEXT INSIDE) -->
@@ -970,7 +1653,7 @@
           <h4 class="font-serif font-bold text-base text-[#D4AF37] mb-4">خدمة العملاء</h4>
           <ul class="space-y-2.5 text-xs text-[#FAF6F1]/80">
             <li><span class="block">ساعات العمل: السبت - الخميس (9 ص - 10 م)</span></li>
-            <li><span class="block">واتساب الدعم: +966 50 123 4567</span></li>
+            <li><span class="block">واتساب الدعم: +20 10 1234 5678</span></li>
             <li><span class="block">البريد: care@voltedge-beauty.com</span></li>
             <li><a href="javascript:void(0)" class="hover:text-[#D4AF37] transition-colors">سياسة الاستبدال والاسترجاع</a></li>
             <li><a href="javascript:void(0)" class="hover:text-[#D4AF37] transition-colors">الأسئلة الشائعة والشحن</a></li>
@@ -981,25 +1664,32 @@
         <div>
           <h4 class="font-serif font-bold text-base text-[#D4AF37] mb-4">طرق الدفع المعتمدة</h4>
           <p class="text-xs text-[#FAF6F1]/75 mb-4 leading-relaxed font-sans">
-            نوفر وسائل دفع آمنة ومشفرة متوافقة مع الأنظمة المصرفية السعودية.
+            نوفر وسائل دفع مصرية معتمدة وآمنة: فودافون كاش، اتصالات كاش، إنستاباي، كارت ميزة، والبطاقات البنكية، مع خدمة الدفع عند الاستلام لجميع محافظات مصر.
           </p>
-          <div class="flex items-center gap-2.5 flex-wrap">
-            <!-- Mada SVG -->
-            <div class="h-8 px-2.5 bg-white rounded flex items-center justify-center" title="مدى">
-              <span class="text-[11px] font-extrabold text-[#007A3D]">mada مدى</span>
+          <div class="flex items-center gap-2 flex-wrap">
+            <!-- Vodafone Cash -->
+            <div class="h-8 px-2.5 bg-[#E60000] text-white rounded-lg flex items-center justify-center font-bold text-[11px] shadow-sm" title="فودافون كاش">
+              <span>Vodafone Cash</span>
             </div>
-            <!-- Visa SVG -->
-            <div class="h-8 px-2.5 bg-white rounded flex items-center justify-center" title="Visa">
-              <span class="text-[12px] font-extrabold text-[#1A1F71] italic">VISA</span>
+            <!-- InstaPay -->
+            <div class="h-8 px-2.5 bg-[#4A154B] text-white rounded-lg flex items-center justify-center font-bold text-[11px] shadow-sm" title="إنستاباي InstaPay">
+              <span>InstaPay</span>
             </div>
-            <!-- Mastercard SVG -->
-            <div class="h-8 px-2.5 bg-white rounded flex items-center justify-center gap-0.5" title="Mastercard">
-              <span class="w-3.5 h-3.5 rounded-full bg-[#EB001B] inline-block -mr-1.5 opacity-90"></span>
-              <span class="w-3.5 h-3.5 rounded-full bg-[#F79E1B] inline-block opacity-90"></span>
+            <!-- Etisalat Cash -->
+            <div class="h-8 px-2.5 bg-[#78BE20] text-black rounded-lg flex items-center justify-center font-bold text-[11px] shadow-sm" title="اتصالات كاش">
+              <span>اتصالات كاش</span>
             </div>
-            <!-- Apple Pay -->
-            <div class="h-8 px-2.5 bg-black text-white rounded flex items-center justify-center font-bold text-[11px]" title="Apple Pay">
-              Pay
+            <!-- Meeza -->
+            <div class="h-8 px-2.5 bg-white rounded-lg flex items-center justify-center border border-stone-200" title="ميزة Meeza">
+              <span class="text-[11px] font-black text-[#004B87]">ميزة Meeza</span>
+            </div>
+            <!-- Visa & Mastercard -->
+            <div class="h-8 px-2.5 bg-white rounded-lg flex items-center justify-center border border-stone-200" title="Visa / Mastercard">
+              <span class="text-[11px] font-bold text-[#1A1F71] italic">VISA / MC</span>
+            </div>
+            <!-- Cash on Delivery -->
+            <div class="h-8 px-2.5 bg-[#D4A373] text-[#1C1917] rounded-lg flex items-center justify-center font-bold text-[11px] shadow-sm" title="الدفع عند الاستلام">
+              <span>الدفع عند الاستلام</span>
             </div>
           </div>
         </div>
@@ -1015,6 +1705,55 @@
       </div>
     </div>
   </footer>
+
+  
+  <!-- ADD REVIEW MODAL -->
+  <div id="review-modal" class="fixed inset-0 bg-stone-950/60 backdrop-blur-md z-50 hidden items-center justify-center p-4">
+    <div class="bg-[#FAF6F1] max-w-lg w-full rounded-3xl p-6 sm:p-8 text-right border border-[#D4AF37]/40 shadow-2xl relative">
+      <button onclick="closeReviewModal()" class="absolute top-5 left-5 p-2 text-stone-500 hover:text-stone-800">
+        ✕
+      </button>
+
+      <span class="text-xs font-bold text-[#B8962E] tracking-widest block mb-1">صوتكِ يهمنا</span>
+      <h3 class="font-serif text-2xl font-bold text-[#3D2F2A] mb-4">شاركينا رأيكِ في منتجات VoltEdge</h3>
+      
+      <form onsubmit="handleReviewSubmit(event)" class="space-y-4 text-xs sm:text-sm">
+        <div>
+          <label class="block font-semibold text-stone-700 mb-1">اسمكِ الكريم *</label>
+          <input type="text" id="rev-name" required placeholder="مثال: منى محمود" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-stone-700 mb-1">المحافظة *</label>
+            <input type="text" id="rev-city" required placeholder="مثال: القاهرة" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
+          </div>
+          <div>
+            <label class="block font-semibold text-stone-700 mb-1">التقييم *</label>
+            <select id="rev-stars" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
+              <option value="5">★★★★★ (5 من 5 ممتاز)</option>
+              <option value="4">★★★★☆ (4 من 5 جيد جداً)</option>
+              <option value="3">★★★☆☆ (3 من 5 جيد)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-stone-700 mb-1">المنتج الذي جربتيه *</label>
+          <input type="text" id="rev-product" required placeholder="مثال: سيروم الورد المخملي" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-stone-700 mb-1">تجربتكِ بالتفصيل *</label>
+          <textarea id="rev-text" required rows="3" placeholder="اكتبي لنا كيف شعرتِ بعد استخدام المنتج وسرعة وصوله..." class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-sm shadow-md transition-all">
+          إرسال التقييم ✨
+        </button>
+      </form>
+    </div>
+  </div>
 
   <!-- TOAST NOTIFICATION -->
   <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
@@ -1050,9 +1789,13 @@
           <span class="text-stone-500">عنوان التوصيل:</span>
           <span id="modal-cust-city" class="font-semibold text-[#3D2F2A]">-</span>
         </div>
+        <div class="flex justify-between">
+          <span class="text-stone-500">طريقة الدفع المختارة:</span>
+          <span id="modal-pay-method" class="font-bold text-[#6B7F5E]">-</span>
+        </div>
         <div class="flex justify-between pt-2 border-t border-stone-200">
           <span class="font-bold text-stone-800">المبلغ الإجمالي المدفوع:</span>
-          <span id="modal-total" class="font-bold text-[#B8962E] font-serif text-sm">0 ر.س</span>
+          <span id="modal-total" class="font-bold text-[#B8962E] font-serif text-sm">0 ج.م</span>
         </div>
       </div>
 
@@ -1064,7 +1807,7 @@
 
   <!-- APPLICATION LOGIC -->
   <script>
-// VoltEdge Beauty - Application State & Logic
+// VoltEdge Beauty - Comprehensive Application State & Products Data
 const PRODUCTS_DATA = {
   skincare: [
     {
@@ -1072,184 +1815,319 @@ const PRODUCTS_DATA = {
       name: 'سيروم الورد المخملي المركز',
       category: 'سيروم',
       price: 349,
+      originalPrice: 499,
       rating: 5.0,
+      reviewsCount: 142,
       image: 'images/prod-serum.jpg',
       imgClass: 'object-cover',
-      desc: 'تركيبة مكثفة من بتلات الورد الدمشقي مع الهيالورونيك لنضارة فائقة وترطيب عميق.'
+      badge: 'الأكثر طلباً',
+      desc: 'إكسير فائق التركيز مستخلص من آلاف بتلات الورد الدمشقي المقطرة مع حمض الهيالورونيك الثلاثي، يمنحكِ نضارة حريرية وترطيباً عميقاً يستمر 24 ساعة كاملة دون أدنى أثر دهني.',
+      features: [
+        'نضارة فورية وتوحيد ملحوظ للون البشرة خلال 14 يوماً',
+        'ترطيب عميق يحبس الرطوبة في طبقات الجلد الداخلية',
+        'مضاد قوي للأكسدة يحمي البشرة من الإجهاد البيئي',
+        'تركيبة خفيفة سريعة الامتصاص ملائمة لجميع أنواع البشرة حتى الحساسة'
+      ],
+      ingredients: 'مستخلص بتلات الورد الدمشقي النقي 100%، حمض الهيالورونيك (منخفض ومتوسط وعالي الوزن الجزيئي)، فيتامين B5، نياسيناميد، غليسرين نباتي، ماء الورد العضوي.',
+      howToUse: 'ضعي 3 إلى 5 قطرات على بشرة نظيفة ورطبة قليلاً كل صباح ومساء. ربتي بلطف على الوجه والرقبة حتى يمتصه الجلد تماماً قبل وضع المرطب.'
     },
     {
       id: 'skin-2',
       name: 'كريم الكولاجين والذهب 24 قيراط',
       category: 'كريمات',
       price: 419,
+      originalPrice: 599,
       rating: 4.9,
+      reviewsCount: 118,
       image: 'images/prod-cream.jpg',
       imgClass: 'object-cover brightness-105',
-      desc: 'إكسير استعادة الشباب وحبس الرطوبة، مع جزيئات الذهب الخالص لمرونة تدوم.'
+      badge: 'إكسير الشباب',
+      desc: 'كريم فاخر غني بجزيئات الذهب الخالص عيار 24 وببتيدات الكولاجين البحري، صُمم خصيصاً لشد ترهلات البشرة، وتحسين مرونتها، وإخفاء مظهر الخطوط الدقيقة والتجاعيد.',
+      features: [
+        'شد فوري ومرونة فائقة تعيد للبشرة شبابها وحيويتها',
+        'جزيئات الذهب تعكس الضوء لتمنحكِ توهجاً ملكياً طبيعياً',
+        'يحفز إنتاج الكولاجين الطبيعي ويدعم حاجز حماية البشرة',
+        'ملمس مخملي ناعم يذوب في البشرة دون ثقل'
+      ],
+      ingredients: 'جزيئات الذهب النقي 24 قيراط، ببتيدات كولاجين بحري متقدمة، حمض الهيالورونيك، زبدة الشيا العضوية، زيت الأرجان المغربي، خلاصة الشاي الأخضر.',
+      howToUse: 'دلكي كمية بحجم حبة البازلاء على الوجه والرقبة بحركات تصاعدية لطيفة كل صباح ومساء بعد امتصاص السيروم تماماً.'
     },
     {
       id: 'skin-3',
-      name: 'غسول التقشير اللطيف ببتلات الورد',
+      name: 'غسول التقشير اللطيف بماء الورد',
       category: 'تنظيف',
       price: 189,
+      originalPrice: 270,
       rating: 4.8,
-      image: 'images/prod-serum.jpg',
-      imgClass: 'object-cover brightness-95 saturate-110',
-      desc: 'تنقية حريرية للبشرة تزيل الشوائب بلطف وتعيد التوازن الطبيعي دون جفاف.'
+      reviewsCount: 95,
+      image: 'images/prod-cleanser.jpg',
+      imgClass: 'object-cover',
+      badge: 'تنقية حريرية',
+      desc: 'رغوة حريرية غنية بماء الورد العضوي وأحماض الفواكه اللطيفة تزيل الأوساخ والدهون وآثار المكياج دون أن تجرد البشرة من زيوتها الطبيعية، لتترك وجهكِ نظيفاً ومنتعشاً.',
+      features: [
+        'تنظيف عميق للمسام يمنع ظهور الحبوب والرؤوس السوداء',
+        'يقشر الخلايا الميتة بلطف ليعيد إشراقة وتجدد البشرة',
+        'خالٍ تماماً من الكبريتات (Sulfate-free) والبارابين',
+        'يحافظ على توازن حموضة البشرة الطبيعي (pH 5.5)'
+      ],
+      ingredients: 'ماء الورد الجوري، خلاصة الصبار، حمض اللاكتيك المخفف، غليسرين نباتي، زيت اللافندر العضوي، مستخلص زهرة البابونج.',
+      howToUse: 'ضعي ضخة واحدة على يدين مبللتين ودلكي الوجه بحركات دائرية لمدة دقيقة واحدة، ثم اشطفي بالماء الفاتر وجففي برفق.'
     },
     {
       id: 'skin-4',
-      name: 'كريم الليل المغذي بالببتيدات',
-      category: 'كريمات',
-      price: 389,
+      name: 'سيروم محيط العينين بالكافيين والنياسيناميد',
+      category: 'سيروم',
+      price: 299,
+      originalPrice: 420,
       rating: 4.9,
-      image: 'images/prod-cream.jpg',
-      imgClass: 'object-cover contrast-105',
-      desc: 'تجديد خلوي عميق أثناء النوم يمنحكِ بشرة ناعمة ومشدودة عند الصباح.'
+      reviewsCount: 88,
+      image: 'images/prod-eyeserum.jpg',
+      imgClass: 'object-cover',
+      badge: 'مضاد للهالات',
+      desc: 'محلول خفيف وسريع النفاذ يجمع بين الكافيين المركز والنياسيناميد لاستهداف الهالات السوداء والانتفاخات تحت العينين، ويمنحكِ نظرة يقظة ومشرقة مفعمة بالحيوية.',
+      features: [
+        'تفتيح ملحوظ للهالات السوداء وتنشيط الدورة الدموية الدقيقة',
+        'تقليل انتفاخات الجفون الصباحية خلال دقائق من التطبيق',
+        'ترطيب منطقة محيط العين الرقيقة ومنع ظهور خطوط التعبير',
+        'رأس تطبيق كروي منعش يسهل التوزيع والتدليك'
+      ],
+      ingredients: 'كافيين نقي 5%، نياسيناميد 2%، ببتيدات شد البشرة، خلاصة الشاي الأخضر، هيالورونات الصوديوم، ماء الخيار المقطر.',
+      howToUse: 'ضعي قطرة واحدة برفق تحت كل عين وربتي بإصبع البنصر من الداخل للخارج كل صباح ومساء وتجنبي فرك العين.'
     },
     {
       id: 'skin-5',
-      name: 'سيروم النضارة الفورية بالفيتامينات',
-      category: 'سيروم',
-      price: 279,
-      rating: 4.7,
-      image: 'images/prod-serum.jpg',
-      imgClass: 'object-cover scale-110 object-top',
-      desc: 'مزيج فيتامين C و E لتفتيح وتوحيد لون البشرة وحمايتها من العوامل البيئية.'
+      name: 'ماسك الطين الوردي الأسترالي لتنقية المسام',
+      category: 'تنظيف',
+      price: 259,
+      originalPrice: 360,
+      rating: 4.8,
+      reviewsCount: 76,
+      image: 'images/prod-claymask.jpg',
+      imgClass: 'object-cover',
+      badge: 'تنقية فورية',
+      desc: 'قناع الطين الوردي الفاخر المستخلص من أنقى الرواسب المعدنية، يعمل كمغناطيس لسحب السموم والدهون والشوائب العالقة في أعماق المسام، ليمنحكِ بشرة فائقة النقاء والنعومة.',
+      features: [
+        'تنقية وتضييق المسام الواسعة من أول استخدام',
+        'إزالة اللمعان الزائد وتوحيد ملمس البشرة الدهنية والمختلطة',
+        'ملمس كريمي ناعم لا يسبب تشققاً أو جفافاً مزعجاً',
+        'يكفي لأكثر من 20 تطبيقاً منزلياً'
+      ],
+      ingredients: 'طين الكاولين الوردي الأسترالي، خلاصة عرق السوس لتفتيح التصبغات، زيت شجرة الشاي المهدئ، مستخلص الألوفيرا، ماء الورد الطبيعي.',
+      howToUse: 'افردي طبقة متساوية على بشرة جافة ونظيفة، واتركيه لمدة 10 دقائق حتى يجف نصف جفاف، ثم اشطفي بالماء الدافئ وجففي بفوطة قطنية.'
     },
     {
       id: 'skin-6',
-      name: 'قناع الترميم العميق بالزيوت الطبيعية',
+      name: 'باقة العناية الليلية المهدئة',
       category: 'كريمات',
-      price: 229,
-      rating: 4.8,
-      image: 'images/prod-cream.jpg',
-      imgClass: 'object-cover sepia-[0.15]',
-      desc: 'علاج أسبوعي مركز يعيد بناء الحاجز الواقي للبشرة ويمنحها نعومة الحرير.'
+      price: 459,
+      originalPrice: 650,
+      rating: 5.0,
+      reviewsCount: 64,
+      image: 'images/prod-bundle-rose.jpg',
+      imgClass: 'object-cover',
+      badge: 'طقم ليلي متكامل',
+      desc: 'باقة تضم كريم الليل المغذي مع زيت بتلات الورد للترميم العميق أثناء النوم، لتستيقظي كل صباح ببشرة مرتاحة، مشدودة، ومتألقة كبتلات الزهور المتفتحة.',
+      features: [
+        'ترميم حاجز البشرة التالف وتجديد الخلايا بنسبة 300% أسرع',
+        'تغذية عميقة بالأحماض الدهنية الأساسية أوميغا 3 و 6 و 9',
+        'تهدئة الاحمرار والتهابات البشرة الناتجة عن الشمس والتلوث',
+        'رائحة الورد واللافندر التي تساعد على الاسترخاء والنوم العميق'
+      ],
+      ingredients: 'زيت بذور ثمر الورد البكر، ببتيدات الكولاجين، مستخلص السكوالان النباتي، زبدة الكاكاو، فيتامين E، زيت زهر البرتقال العضوي.',
+      howToUse: 'بعد تنظيف البشرة ليلاً، ضعي الكريم المغذي ثم أتبعيه بقطرتين من الزيت المركز واضغطي بلطف على الخدين والجبهة.'
     }
   ],
   makeup: [
     {
       id: 'mu-1',
-      name: 'أحمر شفاه مخملي راقي',
+      name: 'أحمر شفاه عنابي مخملي راقي',
       category: 'شفاه',
       price: 119,
+      originalPrice: 180,
       rating: 5.0,
+      reviewsCount: 167,
       image: 'images/prod-lipstick.jpg',
       imgClass: 'object-cover',
-      desc: 'لون عنابي فاخر بتغطية كاملة من لمسة واحدة وثبات مريح يدوم 12 ساعة.'
+      badge: 'الأكثر مبيعاً',
+      desc: 'لون عنابي فاخر بتغطية غنية ومكثفة من تمريرة واحدة فقط. يتميز بلمسة نهائية مخملية مات (Velvet Matte) وثبات استثنائي يدوم 12 ساعة دون تشقق أو جفاف.',
+      features: [
+        'ثبات فائق مقاوم للماء والطعام لا يترك أي أثر',
+        'تركيبة معززة بزبدة الشيا وفيتامين E لترطيب الشفاه',
+        'صبغة نقية مركزة تعطي لوناً غنياً مشبعاً ومبهراً',
+        'ملمس خفيف كالحرير لا تشعرين بوجوده إطلاقاً'
+      ],
+      ingredients: 'زبدة الشيا العضوية، شمع الكانديليلا النباتي، زيت الجوجوبا الذهبي، فيتامين E، أكاسيد حديد وأصباغ عضوية نقية مصرح بها.',
+      howToUse: 'ابدئي بتحديد منتصف الشفاه العليا باتجاه الزوايا، ثم املئي الشفاه السفلية بحركة واحدة سلسة للحصول على مظهر ممتلئ وجذاب.'
     },
     {
       id: 'mu-2',
-      name: 'فرشاة دمج وتوزيع احترافية',
+      name: 'طقم فرش التجميل المتكامل (12 قطعة)',
       category: 'فرش',
-      price: 179,
-      rating: 4.7,
+      price: 329,
+      originalPrice: 490,
+      rating: 4.9,
+      reviewsCount: 153,
       image: 'images/prod-brushes.jpg',
-      imgClass: 'object-cover scale-150 object-top',
-      desc: 'ألياف نباتية فائقة النعومة بمقبض زيتي مطعم بالذهب لتوزيع متجانس كالمحترفات.'
+      imgClass: 'object-cover',
+      badge: 'طقم فاخر',
+      desc: 'المجموعة الاحترافية الكاملة التي تلبي كافة احتياجاتكِ في تطبيق المكياج اليومي والمناسبات، من دمج كريم الأساس والكونتور ونحت الوجه، إلى تفاصيل العيون الدقيقة، داخل حقيبة جلدية فاخرة.',
+      features: [
+        '12 فرشاة متخصصة صُممت بدقة لتوزيع متساوٍ وخالٍ من الخطوط',
+        'شعيرات ميكروفايبر ناعمة كالحرير لا تمتص أو تهدر مستحضراتكِ',
+        'مقابض خشبية أنيقة مريحة في المسك مع طلاء ذهبي وردي مضاد للصدأ',
+        'حقيبة جلدية مخملية أنيقة للسفر والحفظ المنزلي'
+      ],
+      ingredients: 'شعيرات تاكلون (Taklon) نباتية عالية الكثافة، حلقات ألومنيوم مطلية، خشب طبيعي متين.',
+      howToUse: 'استخدمي الفرش الكبيرة لتوزيع البودرة والفاونديشن، والفرش المشطوفة للكونتور والهايلايتر، والفرش الصغيرة الدقيقة لظلال العيون والحواجب.'
     },
     {
       id: 'mu-3',
-      name: 'أحمر شفاه كريمي بالذهب المنقوش',
+      name: 'قلم تحديد الشفاه وملمع الفراولة اللامع',
       category: 'شفاه',
-      price: 149,
-      rating: 4.9,
-      image: 'images/prod-lipstick.jpg',
-      imgClass: 'object-cover brightness-105 saturate-120',
-      desc: 'ترطيب عميق مع لمسة ساتانية جذابة في عبوة ذهبية منقوشة بالغة الرقي.'
+      price: 139,
+      originalPrice: 199,
+      rating: 4.8,
+      reviewsCount: 92,
+      image: 'images/prod-lipliner.jpg',
+      imgClass: 'object-cover',
+      badge: 'ثنائي جذاب',
+      desc: 'مجموعة تجمع بين قلم تحديد الشفاه الحريري المقاوم للتلطخ، وملمع الشفاه الزجاجي بنكهة الفراولة الطبيعية وحمض الهيالورونيك لنفخ الشفاه وترطيبها بلمعان آسر.',
+      features: [
+        'تحديد دقيق يمنع سيلان أحمر الشفاه ويكبر الشفاه بصرياً',
+        'لمعان زجاجي مائي فاخر دون أي إحساس لزج أو مزعج',
+        'يغذي الشفاه ويقضي على التشققات بفضل زيت جوز الهند',
+        'يدوم لعدة ساعات مع لمسة لونية وردية طبيعية'
+      ],
+      ingredients: 'حمض الهيالورونيك، زيت جوز الهند البكر، زيت الخروع، مستخلص الفراولة الطبيعي، فيتامين C، شموع نباتية نقية.',
+      howToUse: 'حددي حواف الشفاه بدقة بواسطة القلم لزيادة حجمها، ثم املئي منتصف الشفاه بملمع الفراولة لنظرة ممتلئة ولامعة.'
     },
     {
       id: 'mu-4',
-      name: 'طقم فرش التجميل المتكامل',
-      category: 'فرش',
-      price: 329,
-      rating: 4.8,
-      image: 'images/prod-brushes.jpg',
+      name: 'باليت ظلال العيون المخملية الترابية',
+      category: 'عيون',
+      price: 289,
+      originalPrice: 420,
+      rating: 4.9,
+      reviewsCount: 112,
+      image: 'images/prod-eyeshadow.jpg',
       imgClass: 'object-cover',
-      desc: 'مجموعة متكاملة تغطي كافة مراحل المكياج، تمنحكِ دقة لا تضاهى وشعيرات تدوم طويلاً.'
+      badge: '16 لوناً ساحراً',
+      desc: 'باليت ظلال عيون يضم 16 درجة لونية ساحرة تجمع بين النيود الهادئ، والبرونز اللامع، والوردي المخملي، والدرجات الترابية الدافئة، بتركيبة زبدية فائقة الاندماج والثبات.',
+      features: [
+        'درجات متعددة تجمع بين المات الناعم، والشيمر المضيء، والميتاليك الفاخر',
+        'تركيبة زبدية سهلة الدمج لا تتطاير أو تتجمع في خطوط الجفن',
+        'صبغات ألوان غنية فائقة الوضوح من اللمسة الأولى',
+        'مرآة داخلية كبيرة وتصميم مدمج راقٍ ومثالي للحقيبة'
+      ],
+      ingredients: 'ميكا معدنية فائقة النقاء، مسحوق التلك المعالج، ستيرات الزنك، ثنائي الميثيكون، أصباغ لؤلؤية طبيعية عاكسة للضوء.',
+      howToUse: 'طبقي اللون الانتقالي الفاتح على كامل الجفن، ثم ضعي الدرجة الأغمق في زاوية العين الخارجية، واختمي بلمسة لامعة شيمر في المنتصف لإضاءة العين.'
     },
     {
       id: 'mu-5',
-      name: 'محدد شفاه حريري يدوم طويلاً',
-      category: 'شفاه',
-      price: 89,
-      rating: 4.7,
-      image: 'images/prod-lipstick.jpg',
-      imgClass: 'object-cover scale-125 object-bottom',
-      desc: 'انسيابية فائقة في التحديد ورسم الشفاه دون تكتل أو جفاف طوال اليوم.'
+      name: 'بلاشر كريمي بلمسة خوخية مخملية',
+      category: 'وجه',
+      price: 159,
+      originalPrice: 230,
+      rating: 4.9,
+      reviewsCount: 84,
+      image: 'images/prod-blush.jpg',
+      imgClass: 'object-cover',
+      badge: 'توريد طبيعي',
+      desc: 'أحمر خدود كريمي بتركيبة خفيفة تذوب في البشرة كالحرير، تمنح وجنتيكِ توريداً طبيعياً وإشراقة شابة تدوم طوال النهار دون أن تبهت أو تلتصق.',
+      features: [
+        'توريد ناعم وطبيعي يبدو وكأنه نضارة بشرتكِ الطبيعية',
+        'متعدد الاستخدام: يمكن وضعه على الخدود، والشفاه، والجفون',
+        'قابل للبناء من لون شفاف خفيف إلى لون قوي وجذاب',
+        'غني بزيت الجوجوبا ليمنع جفاف البشرة ويحافظ على رونقها'
+      ],
+      ingredients: 'زيت الجوجوبا النقي، زبدة المانجو، شمع نخالة الأرز، أصباغ وردية وخوخية نقية، فيتامين E الطبيعي.',
+      howToUse: 'ربتي بأطراف أصابعكِ أو بفرشاة الدمج على تفاحتي الخدين وادمجيهما للأعلى باتجاه الصدغين لإطلالة مشدودة ومنتعشة.'
     },
     {
       id: 'mu-6',
-      name: 'فرشاة البودرة والكونتور الملكية',
-      category: 'فرش',
-      price: 159,
+      name: 'مسكارا الرموش الملكية بزيت الأرجان',
+      category: 'عيون',
+      price: 189,
+      originalPrice: 270,
       rating: 4.8,
-      image: 'images/prod-brushes.jpg',
-      imgClass: 'object-cover scale-130 object-center',
-      desc: 'رأس مروحي كثيف وناعم ينساب بسلاسة على تفاصيل الوجه لتثبيت متقن.'
+      reviewsCount: 120,
+      image: 'images/prod-mascara.jpg',
+      imgClass: 'object-cover',
+      badge: 'كثافة وطول',
+      desc: 'مسكارا مبتكرة تمنحكِ رموشاً كثيفة وطويلة للغاية كرموش الصالونات الاحترافية، مع معالجة وتغذية الرموش الضعيفة ومنع تساقطها بفضل زيت الأرجان المغربي.',
+      features: [
+        'مضاعفة كثافة الرموش وطولها بنسبة 200% دون أي تكتل',
+        'سواد فحمي ملكي عميق يبرز جمال وسحر العينين',
+        'فرشاة سيليكونية مرنة تلتقط أصغر الشعيرات من الجذور',
+        'مقاومة للرطوبة والدموع وتُزال بسهولة بالماء الدافئ'
+      ],
+      ingredients: 'زيت الأرجان النقي، شمع الكارنوبا، خلاصة الحرير المهدرج، كربون نباتي أسود فاحم، بانثينول مقوي للشعر.',
+      howToUse: 'مرري الفرشاة من منبت الرموش باتجاه الأطراف بحركة متعرجة خفيفة (Zig-Zag) للحصول على أقصى رفع وتفريق للرموش.'
     }
   ],
   perfumes: [
     {
       id: 'perf-1',
-      name: 'إكسير عطر الورد الدمشقي المركز',
-      category: 'زهري',
-      price: 489,
+      name: 'عطر الورد الفرنسي الملكي (50ml)',
+      category: 'عطور',
+      price: 499,
+      originalPrice: 699,
       rating: 5.0,
-      image: 'images/prod-serum.jpg',
-      imgClass: 'object-cover brightness-105 saturate-110',
-      desc: 'قطرات زيتية نقية من أندر ورود الربيع، تمنحكِ هالة زهرية آسرة تدوم لأيام.'
+      reviewsCount: 178,
+      image: 'images/prod-perfume.jpg',
+      imgClass: 'object-cover',
+      badge: 'الإصدار الحصري',
+      desc: 'تحفة عطرية استثنائية تجسد الأنوثة الراقية في أبهى صورها. تفتتح بنوتات منعشة من الورد الدمشقي والبرغموت الإيطالي، يعقبها قلب ساحر من زهر البرتقال والياسمين، وترتكز على قاعدة ملكية دافئة من العنبر والمسك الأبيض وخشب الأرز.',
+      features: [
+        'ثبات وفواحان هائل يدوم لأكثر من 36 ساعة على الملابس',
+        'زجاجة كريستالية ثقيلة فاخرة بغطاء ذهبي وردي محفور',
+        'تركيز عالي بنسبة Eau de Parfum بزيوت فرنسية مقطرة',
+        'يناسب الإطلالات اليومية الفخمة والمناسبات الخاصة'
+      ],
+      ingredients: 'كحول عطري نقي، زيوت عطرية فرنسية طبيعية، مستخلص الورد الجوري، دهن العنبر الأبيض، خلاصة البرغموت، أخشاب الأرز.',
+      howToUse: 'رشي العطر على نقاط النبض (الرقبة، المعصمين، وخلف الأذنين) من مسافة 15 سم لانتشار عطري فواح طوال اليوم.'
     },
     {
       id: 'perf-2',
-      name: 'زيت العطر الملكي بالمسك والعنبر',
-      category: 'مسكي',
-      price: 549,
-      rating: 4.9,
-      image: 'images/prod-serum.jpg',
-      imgClass: 'object-cover contrast-110 sepia-[0.2]',
-      desc: 'مزيج فاخر ودافئ من المسك الأبيض وحبيبات العنبر الثمينة لإحساس ملكي مهيب.'
+      name: 'زيت المسك الأسود والعود الملكي',
+      category: 'زيوت',
+      price: 299,
+      originalPrice: 420,
+      rating: 4.8,
+      reviewsCount: 96,
+      image: 'images/prod-oud.jpg',
+      imgClass: 'object-cover',
+      badge: 'فخامة شرقية',
+      desc: 'خلاصة دهن العود الكمبودي الفاخر الممتزج مع المسك الأسود المركز. قطرات نقية خالية تماماً من الكحول تضفي عليكِ هيبة وسحراً شرقياً لا يُقاوم ويدوم لأيام.',
+      features: [
+        'تركيز نقي 100% خالٍ من أي كحول أو مواد مخففة',
+        'ثبات أسطوري يدوم حتى بعد غسل الملابس',
+        'رائحة غنية دافئة تجمع بين العود العتيق والمسك الغامض',
+        'تغليف شرقي فخم داخل قارورة كرستال مذهبة'
+      ],
+      ingredients: 'دهن عود كمبودي معتق، مسك أسود صافي، قطرات من العنبر والزعفران، زيوت ناقلة طبيعية مغذية للبشرة.',
+      howToUse: 'ضعي قطرة واحدة على باطن يدكِ ووزعيها بلطف على الرقبة وأطراف الشعر وثنايا الملابس للاستمتاع بعبير ملكي فواح.'
     },
     {
       id: 'perf-3',
-      name: 'زبدة العطر المخملية برائحة الفانيلا',
-      category: 'شرقي',
-      price: 259,
+      name: 'بخاخ الجسم والشعر بزهور الكرز والمسك',
+      category: 'بخاخات',
+      price: 189,
+      originalPrice: 260,
       rating: 4.8,
-      image: 'images/prod-cream.jpg',
-      imgClass: 'object-cover brightness-100',
-      desc: 'ترطيب عميق معطر بنفحات الفانيلا المدغشقرية الدافئة وعبير أخشاب الأرز.'
-    },
-    {
-      id: 'perf-4',
-      name: 'رذاذ الجسم الحريري بزهور الكرز',
-      category: 'فاكهي',
-      price: 199,
-      rating: 4.7,
-      image: 'images/prod-serum.jpg',
-      imgClass: 'object-cover hue-rotate-15',
-      desc: 'انتعاش مائي أنثوي خفيف يلف بشرتك بغيمة رقيقة من أزهار الساكورا المبهجة.'
-    },
-    {
-      id: 'perf-5',
-      name: 'زيت الشعر العطري بالياسمين الملكي',
-      category: 'زهري',
-      price: 319,
-      rating: 4.9,
-      image: 'images/prod-serum.jpg',
-      imgClass: 'object-cover scale-110',
-      desc: 'لمعان حريري فوري للشعر مع عبير الياسمين الخالص وفيتامين E الحامي للأطراف.'
-    },
-    {
-      id: 'perf-6',
-      name: 'كريم المسك الأبيض المعطر للجسم',
-      category: 'مسكي',
-      price: 239,
-      rating: 4.8,
-      image: 'images/prod-cream.jpg',
-      imgClass: 'object-cover brightness-105',
-      desc: 'قوام مخملي غني بالمسك الصافي يذوب على البشرة ليتركها فائقة النعومة والجاذبية.'
+      reviewsCount: 135,
+      image: 'images/prod-bodymist.jpg',
+      imgClass: 'object-cover',
+      badge: 'انتعاش يومي',
+      desc: 'رذاذ معطر للجسم والشعر يفيض بعبير أزهار الكرز اليابانية المنعشة والمسك الأبيض الناعم، معزز بالألوفيرا وفيتامين E لترطيب بشرتكِ وإنعاشها طوال اليوم.',
+      features: [
+        'انتعاش فوري ورائحة نظافة مبهجة تدوم أكثر من 12 ساعة',
+        'آمن تماماً على خصلات الشعر ولا يسبب الجفاف أو البهتان',
+        'حجم كبير اقتصادي 250ml يكفي للاستخدام اليومي لشهور',
+        'خالٍ من الزيوت الثقيلة ليترك ملمساً خفيفاً وناعماً'
+      ],
+      ingredients: 'ماء نقي مقطر، مستخلص أزهار الكرز، مسك أبيض ناعم، خلاصة الصبار المرطب، فيتامين E، غليسرين، زيت البابونج.',
+      howToUse: 'رشي بسخاء على كامل الجسم والشعر بعد الاستحمام مباشرة أو في أي وقت من اليوم لتجديد الحيوية والانتعاش.'
     }
   ]
 };
@@ -1358,19 +2236,461 @@ function navigateTo(hash) {
   window.location.hash = hash;
 }
 
-function handleRoute() {
-  const hash = window.location.hash || '#/home';
-  const validPages = ['#/home', '#/skincare', '#/makeup', '#/perfumes', '#/calm', '#/cart'];
-  const activePage = validPages.includes(hash) ? hash.replace('#/', '') : 'home';
 
-  // Scroll to top
+// Helper to retrieve any product or deal by ID
+function getProductById(id) {
+  for (const cat in PRODUCTS_DATA) {
+    const found = PRODUCTS_DATA[cat].find(p => p.id === id);
+    if (found) return { ...found, categoryGroup: cat };
+  }
+
+  // Predefined Flash Deals & Bundles
+  const specialDeals = [
+    {
+      id: 'flash-1',
+      name: 'باقة الإشراقة الفائقة الثلاثية (عرض فلاش ذهبي)',
+      category: 'عروض فلاش',
+      price: 599,
+      originalPrice: 957,
+      rating: 5.0,
+      reviewsCount: 248,
+      image: 'images/hero-beauty.jpg',
+      badge: 'خصم 38% · ينتهي قريباً',
+      desc: 'باقة العناية المتكاملة الأكثر مبيعاً في مصر! تضم سيروم الورد الدمشقي المركز 50ml + كريم الكولاجين والذهب عيار 24 قيراط 50ml + غسول التقشير اللطيف بماء الورد. روتين عناية فاخر يمنحكِ نضارة وإشراقة فورية من أول أسبوع.',
+      features: [
+        'توفير فوري 358 ج.م مقارنة بشراء المنتجات منفردة',
+        'نضارة فورية وترطيب عميق يدوم 24 ساعة بدون أي ملمس دهني',
+        'مستخلصات الورد الدمشقي الطبيعي وجزيئات الذهب الخالص 24k',
+        'شحن مجاني وسريع لكافة المحافظات مع هدية عينة مسك العروس'
+      ],
+      ingredients: 'مستخلص بتلات الورد الدمشقي النقي، حمض الهيالورونيك الثلاثي، جزيئات الذهب عيار 24، ببتيدات الكولاجين البحري، فيتامين C و E، زيت اللوز الحلو النقي.',
+      howToUse: '١. اغسلي الوجه بغسول الورد اللطيف وجففي بلطف. ٢. ضعي 4-5 قطرات من سيروم الورد المركز ودلكي بحركات دائرية. ٣. اختمي بطبقة رقيقة من كريم الكولاجين لحبس الترطيب طوال النهار أو الليل.',
+      isFlashDeal: true,
+      stockLeft: 5,
+      flashExpires: 'ينتهي خلال ساعات معدودة اليوم'
+    },
+    {
+      id: 'flash-2',
+      name: 'طقم الجمال المخملي والفرش (عرض نهاية الأسبوع)',
+      category: 'عروض فلاش',
+      price: 419,
+      originalPrice: 648,
+      rating: 4.9,
+      reviewsCount: 189,
+      image: 'images/prod-bundle-rose.jpg',
+      badge: 'خصم 35% · متبقي 8 قطع',
+      desc: 'طقم الإطلالة الملكية يجمع بين أحمر الشفاه المخملي العنابي الراقي وثباته المريح لمدة 12 ساعة، مع طقم فرش التجميل الاحترافية 12 قطعة ناعمة كالحرير داخل حقيبة جلدية وردية أنيقة.',
+      features: [
+        'توفير 229 ج.م في عرض نهاية الأسبوع',
+        'أحمر شفاه غني بزبدة الشيا لا يجفف الشفاه ويدوم طويلاً',
+        '12 فرشاة احترافية لكل استخدامات الفاونديشن والكونتور والعيون',
+        'شعيرات نباتية فائقة النعومة سهلة التنظيف ولا تتساقط'
+      ],
+      ingredients: 'شعيرات ميكروفايبر نباتية ناعمة، مقابض خشبية فاخرة مطلية بالذهب الوردي، تركيبة أحمر شفاه غنية بزبدة الشيا، فيتامين E، شمع النحل الطبيعي، وزيوت نباتية مغذية.',
+      howToUse: 'استخدمي فرشاة الدمج الكبيرة للفاونديشن والبودرة، والفرش المشطوفة لتحديد العيون والحواجب. طبقي أحمر الشفاه مباشرة أو بواسطة فرشاة الشفاه المرفقة لمظهر دقيق وممتلئ.',
+      isFlashDeal: true,
+      stockLeft: 8,
+      flashExpires: 'عرض نهاية الأسبوع المحدود'
+    },
+    {
+      id: 'flash-3',
+      name: 'دويتو المسك الأبيض والورد (عرض الساعة السعيدة)',
+      category: 'عروض فلاش',
+      price: 299,
+      originalPrice: 449,
+      rating: 5.0,
+      reviewsCount: 164,
+      image: 'images/prod-perfume.jpg',
+      badge: 'خصم 34% · وفّري 150 ج.م',
+      desc: 'المزيج العطري الأكثر جاذبية وأنوثة! يجمع بين زيت مسك العروس النقي المركز الخالي تماماً من الكحول بثبات أسطوري يدوم 48 ساعة، مع بخاخ الجسم المنعش برائحة الورد الفرنسي والزهور البيضاء.',
+      features: [
+        'ثبات استثنائي يدوم لأيام على البشرة والملابس',
+        'خالٍ تماماً من الكحول وآمن 100% على البشرة الحساسة والشعر',
+        'يمنحكِ هالة من الانتعاش والنظافة والأنوثة الطاغية',
+        'حجم اقتصادي مناسب لحقيبة اليد والسفر'
+      ],
+      ingredients: 'زيت المسك الأبيض النقي، مستخلص الورد البلدي والفرنسي، زيت الجوجوبا المغذي، ماء الورد المقطر، غليسرين نباتي مرطب.',
+      howToUse: 'ضعي قطرات من زيت المسك على مناطق النبض (خلف الأذنين، المعصمين، والرقبة). رشي بخاخ الورد على كامل الجسم والشعر بعد الاستحمام مباشرة لانتعاش يدوم طوال اليوم.',
+      isFlashDeal: true,
+      stockLeft: 3,
+      flashExpires: 'ينتهي بعد قليل (الساعة السعيدة)'
+    },
+    {
+      id: 'bundle-1',
+      name: 'باقة الإشراقة الفائقة الملكية',
+      category: 'باقات',
+      price: 649,
+      originalPrice: 890,
+      rating: 5.0,
+      reviewsCount: 130,
+      image: 'images/hero-beauty.jpg',
+      badge: 'الباقة الأكثر طلباً',
+      desc: 'صندوق فاخر يضم سيروم الورد المركز، كريم الكولاجين والذهب، ومحدد الشفاه الحريري مع حقيبة مكياج جلدية مجانية هدية من VoltEdge.',
+      features: ['توفير 241 ج.م', 'صندوق هدايا فاخر مخملي', 'روتين نضارة كامل', 'شحن مجاني فوري'],
+      ingredients: 'مستخلصات الورد وزيوت طبيعية 100% وببتيدات الذهب والكولاجين.',
+      howToUse: 'استخدمي السيروم والكريم صباحاً ومساءً لنتائج سريعة تدوم طويلاً.'
+    },
+    {
+      id: 'bundle-2',
+      name: 'باقة العروس الملكية الشاملة',
+      category: 'باقات',
+      price: 899,
+      originalPrice: 1250,
+      rating: 5.0,
+      reviewsCount: 175,
+      image: 'images/prod-serum.jpg',
+      badge: 'الباقة الشاملة',
+      desc: 'المجموعة الملكية المتكاملة للعروس ولكل امرأة تبحث عن التميز والجاذبية المطلقة. تضم عطر الورد الفرنسي، زيت المسك الأبيض، سيروم النضارة، كريم الكولاجين، وطقم الفرش.',
+      features: ['توفير 351 ج.م', 'شاملة العطور والعناية والمكياج', 'تغليف ملكي خاص بالعرائس', 'ضمان أصلي 100%'],
+      ingredients: 'أجود الخلاصات الملكية الطبيعية والزيوت العطرية النقية بدون أي إضافات كيماوية.',
+      howToUse: 'دليل كامل مرفق داخل الصندوق لجدول العناية خطوة بخطوة قبل المناسبات.'
+    },
+    {
+      id: 'bundle-3',
+      name: 'باقة الاسترخاء الهادئ',
+      category: 'باقات',
+      price: 499,
+      originalPrice: 680,
+      rating: 4.9,
+      reviewsCount: 98,
+      image: 'images/prod-cream.jpg',
+      badge: 'استرخاء ونوم',
+      desc: 'باقة مخصصة للاسترخاء المسائي وتهدئة البشرة المتعبة والأعصاب بعد يوم عمل طويل.',
+      features: ['توفير 181 ج.م', 'معطر الوسائد باللافندر', 'كريم الليل المغذي', 'ماسك الطين الوردي'],
+      ingredients: 'زيوت اللافندر، خلاصة البابونج المهدئة، طين الورد الأسترالي، زبدة الكاكاو.',
+      howToUse: 'استخدمي الماسك مرتين أسبوعياً ورشي معطر اللافندر على الوسادة قبل النوم.'
+    }
+  ];
+
+  return specialDeals.find(d => d.id === id) || null;
+}
+
+// Product Quantity in Detail Page
+let detailQty = 1;
+function changeDetailQty(delta) {
+  detailQty = Math.max(1, detailQty + delta);
+  const el = document.getElementById("detail-qty-input");
+  if (el) el.value = detailQty;
+}
+
+// Add to Cart from Detail Page
+function addCurrentProductToCart(prodId, buyNow = false) {
+  const prod = getProductById(prodId);
+  if (!prod) return;
+
+  const existing = cart.find(i => i.id === prod.id);
+  if (existing) {
+    existing.qty += detailQty;
+  } else {
+    cart.push({
+      id: prod.id,
+      name: prod.name,
+      price: prod.price,
+      image: prod.image,
+      category: prod.category,
+      qty: detailQty
+    });
+  }
+
+  saveCart();
+  updateCartBadge();
+
+  if (buyNow) {
+    navigateTo('#/cart');
+  } else {
+    showToast(`تمت إضافة (${detailQty}) من ${prod.name} إلى السلة بنجاح ✨`);
+  }
+}
+
+// Render Full Product / Deal Detail Page
+function renderProductDetailPage(prodId) {
+  const container = document.getElementById('page-product');
+  if (!container) return;
+
+  const prod = getProductById(prodId);
+  if (!prod) {
+    container.innerHTML = `
+      <div class="text-center py-20 bg-white rounded-3xl border border-stone-200 p-8">
+        <h2 class="font-serif text-2xl font-bold text-[#3D2F2A] mb-3">عذراً، المنتج غير متوفر</h2>
+        <p class="text-stone-600 mb-6 text-sm">قد يكون الرابط غير صحيح أو انتهى العرض المحدد.</p>
+        <button onclick="navigateTo('#/home')" class="px-6 py-3 rounded-xl bg-[#D4A373] text-[#1C1917] font-bold text-sm">
+          العودة للمتجر
+        </button>
+      </div>
+    `;
+    return;
+  }
+
+  detailQty = 1;
+  const savings = prod.originalPrice ? (prod.originalPrice - prod.price) : 0;
+  const discountPercent = prod.originalPrice ? Math.round((savings / prod.originalPrice) * 100) : 0;
+
+  container.innerHTML = `
+    <!-- Breadcrumb & Back Button -->
+    <div class="flex items-center justify-between pb-4 border-b border-[#D4AF37]/30 text-xs sm:text-sm">
+      <div class="flex items-center gap-2 text-stone-500 flex-wrap">
+        <a href="#/home" class="hover:text-[#B8962E] transition-colors">الرئيسية</a>
+        <span>/</span>
+        <span class="text-stone-700 font-semibold">${prod.category}</span>
+        <span>/</span>
+        <span class="text-[#3D2F2A] font-bold truncate max-w-xs">${prod.name}</span>
+      </div>
+      <button onclick="history.back()" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#B8962E] hover:underline bg-white px-3 py-1.5 rounded-xl border border-[#D4AF37]/40 shadow-sm">
+        <span>← العودة</span>
+      </button>
+    </div>
+
+    <!-- Main Product Grid: Image (Right) & Details (Left) in RTL -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      
+      <!-- Right Col: High-Res Image Card -->
+      <div class="lg:col-span-6 space-y-4">
+        <div class="relative aspect-square sm:aspect-[4/4] rounded-3xl overflow-hidden bg-white shadow-2xl border border-stone-200/80 group">
+          <img id="main-product-img" src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          
+          <!-- Promo Badges Overlay -->
+          <div class="absolute top-4 right-4 z-20 flex flex-col gap-2 items-start">
+            ${prod.badge ? `<span class="px-3.5 py-1.5 rounded-full bg-[#E8B4B8] text-[#3D2F2A] text-xs font-bold shadow-md">${prod.badge}</span>` : ''}
+            ${discountPercent > 0 ? `<span class="px-3 py-1 rounded-full bg-[#E60000] text-white text-xs font-bold shadow-md">وفّري ${savings} ج.م (-${discountPercent}%)</span>` : ''}
+          </div>
+
+          <!-- Bottom Guaranteed Badge -->
+          <div class="absolute bottom-4 inset-x-4 z-20 bg-black/60 backdrop-blur-md rounded-2xl p-3 text-white flex items-center justify-between text-xs">
+            <span class="flex items-center gap-1.5 font-bold">
+              <span class="text-[#D4AF37]">★</span> ضمان جودة أصلي 100%
+            </span>
+            <span class="text-stone-300">مختبر سريرياً وطبيعي</span>
+          </div>
+        </div>
+
+        <!-- Trust Badges Under Image -->
+        <div class="grid grid-cols-3 gap-3 text-center text-[11px] text-stone-700 font-semibold">
+          <div class="bg-white p-3 rounded-2xl border border-stone-200/80 shadow-sm">
+            <span class="text-base block mb-0.5">🚚</span>
+            <span>شحن مجاني وسريع</span>
+          </div>
+          <div class="bg-white p-3 rounded-2xl border border-stone-200/80 shadow-sm">
+            <span class="text-base block mb-0.5">💵</span>
+            <span>دفع عند الاستلام</span>
+          </div>
+          <div class="bg-white p-3 rounded-2xl border border-stone-200/80 shadow-sm">
+            <span class="text-base block mb-0.5">🔄</span>
+            <span>استبدال 14 يوماً</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left Col: Product Info & Actions -->
+      <div class="lg:col-span-6 space-y-6 text-right">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs font-bold text-[#B8962E] tracking-widest">${prod.category}</span>
+            <div class="flex items-center gap-1 text-[#D4AF37] text-xs font-bold mr-auto">
+              <span>★★★★★</span>
+              <span class="text-[#3D2F2A] font-mono">${prod.rating}</span>
+              <span class="text-stone-400 font-sans">(${prod.reviewsCount || 120} تقييم موثق)</span>
+            </div>
+          </div>
+          <h1 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#3D2F2A] leading-snug mb-3">
+            ${prod.name}
+          </h1>
+          <p class="font-sans text-stone-700 text-sm sm:text-base leading-relaxed">
+            ${prod.desc}
+          </p>
+        </div>
+
+        <!-- If Flash Deal: Special Box with Countdown and Stock -->
+        ${prod.isFlashDeal ? `
+          <div class="bg-gradient-to-r from-[#3D2F2A] to-[#241B18] text-[#FAF6F1] p-4 sm:p-5 rounded-2xl border border-[#D4AF37]/50 shadow-md">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-[#D4AF37] flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#E60000] animate-ping"></span>
+                🔥 عرض محدود الوقت - ينتهي قريباً
+              </span>
+              <span class="text-[11px] text-[#E60000] font-bold">باقي ${prod.stockLeft || 5} قطع فقط بالمخزن!</span>
+            </div>
+            <div class="w-full bg-white/20 h-2 rounded-full overflow-hidden mt-1 mb-2">
+              <div class="bg-gradient-to-r from-[#D4AF37] to-[#E60000] h-full w-[85%] rounded-full"></div>
+            </div>
+            <p class="text-[11px] text-stone-300">سارعي بالحجز قبل انتهاء الكمية المخصصة لهذا العرض الاستثنائي.</p>
+          </div>
+        ` : ''}
+
+        <!-- Price Section -->
+        <div class="p-5 rounded-2xl bg-white border border-[#D4AF37]/30 shadow-sm flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <span class="text-xs text-stone-500 block mb-0.5">السعر الحالي (شامل الضريبة):</span>
+            <div class="flex items-baseline gap-3">
+              <span class="font-serif text-3xl sm:text-4xl font-bold text-[#B8962E]">${prod.price} <span class="text-sm font-sans text-[#3D2F2A]">ج.م</span></span>
+              ${prod.originalPrice ? `<span class="text-sm sm:text-base text-stone-400 line-through">${prod.originalPrice} ج.م</span>` : ''}
+            </div>
+          </div>
+          ${savings > 0 ? `
+            <div class="text-left bg-[#6B7F5E]/15 text-[#6B7F5E] px-3.5 py-1.5 rounded-xl text-xs font-bold">
+              توفير نقدي: ${savings} ج.م
+            </div>
+          ` : ''}
+        </div>
+
+        <!-- Quantity & Add to Cart -->
+        <div class="space-y-3 pt-2">
+          <div class="flex items-center gap-4">
+            <span class="text-xs font-bold text-[#3D2F2A]">الكمية المطلوبة:</span>
+            <div class="flex items-center border border-stone-300 rounded-xl bg-white overflow-hidden shadow-sm">
+              <button onclick="changeDetailQty(-1)" class="w-10 h-10 flex items-center justify-center text-lg font-bold text-stone-600 hover:bg-stone-100 transition-colors">-</button>
+              <input type="text" id="detail-qty-input" value="1" readonly class="w-12 text-center font-bold text-sm text-[#3D2F2A] border-x border-stone-200">
+              <button onclick="changeDetailQty(1)" class="w-10 h-10 flex items-center justify-center text-lg font-bold text-stone-600 hover:bg-stone-100 transition-colors">+</button>
+            </div>
+            <span class="text-xs text-[#6B7F5E] font-semibold">✓ متوفر للشحن الفوري بمصر</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <button onclick="addCurrentProductToCart('${prod.id}', false)"
+              class="w-full py-4 rounded-xl bg-[#D4A373] hover:bg-[#c99564] text-[#1C1917] font-bold text-sm sm:text-base shadow-md transition-all active:scale-95 flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              <span>أضيفي لسلة التسوق</span>
+            </button>
+            <button onclick="addCurrentProductToCart('${prod.id}', true)"
+              class="w-full py-4 rounded-xl bg-stone-900 hover:bg-black text-white font-bold text-sm sm:text-base shadow-md transition-all active:scale-95 flex items-center justify-center gap-2">
+              <span>⚡ اشتري الآن (دفع سريع)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Egyptian Payment Reassurance Banner -->
+        <div class="p-4 rounded-2xl bg-[#FAF6F1] border border-stone-200/80 text-xs text-stone-700 space-y-1.5">
+          <div class="flex items-center gap-2 font-bold text-[#3D2F2A]">
+            <span>💳 طرق الدفع المتاحة في مصر:</span>
+          </div>
+          <p class="text-stone-600 leading-relaxed">
+            ادفعي نقداً لمندوب الشحن عند استلام الطلب ومعاينته، أو عبر <strong>فودافون كاش</strong> (01012345678)، أو <strong>إنستاباي</strong>، أو ببطاقة ميزة البنكية.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Product Detailed Features & Tabs -->
+    <div class="bg-white rounded-3xl p-6 sm:p-10 border border-stone-200/80 shadow-md space-y-8">
+      
+      <!-- Key Features List -->
+      ${prod.features && prod.features.length > 0 ? `
+        <div>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#3D2F2A] mb-4 pb-2 border-b border-[#D4AF37]/30 flex items-center gap-2">
+            <span>✨</span> أهم المميزات والفوائد الاستثنائية
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            ${prod.features.map(f => `
+              <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-[#FAF6F1] border border-stone-200/50">
+                <span class="w-6 h-6 rounded-full bg-[#B8962E] text-white flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</span>
+                <span class="text-xs sm:text-sm font-semibold text-stone-800 leading-relaxed">${f}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- Ingredients & How to Use -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 border-t border-stone-200">
+        <div>
+          <h4 class="font-serif font-bold text-lg text-[#3D2F2A] mb-2 flex items-center gap-2">
+            <span>🌿</span> المكونات الفعالة والطبيعية
+          </h4>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-sans bg-[#FAF6F1] p-4 rounded-2xl border border-stone-200/60">
+            ${prod.ingredients || 'مستخلصات نباتية نقية 100%، زيوت طبيعية غير مكررة، خالية من البارابين، الكبريتات، والزيوت المعدنية الضارة.'}
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-serif font-bold text-lg text-[#3D2F2A] mb-2 flex items-center gap-2">
+            <span>🌸</span> طريقة الاستخدام المثالية
+          </h4>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-sans bg-[#FAF6F1] p-4 rounded-2xl border border-stone-200/60">
+            ${prod.howToUse || 'استخدميه بانتظام على بشرة نظيفة للحصول على أفضل النتائج المستدامة والإشراقة الدائمة.'}
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Related Products -->
+    <div class="space-y-6 pt-4">
+      <div class="flex items-center justify-between">
+        <h3 class="font-serif text-2xl font-bold text-[#3D2F2A]">منتجات وعروض قد تهمكِ أيضاً</h3>
+        <a href="#/home" class="text-xs sm:text-sm font-semibold text-[#B8962E] hover:underline">مشاهدة الكل ←</a>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        ${PRODUCTS_DATA.skincare.slice(0, 4).map(rel => `
+          <div onclick="navigateTo('#/product/${rel.id}')" class="bg-white rounded-2xl p-3 border border-stone-200 shadow-sm hover:shadow-lg transition-all cursor-pointer group flex flex-col justify-between">
+            <div class="aspect-square rounded-xl overflow-hidden mb-2 bg-[#FAF6F1]">
+              <img src="${rel.image}" alt="${rel.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div>
+              <span class="text-[10px] text-[#B8962E] font-bold block">${rel.category}</span>
+              <h4 class="font-serif text-xs font-bold text-[#3D2F2A] truncate mb-1">${rel.name}</h4>
+              <span class="font-bold text-xs text-[#3D2F2A] block">${rel.price} ج.م</span>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+// Reliable Navigation & Route Handler
+function navigateTo(hash) {
+  if (!hash) return;
+  if (!hash.startsWith('#/')) hash = '#/' + hash.replace(/^#?\/?/, '');
+
+  if (window.location.hash !== hash) {
+    window.location.hash = hash;
+  }
+  handleRoute();
+}
+
+function handleRoute() {
+  const fullHash = window.location.hash || '#/home';
+  const cleanHash = fullHash.split('?')[0];
+
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  // Update Page visibility
-  ['home', 'skincare', 'makeup', 'perfumes', 'calm', 'cart'].forEach(page => {
+  // 1. Handle Dedicated Product & Deal Detail Route (#/product/:id)
+  if (cleanHash.startsWith('#/product/')) {
+    const prodId = cleanHash.replace('#/product/', '');
+    
+    // Hide all main pages
+    ['home', 'skincare', 'makeup', 'perfumes', 'calm', 'cart', 'deals'].forEach(page => {
+      const el = document.getElementById(`page-${page}`);
+      if (el) el.classList.add('hidden');
+    });
+
+    const prodPage = document.getElementById('page-product');
+    if (prodPage) {
+      prodPage.classList.remove('hidden');
+      prodPage.classList.add('animate-fade-in');
+    }
+
+    renderProductDetailPage(prodId);
+    closeMobileMenu();
+    return;
+  }
+
+  // 2. Hide product detail page on any normal category / page route
+  const prodPage = document.getElementById('page-product');
+  if (prodPage) prodPage.classList.add('hidden');
+
+  // 3. Main Pages List
+  const validPages = ['home', 'deals', 'skincare', 'makeup', 'perfumes', 'calm', 'cart'];
+  let requestedPage = cleanHash.replace('#/', '');
+  if (!validPages.includes(requestedPage)) {
+    requestedPage = 'home';
+  }
+
+  validPages.forEach(page => {
     const el = document.getElementById(`page-${page}`);
     if (el) {
-      if (page === activePage) {
+      if (page === requestedPage) {
         el.classList.remove('hidden');
         el.classList.add('animate-fade-in');
       } else {
@@ -1380,32 +2700,46 @@ function handleRoute() {
     }
   });
 
-  // Update Navigation Active Links
+  // 4. Update Navigation Links Highlight
   document.querySelectorAll('[data-nav-link]').forEach(link => {
     const linkTarget = link.getAttribute('href');
-    if (linkTarget === hash || (hash === '' && linkTarget === '#/home')) {
+    if (linkTarget === cleanHash || (cleanHash === '' && linkTarget === '#/home')) {
       link.classList.add('text-[#B8962E]', 'border-b-2', 'border-[#D4AF37]');
-      link.classList.remove('text-[#3D2F2A]');
+      if (!link.classList.contains('text-[#E60000]')) {
+        link.classList.remove('text-[#3D2F2A]');
+      }
     } else {
       link.classList.remove('text-[#B8962E]', 'border-b-2', 'border-[#D4AF37]');
-      link.classList.add('text-[#3D2F2A]');
+      if (!link.classList.contains('text-[#E60000]')) {
+        link.classList.add('text-[#3D2F2A]');
+      }
     }
   });
 
-  // Page Specific Actions
-  if (activePage === 'cart') {
+  // 5. Page-specific renders
+  if (requestedPage === 'cart') {
     renderCartPage();
-  } else if (activePage === 'skincare') {
+  } else if (requestedPage === 'skincare') {
     renderCategoryGrid('skincare');
-  } else if (activePage === 'makeup') {
+  } else if (requestedPage === 'makeup') {
     renderCategoryGrid('makeup');
-  } else if (activePage === 'perfumes') {
+  } else if (requestedPage === 'perfumes') {
     renderCategoryGrid('perfumes');
   }
 
-  // Close Mobile Menu if open
   closeMobileMenu();
 }
+
+// Global click delegator to intercept all #/ links safely
+document.addEventListener('click', function(e) {
+  const link = e.target.closest('a[href^="#/"]');
+  if (link) {
+    e.preventDefault();
+    const targetHash = link.getAttribute('href');
+    navigateTo(targetHash);
+  }
+});
+
 
 // Category Grid Rendering with filters and sorting
 const categoryFilters = {
@@ -1460,14 +2794,17 @@ function renderCategoryGrid(cat) {
   }
 
   container.innerHTML = items.map(prod => `
-    <div class="group relative overflow-hidden rounded-3xl aspect-[3/4] shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-[#FAF6F1]/50">
+    <div onclick="navigateTo('#/product/' + prod.id)" class="group relative overflow-hidden rounded-3xl aspect-[3/4] shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-[#FAF6F1]/50 cursor-pointer">
       <img src="${prod.image}" alt="${prod.name}" loading="lazy" class="absolute inset-0 w-full h-full ${prod.imgClass} transition-transform duration-700 group-hover:scale-108 z-0">
       <div class="absolute inset-0 bg-gradient-to-t from-[#3D2F2A]/90 via-[#3D2F2A]/45 to-transparent z-10"></div>
       
-      <!-- Top rating badge -->
-      <div class="absolute top-4 right-4 z-20 flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/85 backdrop-blur-md text-xs font-bold text-[#3D2F2A] shadow-sm">
-        <svg class="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-        <span>${prod.rating}</span>
+      <!-- Top badges: Rating and Promo Badge -->
+      <div class="absolute top-4 inset-x-4 z-20 flex items-center justify-between">
+        ${prod.badge ? `<span class="px-2.5 py-1 rounded-full bg-[#E8B4B8] text-[#3D2F2A] text-[10px] font-bold shadow-sm">${prod.badge}</span>` : '<span></span>'}
+        <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/85 backdrop-blur-md text-xs font-bold text-[#3D2F2A] shadow-sm">
+          <svg class="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <span>${prod.rating}</span>
+        </div>
       </div>
 
       <!-- Text inside image (Golden Rule) -->
@@ -1478,10 +2815,10 @@ function renderCategoryGrid(cat) {
         
         <div class="flex items-center justify-between gap-3 pt-3 border-t border-white/15">
           <div class="text-right">
-            <span class="text-xs text-[#FAF6F1]/70 block font-light">السعر</span>
-            <span class="font-bold text-lg text-[#F5F0EB]">${prod.price} <span class="text-xs text-[#D4AF37]">ر.س</span></span>
+            ${prod.originalPrice ? `<span class="text-[11px] text-stone-300 line-through block leading-none mb-0.5">${prod.originalPrice} ج.م</span>` : `<span class="text-xs text-[#FAF6F1]/70 block font-light">السعر</span>`}
+            <span class="font-bold text-lg text-[#F5F0EB]">${prod.price} <span class="text-xs text-[#D4AF37]">ج.م</span></span>
           </div>
-          <button onclick="addToCart({id: '${prod.id}', name: '${prod.name}', price: ${prod.price}, image: '${prod.image}', category: '${prod.category}'})"
+          <button onclick="event.stopPropagation(); addToCart({id: '${prod.id}', name: '${prod.name}', price: ${prod.price}, image: '${prod.image}', category: '${prod.category}'})"
             class="px-5 py-2.5 rounded-xl bg-[#D4A373] hover:bg-[#e0b182] active:scale-95 text-[#1C1917] font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
             <span>أضيفي للسلة</span>
@@ -1527,7 +2864,7 @@ function renderCartPage() {
       <div class="flex-grow text-center sm:text-right">
         <span class="text-xs font-semibold text-[#B8962E] block mb-1">${item.category || 'VoltEdge Beauty'}</span>
         <h4 class="font-serif font-bold text-lg text-[#3D2F2A] mb-1">${item.name}</h4>
-        <span class="text-sm font-bold text-stone-700">${item.price} ر.س</span>
+        <span class="text-sm font-bold text-stone-700">${item.price} ج.م</span>
       </div>
       
       <!-- Quantity Controls -->
@@ -1538,7 +2875,7 @@ function renderCartPage() {
           <button onclick="updateQty('${item.id}', 1)" class="w-8 h-8 flex items-center justify-center text-stone-600 hover:bg-stone-200 transition-colors font-bold text-base" title="زيادة الكمية">+</button>
         </div>
         <div class="text-right min-w-[70px]">
-          <span class="font-bold text-base text-[#3D2F2A]">${item.price * item.qty} ر.س</span>
+          <span class="font-bold text-base text-[#3D2F2A]">${item.price * item.qty} ج.م</span>
         </div>
         <button onclick="removeFromCart('${item.id}')" class="p-2 text-stone-400 hover:text-red-500 transition-colors" title="حذف">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
@@ -1567,21 +2904,21 @@ function renderCartPage() {
           <div class="space-y-3 text-sm text-[#3D2F2A] mb-6">
             <div class="flex justify-between">
               <span>المجموع الفرعي</span>
-              <span class="font-semibold">${subtotal} ر.س</span>
+              <span class="font-semibold">${subtotal} ج.م</span>
             </div>
             <div class="flex justify-between">
               <span>تكلفة الشحن</span>
-              <span class="text-[#6B7F5E] font-bold">مجاني لجميع مناطق المملكة</span>
+              <span class="text-[#6B7F5E] font-bold">شحن مجاني لجميع محافظات مصر 🇪🇬</span>
             </div>
             ${discountRate > 0 ? `
               <div class="flex justify-between text-[#6B7F5E]">
                 <span>خصم الكوبون (${appliedPromoCode})</span>
-                <span class="font-bold">-${discountAmount} ر.س</span>
+                <span class="font-bold">-${discountAmount} ج.م</span>
               </div>
             ` : ''}
             <div class="pt-3 border-t border-stone-300/80 flex justify-between text-base sm:text-lg font-bold">
               <span>الإجمالي النهائي (شامل الضريبة)</span>
-              <span class="text-[#B8962E] text-xl font-serif">${total} ر.س</span>
+              <span class="text-[#B8962E] text-xl font-serif">${total} ج.م</span>
             </div>
           </div>
 
@@ -1607,25 +2944,43 @@ function renderCartPage() {
 
             <div>
               <label class="block text-xs font-semibold text-stone-700 mb-1">رقم الجوال *</label>
-              <input type="tel" id="cust-phone" required placeholder="05XXXXXXXX" dir="ltr" class="w-full text-right px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 bg-white">
+              <input type="tel" id="cust-phone" required placeholder="01XXXXXXXXX" dir="ltr" class="w-full text-right px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 bg-white">
             </div>
 
             <div class="grid grid-cols-2 gap-3">
               <div>
                 <label class="block text-xs font-semibold text-stone-700 mb-1">المدينة *</label>
                 <select id="cust-city" required class="w-full px-3 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 bg-white">
-                  <option value="الرياض">الرياض</option>
-                  <option value="جدة">جدة</option>
-                  <option value="الدمام">الدمام</option>
-                  <option value="مكة المكرمة">مكة المكرمة</option>
-                  <option value="المدينة المنورة">المدينة المنورة</option>
-                  <option value="الخبر">الخبر</option>
-                  <option value="أخرى">مدينة أخرى</option>
+                  <option value="القاهرة">القاهرة</option>
+                  <option value="الجيزة">الجيزة</option>
+                  <option value="الإسكندرية">الإسكندرية</option>
+                  <option value="القليوبية">القليوبية</option>
+                  <option value="الدقهلية (المنصورة)">الدقهلية (المنصورة)</option>
+                  <option value="الغربية (طنطا)">الغربية (طنطا)</option>
+                  <option value="الشرقية (الزقازيق)">الشرقية (الزقازيق)</option>
+                  <option value="المنوفية">المنوفية</option>
+                  <option value="البحيرة">البحيرة</option>
+                  <option value="كفر الشيخ">كفر الشيخ</option>
+                  <option value="دمياط">دمياط</option>
+                  <option value="بورسعيد">بورسعيد</option>
+                  <option value="الإسماعيلية">الإسماعيلية</option>
+                  <option value="السويس">السويس</option>
+                  <option value="الفيوم">الفيوم</option>
+                  <option value="بني سويف">بني سويف</option>
+                  <option value="المنيا">المنيا</option>
+                  <option value="أسيوط">أسيوط</option>
+                  <option value="سوهاج">سوهاج</option>
+                  <option value="قنا">قنا</option>
+                  <option value="الأقصر">الأقصر</option>
+                  <option value="أسوان">أسوان</option>
+                  <option value="البحر الأحمر (الغردقة)">البحر الأحمر (الغردقة)</option>
+                  <option value="جنوب سيناء (شرم الشيخ)">جنوب سيناء (شرم الشيخ)</option>
+                  <option value="محافظة أخرى">محافظة أخرى</option>
                 </select>
               </div>
               <div>
                 <label class="block text-xs font-semibold text-stone-700 mb-1">الحي السكني *</label>
-                <input type="text" id="cust-district" required placeholder="حي النرجس" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 bg-white">
+                <input type="text" id="cust-district" required placeholder="المعادي / التجمع / الدقي / سموحة..." class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 bg-white">
               </div>
             </div>
 
@@ -1635,20 +2990,62 @@ function renderCartPage() {
             </div>
 
             <div>
-              <label class="block text-xs font-semibold text-stone-700 mb-1.5">طريقة الدفع المعتمدة</label>
-              <div class="grid grid-cols-3 gap-2 text-xs">
-                <label class="flex flex-col items-center justify-center p-2 rounded-xl border border-[#D4AF37] bg-white cursor-pointer hover:bg-stone-50">
-                  <input type="radio" name="payment-method" value="mada" checked class="accent-[#D4AF37] mb-1">
-                  <span class="font-bold text-[#3D2F2A]">مدى / بطاقة</span>
+              <label class="block text-xs font-semibold text-stone-700 mb-1.5">طريقة الدفع في مصر 🇪🇬</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                <!-- Vodafone / Etisalat Cash -->
+                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-stone-300 bg-white cursor-pointer hover:border-[#D4AF37] transition-all has-[:checked]:border-[#B8962E] has-[:checked]:bg-[#FAF6F1]">
+                  <input type="radio" name="payment-method" value="vodafone_cash" checked onchange="updatePaymentHelpText()" class="accent-[#D4AF37]">
+                  <div>
+                    <span class="font-bold text-[#3D2F2A] block">فودافون كاش / محافظ إلكترونية</span>
+                    <span class="text-[10px] text-stone-500">فودافون كاش، اتصالات كاش، أورنج، وي باي</span>
+                  </div>
                 </label>
-                <label class="flex flex-col items-center justify-center p-2 rounded-xl border border-stone-200 bg-white cursor-pointer hover:bg-stone-50">
-                  <input type="radio" name="payment-method" value="applepay" class="accent-[#D4AF37] mb-1">
-                  <span class="font-bold text-[#3D2F2A]">Apple Pay</span>
+
+                <!-- InstaPay -->
+                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-stone-300 bg-white cursor-pointer hover:border-[#D4AF37] transition-all has-[:checked]:border-[#B8962E] has-[:checked]:bg-[#FAF6F1]">
+                  <input type="radio" name="payment-method" value="instapay" onchange="updatePaymentHelpText()" class="accent-[#D4AF37]">
+                  <div>
+                    <span class="font-bold text-[#3D2F2A] block">إنستاباي (InstaPay)</span>
+                    <span class="text-[10px] text-stone-500">تحويل فوري عبر الحساب أو رقم الهاتف</span>
+                  </div>
                 </label>
-                <label class="flex flex-col items-center justify-center p-2 rounded-xl border border-stone-200 bg-white cursor-pointer hover:bg-stone-50">
-                  <input type="radio" name="payment-method" value="cod" class="accent-[#D4AF37] mb-1">
-                  <span class="font-bold text-[#3D2F2A]">عند الاستلام</span>
+
+                <!-- Cash on Delivery (COD) -->
+                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-stone-300 bg-white cursor-pointer hover:border-[#D4AF37] transition-all has-[:checked]:border-[#B8962E] has-[:checked]:bg-[#FAF6F1]">
+                  <input type="radio" name="payment-method" value="cod" onchange="updatePaymentHelpText()" class="accent-[#D4AF37]">
+                  <div>
+                    <span class="font-bold text-[#3D2F2A] block">الدفع عند الاستلام (COD)</span>
+                    <span class="text-[10px] text-stone-500">ادفعي نقداً لمندوب الشحن عند باب البيت</span>
+                  </div>
                 </label>
+
+                <!-- Meeza & Cards -->
+                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-stone-300 bg-white cursor-pointer hover:border-[#D4AF37] transition-all has-[:checked]:border-[#B8962E] has-[:checked]:bg-[#FAF6F1]">
+                  <input type="radio" name="payment-method" value="card" onchange="updatePaymentHelpText()" class="accent-[#D4AF37]">
+                  <div>
+                    <span class="font-bold text-[#3D2F2A] block">كارت ميزة / فيزا / ماستركارد</span>
+                    <span class="text-[10px] text-stone-500">بطاقات الدفع والخصم المباشر المصرية</span>
+                  </div>
+                </label>
+
+                <!-- Bank Transfer -->
+                <label class="flex items-center gap-2.5 p-3 rounded-xl border border-stone-300 bg-white cursor-pointer hover:border-[#D4AF37] transition-all has-[:checked]:border-[#B8962E] has-[:checked]:bg-[#FAF6F1] sm:col-span-2">
+                  <input type="radio" name="payment-method" value="bank" onchange="updatePaymentHelpText()" class="accent-[#D4AF37]">
+                  <div>
+                    <span class="font-bold text-[#3D2F2A] block">تحويل بنكي مباشر (CIB / الأهلي / بنك مصر)</span>
+                    <span class="text-[10px] text-stone-500">تحويل مباشر على حساب الشركة البنكي</span>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Dynamic Payment Notice Box -->
+              <div id="payment-notice-box" class="mt-3 p-3.5 rounded-xl bg-white border border-[#D4AF37]/40 text-xs text-stone-700 space-y-1">
+                <div class="flex items-center gap-1.5 font-bold text-[#B8962E]">
+                  <span>💡 تعليمات الدفع المعتمدة:</span>
+                </div>
+                <p id="payment-notice-desc" class="text-stone-600 leading-relaxed">
+                  رقم فودافون كاش المعتمد للتحويل: <strong class="font-mono text-[#3D2F2A]">01012345678</strong> (أو اتصالات كاش على نفس الرقم). سيصلكِ اتصال سريع لتأكيد التحويل والشحن فوراً.
+                </p>
               </div>
             </div>
 
@@ -1682,6 +3079,25 @@ function applyPromoCode() {
   }
 }
 
+
+function updatePaymentHelpText() {
+  const method = document.querySelector('input[name="payment-method"]:checked')?.value;
+  const desc = document.getElementById("payment-notice-desc");
+  if (!desc) return;
+
+  if (method === "vodafone_cash") {
+    desc.innerHTML = 'رقم فودافون كاش المعتمد للتحويل: <strong class="font-mono text-[#3D2F2A]">01012345678</strong> (أو اتصالات كاش على نفس الرقم). سيصلكِ اتصال سريع لتأكيد التحويل والشحن فوراً.';
+  } else if (method === "instapay") {
+    desc.innerHTML = 'عنوان الدفع اللحظي إنستاباي: <strong class="font-mono text-[#3D2F2A]">voltedge@instapay</strong> (أو على رقم: 01012345678). التحويل فوري وبدون أي رسوم إضافية.';
+  } else if (method === "cod") {
+    desc.innerHTML = 'ادفعي نقداً لمندوب الشحن عند استلام الطلب ومعاينته أمامك مباشرة عند باب بيتك. متاح في كل محافظات مصر.';
+  } else if (method === "card") {
+    desc.innerHTML = 'دفع إلكتروني آمن ومشفر 100% بكارت ميزة الوطني أو بطاقات فيزا وماستركارد الصادرة من أي بنك مصري.';
+  } else if (method === "bank") {
+    desc.innerHTML = 'حساب البنك التجاري الدولي (CIB) - رقم الحساب: <strong class="font-mono text-[#3D2F2A]">10004928172</strong> باسم شركة VoltEdge للتجارة.';
+  }
+}
+
 function handleCheckout(e) {
   e.preventDefault();
   const name = document.getElementById('cust-name')?.value || '';
@@ -1696,10 +3112,20 @@ function handleCheckout(e) {
   // Show Success Modal
   const modal = document.getElementById('order-modal');
   if (modal) {
+    const payMethodVal = document.querySelector('input[name="payment-method"]:checked')?.value;
+    const payNames = {
+      vodafone_cash: "فودافون كاش / محافظ إلكترونية",
+      instapay: "إنستاباي (InstaPay)",
+      cod: "الدفع عند الاستلام (نقداً)",
+      card: "كارت ميزة / بطاقة بنكية",
+      bank: "تحويل بنكي مباشر"
+    };
     document.getElementById('modal-order-id').textContent = orderNum;
     document.getElementById('modal-cust-name').textContent = name;
     document.getElementById('modal-cust-city').textContent = city + ' - ' + address;
-    document.getElementById('modal-total').textContent = `${total} ر.س`;
+    const modalPayElem = document.getElementById('modal-pay-method');
+    if (modalPayElem) modalPayElem.textContent = payNames[payMethodVal] || payMethodVal;
+    document.getElementById('modal-total').textContent = `${total} ج.م`;
     modal.classList.remove('hidden');
     modal.classList.add('flex');
   }
@@ -1786,6 +3212,7 @@ function initApp() {
     handleRoute();
   }
   startCountdown();
+  startCountdownTimers();
 }
 
 if (document.readyState === 'loading') {
