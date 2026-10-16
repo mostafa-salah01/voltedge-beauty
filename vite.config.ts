@@ -10,14 +10,46 @@ export default defineConfig(() => {
       react(),
       tailwindcss(),
       {
-        name: 'serve-root-images',
+        name: 'serve-root-assets',
         configureServer(server) {
-          server.middlewares.use('/images', (req, res, next) => {
-            const cleanUrl = req.url ? req.url.split('?')[0].replace(/^\//, '') : '';
-            const filePath = path.join(__dirname, 'images', cleanUrl);
-            if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-              res.setHeader('Content-Type', 'image/jpeg');
-              return fs.createReadStream(filePath).pipe(res);
+          server.middlewares.use((req, res, next) => {
+            if (req.url && (req.url.startsWith('/images/') || req.url.startsWith('/videos/'))) {
+              const cleanUrl = req.url.split('?')[0].replace(/^\//, '');
+              const filePath = path.join(__dirname, cleanUrl);
+              if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
+                const stat = fs.statSync(filePath);
+                const ext = path.extname(filePath).toLowerCase();
+                const mimeTypes: Record<string, string> = {
+                  '.jpg': 'image/jpeg',
+                  '.jpeg': 'image/jpeg',
+                  '.png': 'image/png',
+                  '.mp4': 'video/mp4',
+                  '.webm': 'video/webm',
+                };
+                const contentType = mimeTypes[ext] || 'application/octet-stream';
+                const range = req.headers.range;
+
+                if (range && ext === '.mp4') {
+                  const parts = range.replace(/bytes=/, '').split('-');
+                  const start = parseInt(parts[0], 10);
+                  const end = parts[1] ? parseInt(parts[1], 10) : stat.size - 1;
+                  const chunksize = end - start + 1;
+                  res.writeHead(206, {
+                    'Content-Range': `bytes ${start}-${end}/${stat.size}`,
+                    'Accept-Ranges': 'bytes',
+                    'Content-Length': chunksize,
+                    'Content-Type': contentType,
+                  });
+                  return fs.createReadStream(filePath, { start, end }).pipe(res);
+                }
+
+                res.writeHead(200, {
+                  'Content-Length': stat.size,
+                  'Content-Type': contentType,
+                  'Accept-Ranges': 'bytes',
+                });
+                return fs.createReadStream(filePath).pipe(res);
+              }
             }
             next();
           });
