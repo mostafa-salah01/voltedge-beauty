@@ -6,6 +6,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: './',
     plugins: [
       react(),
       tailwindcss(),
@@ -15,7 +16,7 @@ export default defineConfig(() => {
           server.middlewares.use((req, res, next) => {
             if (req.url && (req.url.startsWith('/images/') || req.url.startsWith('/videos/'))) {
               const cleanUrl = req.url.split('?')[0].replace(/^\//, '');
-              const filePath = path.join(__dirname, cleanUrl);
+              const filePath = path.join(import.meta.dirname || __dirname, cleanUrl);
               if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
                 const stat = fs.statSync(filePath);
                 const ext = path.extname(filePath).toLowerCase();
